@@ -36,7 +36,7 @@ def main():
     mysql1 = SqlUtil.Mysql("mysql5.153")
     mysql2 = SqlUtil.Mysql("mysql2.231")
     deposit_detail = mysql1.execute(
-        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '100010' and receive_bank_code = '020' and apply_date >'2018-07-03 00:00:00' order by apply_date desc",
+        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '300010' and receive_bank_code = '020' and apply_date >'2018-07-03 00:00:00' order by apply_date desc",
         "miningaccount")
     # log.info("total deposit_detail with status 100010 is: %d",len(deposit_detail))
 
@@ -89,7 +89,7 @@ def main():
             error.append([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]])
     for j, i in enumerate(result):
         try:
-            mysql2.execute("insert into in_account(deposit_id,bank_id,bank_name) values(%s,%s,%s)"%(j[0],j[10],"wlb"),"bank")
+            mysql2.execute("insert into in_account(deposit_id,bank_id,bank_name) values(%s,%s,'wlb')"%(i[0],i[10]),"bank")
             # line = "\t".join(j) + "\n"
             # f_bank_of_china_hk_detail.write(line)
         except Exception, e:

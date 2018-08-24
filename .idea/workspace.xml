@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b608251-c558-4413-93ed-e7d97a9741b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Mr.Jaryn.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IpoData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account_boc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account_icbc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account_wlb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baiduaip.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/config/mysql.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/config/ocr.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/mysql/SqlUtil.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/mysql/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/downloadpdf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/hkbills_synchronization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/mazhan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/newsInfo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/pdf2htm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/pythonscript/Apriori.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/pythonscript/apriori/apr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/pythonscript/downloadpdf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/pythonscript/gxb.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/pythonscript/gxb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/pythonscript/pdf2htm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/temp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/websitecate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qcloud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restfulapi/hkipo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/area.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/const.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_boc.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_boc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_icbc.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_icbc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_wlb.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_wlb.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account_boc.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="account_boc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account_boc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="340">
+              <caret line="68" column="30" lean-forward="true" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
               <folding>
                 <element signature="e#99#114#0" expanded="true" />
               </folding>
@@ -125,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account_icbc.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="account_icbc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account_icbc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+            <state relative-caret-position="568">
+              <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding>
                 <element signature="e#81#96#0" expanded="true" />
               </folding>
@@ -140,8 +108,8 @@
       <file leaf-file-name="account_wlb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account_wlb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="62" selection-start-line="62" selection-end-line="63" selection-end-column="20" />
+            <state relative-caret-position="321">
+              <caret line="38" column="192" selection-start-line="38" selection-start-column="192" selection-end-line="38" selection-end-column="192" />
               <folding>
                 <element signature="e#80#95#0" expanded="true" />
               </folding>
@@ -201,9 +169,9 @@
         <option value="$PROJECT_DIR$/wlb.py" />
         <option value="$PROJECT_DIR$/IpoData.py" />
         <option value="$PROJECT_DIR$/restfulapi/hkipo.py" />
-        <option value="$PROJECT_DIR$/account_boc.py" />
-        <option value="$PROJECT_DIR$/account_wlb.py" />
         <option value="$PROJECT_DIR$/account_icbc.py" />
+        <option value="$PROJECT_DIR$/account_wlb.py" />
+        <option value="$PROJECT_DIR$/account_boc.py" />
       </list>
     </option>
   </component>
@@ -459,12 +427,12 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295838" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21260683" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13782051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5320585" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49718785" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -510,16 +478,6 @@
           <line>112</line>
           <option name="timeStamp" value="152" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_wlb.py</url>
-          <line>75</line>
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_wlb.py</url>
-          <line>83</line>
-          <option name="timeStamp" value="165" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -528,7 +486,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="166" />
+      <option name="time" value="179" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -863,30 +821,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account_wlb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="62" selection-start-line="62" selection-end-line="63" selection-end-column="20" />
+        <state relative-caret-position="321">
+          <caret line="38" column="192" selection-start-line="38" selection-start-column="192" selection-end-line="38" selection-end-column="192" />
           <folding>
             <element signature="e#80#95#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account_icbc.py">
+    <entry file="file://$PROJECT_DIR$/account_boc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+        <state relative-caret-position="340">
+          <caret line="68" column="30" lean-forward="true" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
           <folding>
-            <element signature="e#81#96#0" expanded="true" />
+            <element signature="e#99#114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account_boc.py">
+    <entry file="file://$PROJECT_DIR$/account_icbc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="568">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
-            <element signature="e#99#114#0" expanded="true" />
+            <element signature="e#81#96#0" expanded="true" />
           </folding>
         </state>
       </provider>
