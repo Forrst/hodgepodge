@@ -6,14 +6,13 @@
 '''
 import MySQLdb
 import ConfigParser
-
 class Mysql():
 
     def __init__(self,server):
         '''
         :param host:
         '''
-        self.confPath = "db/config/mysql.cfg"
+        self.confPath = "../db/config/mysql.cfg"
         self.host = self.getConfig(server)
 
     def getConfig(self,server):
@@ -51,7 +50,7 @@ class Mysql():
         :param table:
         :return:
         '''
-        sql = "select GROUP_CONCAT(COLUMN_NAME) from information_schema.COLUMNS where table_name = %s and table_schema =%s"%(db,table)
+        sql = "select GROUP_CONCAT(COLUMN_NAME) from information_schema.COLUMNS where table_name = '%s' and table_schema ='%s'"%(table,db)
         con = MySQLdb.connect(self.host['host'],self.host['user'],self.host['passwd'],db,charset='utf8')
         cursor = con.cursor()
         cursor.execute(sql)
