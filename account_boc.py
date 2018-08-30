@@ -75,8 +75,8 @@ def main():
             disposeDate = i[3].strip() + " 00:00:00"
         if len(i[3].strip()) == 16:
             disposeDate = i[3].strip() + ":00"
-        remittanceMoney = i[4].replace(",", "").replace("HKD", "").strip() if not i[4] is None else ""
-        fee = i[5].replace(",", "").replace("HKD", "").strip() if not i[5] is None else ""
+        remittanceMoney = i[4].replace(",", "").replace("HKD", "").replace("USD", "").strip() if not i[4] is None else ""
+        fee = i[5].replace(",", "").replace("HKD", "").replace("USD", "").strip() if not i[5] is None else ""
         bankNumber = i[6] if not i[6] is None else ""
         nameAddress = i[7] if not i[7] is None else ""
         bankName = i[8] if not i[8] is None else ""
