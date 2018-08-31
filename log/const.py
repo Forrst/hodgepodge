@@ -8,6 +8,7 @@ import logging.config
 import os
 import datetime
 
+PI = 3.14
 class const:
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     LOG_DIR = os.path.join(BASE_DIR, "logs")
@@ -32,7 +33,7 @@ class const:
             "console": {
                 "class": "logging.StreamHandler",
                 "level": "DEBUG",
-                "formatter": "simple",
+                "formatter": "standard",
                 "stream": "ext://sys.stdout"
             },
 
@@ -57,10 +58,10 @@ class const:
         # },
 
         "root": {
-            'handlers': ['default'],
+            'handlers': ['console'],
             'level': "INFO",
             'propagate': False
         }
     }
-    logging.config.dictConfig(LOGGING)
-    logger = logging.getLogger(__file__)
+    # logging.config.dictConfig(LOGGING)
+    # logger = logging.getLogger(__file__)

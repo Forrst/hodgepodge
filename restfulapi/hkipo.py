@@ -63,7 +63,7 @@ def getJson(bank_name, result):
             x = result[i].encode("utf8")
         row.append(x)
     if bank_name.lower() == "icbc":
-        path = "http://192.168.2.232:9999" + "/icbc/" + ret['img_name']
+        path = "http://192.168.2.232:8991" + "/icbc/" + ret['img_name']
         url = "<a href='%s'>图片网址</a>" % path
         col.append("url")
         row.append(url)
@@ -71,14 +71,14 @@ def getJson(bank_name, result):
         row.append("工银亚洲")
 
     elif bank_name.lower() == "wlb":
-        path = "http://192.168.2.232:9999" + "/WLB/" + ret['dealTime'].replace("-", "") + "/" + ret['imgName']
+        path = "http://192.168.2.232:8991" + "/WLB/" + ret['dealTime'].replace("-", "") + "/" + ret['imgName']
         url = "<a href='%s'>图片网址</a>" % path
         col.append("url")
         row.append(url)
         col.append("bank")
         row.append("永隆银行")
     elif bank_name.lower() == "bankofchinahk":
-        path = "http://192.168.2.232:9999" + "/bankofchinaHK/" + ret['effectDate'].replace("/", "") + "/" + ret[
+        path = "http://192.168.2.232:8991" + "/bankofchinaHK/" + ret['effectDate'].replace("/", "") + "/" + ret[
             'imgName']
         url = "<a href='%s'>图片网址</a>" % path
         col.append("url")
@@ -131,4 +131,4 @@ def index(deposit_id):
 # api.add_resource(Todo, '/<todo_id>')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='192.168.2.119', port=8989)
+    app.run(debug=True, host='192.168.2.232', port=8989)

@@ -9,6 +9,11 @@ import datetime
 from xpinyin import Pinyin
 from db.mysql import SqlUtil
 import account_boc
+from log.const import const
+import logging
+
+logging.config.dictConfig(const.LOGGING)
+logger = logging.getLogger('account_icbc.py')
 
 def to_str(i):
     a = i
@@ -102,14 +107,17 @@ def main():
                     break
         if flag == 0:
             error.append([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]])
-
+    counter = 0
+    logger.info(str(len(result))+" icbc deposit record matched")
     for j, i in enumerate(result):
         try:
             mysql2.execute("insert into in_account(deposit_id,bank_id,bank_name) values(%s,%s,'icbc')"%(i[0],i[10]),"bank")
+            counter+=1
             # line = "\t".join(j) + "\n"
             # f_bank_of_china_hk_detail.write(line)
         except Exception, e:
-            print e
+            logger.error(e,exc_info=True)
+    logger.info("Success !"+str(counter)+" icbc deposit record inserted")
     # f_bank_of_china_hk_detail = open("/home/eos/临时文件/account/icbc_normal.csv", "a+")
     # for j, i in enumerate(result):
     #     try:

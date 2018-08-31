@@ -9,7 +9,11 @@ import datetime
 from xpinyin import Pinyin
 import account_boc
 from db.mysql import SqlUtil
+import logging
+from log.const import const
 
+logging.config.dictConfig(const.LOGGING)
+logger = logging.getLogger('account_wlb.py')
 
 def to_str(i):
     a = i
@@ -36,7 +40,7 @@ def main():
     mysql1 = SqlUtil.Mysql("mysql5.153")
     mysql2 = SqlUtil.Mysql("mysql2.231")
     deposit_detail = mysql1.execute(
-        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '300010' and receive_bank_code = '020' and apply_date >'2018-07-03 00:00:00' order by apply_date desc",
+        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '100010' and receive_bank_code = '020' and apply_date >'2018-07-03 00:00:00' order by apply_date desc",
         "miningaccount")
     # log.info("total deposit_detail with status 100010 is: %d",len(deposit_detail))
 
@@ -87,13 +91,17 @@ def main():
                 break
         if flag == 0:
             error.append([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]])
+    counter = 0
+    logger.info(str(len(result))+" wlb deposit record matched")
     for j, i in enumerate(result):
         try:
             mysql2.execute("insert into in_account(deposit_id,bank_id,bank_name) values(%s,%s,'wlb')"%(i[0],i[10]),"bank")
+            counter+=1
             # line = "\t".join(j) + "\n"
             # f_bank_of_china_hk_detail.write(line)
         except Exception, e:
-            print e
+            logger.error(e,exc_info=True)
+    logger.info("Success !"+str(counter)+" wlb deposit record inserted")
     # f_bank_of_china_hk_detail = open("/home/eos/临时文件/account/wlb_normal.csv", "a+")
     # for j, i in enumerate(result):
     #     try:

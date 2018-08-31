@@ -13,7 +13,11 @@ import datetime
 import account_icbc
 import account_wlb
 from db.mysql import SqlUtil
+from log.const import const
+import logging
 
+logging.config.dictConfig(const.LOGGING)
+logger = logging.getLogger('account_boc.py')
 
 def to_str(i):
     a = i
@@ -53,9 +57,8 @@ def main():
     #已经找到的deposit_id
     deposit_id_found = getSet(mysql2.execute("select deposit_id from in_account", "bank"))
 
-
     deposit_detail = mysql1.execute(
-        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '300010' and receive_bank_code = '012' order by apply_date desc",
+        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '100010' and receive_bank_code = '012' order by apply_date desc",
         "miningaccount")
 
     bank_of_china_hk = mysql2.execute("\
@@ -272,13 +275,17 @@ def main():
             error.append([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]])
 
     # f_bank_of_china_hk_detail = open("/home/eos/临时文件/bank_of_china_hk.csv", "a+")
+    counter = 0
+    logger.info(str(len(result))+" boc deposit record matched")
     for j, i in enumerate(result):
         try:
             mysql2.execute("insert into in_account(deposit_id,bank_id,bank_name) values(%s,%s,'bank_of_china_hk')"%(i[0],i[10]),"bank")
+            counter+=1
             # line = "\t".join(j) + "\n"
             # f_bank_of_china_hk_detail.write(line)
         except Exception, e:
-            print e
+            logger.error(e,exc_info=True)
+    logger.info("Success !"+str(counter)+" boc deposit record inserted")
     # f_bank_of_china_hk_detail.close()
     #
     # f_bank_of_china_hk_detail_error = open("/home/eos/临时文件/bank_of_china_hk_error.csv", "a+")

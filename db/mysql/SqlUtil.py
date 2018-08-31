@@ -12,7 +12,7 @@ class Mysql():
         '''
         :param host:
         '''
-        self.confPath = "../db/config/mysql.cfg"
+        self.confPath = "db/config/mysql.cfg"
         self.host = self.getConfig(server)
 
     def getConfig(self,server):
