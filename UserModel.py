@@ -8,12 +8,18 @@
 
 import happybase
 import hashlib
+import logging
 from db.mysql import SqlUtil
+from log.const import const
+
+logging.config.dictConfig(const.LOGGING)
+logger = logging.getLogger(__file__)
 
 #获取dt=2018-07-31的用户阅读时长
 date = "2018-07-01"
 getAllUsers = "select a.user_id,name,phone_number,funds_account,sum(read_time) read_times from news_read_time a left join user_account_info b on a.user_id = b.user_id where read_day >= '%s' and funds_account is not null group by user_id having read_times >= 2 order by read_times desc"%date
-all_user_read_time = SqlUtil.select(getAllUsers)
+mysql = SqlUtil.Mysql("mysql5.105")
+all_user_read_time = mysql.execute(getAllUsers)
 
 f = open("/home/eos/临时文件/user_info.csv","a+")
 for i in all_user_read_time:
@@ -52,10 +58,14 @@ select a.IssueEndDate,b.SECUCODE,b.CHINAME,a.TotalProceeds from HK_SHAREIPO a in
 user_id = "16380"
 md5_user_id = hashlib.md5(user_id).hexdigest()[:16]
 
-con = happybase.Connection("192.168.2.232")
+# con = happybase.Connection("192.168.2.232")
+import happybase
+con = happybase.Connection("192.168.5.151")
 con.open()
 table = con.table("news")
-ret = table.row("")
+ret = table.row("a2897ffffe99e18b2ef9b07c17fb0000".decode("hex"))
+
+table.delete("b706835de79a2b4e02da000000000000")
 for i in ret:
     print i
 con.close()

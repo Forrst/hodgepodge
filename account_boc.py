@@ -8,7 +8,8 @@
 '''
 尊嘉后台自动对账
 '''
-
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 import datetime
 import account_icbc
 import account_wlb
@@ -58,7 +59,7 @@ def main():
     deposit_id_found = getSet(mysql2.execute("select deposit_id from in_account", "bank"))
 
     deposit_detail = mysql1.execute(
-        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '100010' and receive_bank_code = '012' order by apply_date desc",
+        "select id,account_name,funds_account,deposit_bank_code,receive_bank_code,deposit_amount,transfer_amount,apply_date,certificate,deposit_type from deposit_detail where audit_status = '200010' and receive_bank_code = '012' order by apply_date desc",
         "miningaccount")
 
     bank_of_china_hk = mysql2.execute("\
@@ -92,9 +93,9 @@ def main():
 
     # ocr = BaiduOCR()
     for i in deposit_detail:
-        if i[0] in deposit_id_found:
-            continue
-        # if i[0] != 4612l:
+        # if i[0] in deposit_id_found:
+        #     continue
+        # if i[0] != 6881l:
         #     continue
         # print(i)
         # path = i[8]
@@ -198,10 +199,11 @@ def main():
             if i[3] != i[4] and j[2].strip().lower() != "e-banking transfer":
                 time_apply = i[7]
                 right_date = time_apply + datetime.timedelta(days=delay_day)
+                left_date = time_apply - datetime.timedelta(days=delay_day)
                 time_bank = datetime.datetime.strptime(j[3], "%Y/%m/%d %H:%M:%S")
                 if j[5] != "" and (float(j[4]) - float(j[5]) == float(j[1])):
                     if i[6] != "" and (i[6] is not None) and float(i[6]) == float(j[1]) and (
-                            float(i[5]) - float(i[6]) == float(j[5])) and time_bank < right_date:
+                            float(i[5]) - float(i[6]) == float(j[5])) and left_date < time_bank < right_date:
                         if nameFlag == True:
                             result.append(
                                 [i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], j[0], j[1], j[2], j[3],
@@ -218,7 +220,7 @@ def main():
                                  j[7], j[8], j[9], j[10]])
                             flag = 1
                             break
-                    if (i[6] == "" or i[6] is None) and (float(i[5]) == float(j[4])) and time_bank < right_date:
+                    if (i[6] == "" or i[6] is None) and (float(i[5]) == float(j[4])) and left_date <time_bank < right_date:
                         if nameFlag == True:
                             result.append(
                                 [i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], j[0], j[1], j[2], j[3],
@@ -235,7 +237,7 @@ def main():
                                  j[7], j[8], j[9], j[10]])
                             flag = 1
                             break
-                elif j[5] == "" and j[1] != "" and time_bank < right_date:
+                elif j[5] == "" and j[1] != "" and left_date < time_bank < right_date:
                     if i[6] != "" and i[6] is not None and float(i[6]) == float(j[1]):
                         # number = j[9]
                         # if number in ocr_result:

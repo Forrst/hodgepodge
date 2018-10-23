@@ -85,10 +85,13 @@ def main():
             except Exception,e:
                 print e
             handle_date_formated = datetime.datetime.strptime(j[2], "%Y-%m-%d")
-            if float(i[6])==float(j[1]) and apply_date.date() ==handle_date_formated.date():
-                result.append([i[0],i[1],i[2],i[3],i[4],i[5], i[6], i[7], i[8], i[9],j[0],j[1],j[2],j[3]])
-                flag = 1
-                break
+            try:
+                if float(i[6])==float(j[1]) and apply_date.date() ==handle_date_formated.date():
+                    result.append([i[0],i[1],i[2],i[3],i[4],i[5], i[6], i[7], i[8], i[9],j[0],j[1],j[2],j[3]])
+                    flag = 1
+                    break
+            except Exception,e:
+                logger.error(e,exc_info=True)
         if flag == 0:
             error.append([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]])
     counter = 0

@@ -77,8 +77,8 @@ def getJson(bank_name, result):
         row.append(url)
         col.append("bank")
         row.append("永隆银行")
-    elif bank_name.lower() == "bankofchinahk":
-        path = "http://192.168.2.232:8991" + "/bankofchinaHK/" + ret['effectDate'].replace("/", "") + "/" + ret[
+    elif bank_name.lower() == "bank_of_china_hk":
+        path = "http://192.168.2.232:8991" + "/bankofchinaHK/" + ret['disposeDate'].replace("/", "")[8] + "/" + ret[
             'imgName']
         url = "<a href='%s'>图片网址</a>" % path
         col.append("url")
@@ -131,4 +131,4 @@ def index(deposit_id):
 # api.add_resource(Todo, '/<todo_id>')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='192.168.2.232', port=8989)
+    app.run(debug=True, host='192.168.2.119', port=8989)

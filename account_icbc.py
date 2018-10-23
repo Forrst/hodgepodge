@@ -6,6 +6,8 @@
 '''
 
 import datetime
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 from xpinyin import Pinyin
 from db.mysql import SqlUtil
 import account_boc
@@ -68,8 +70,8 @@ def main():
     for i in deposit_detail:
         if i[0] in deposit_id_found:
             continue
-        # if i[0] != 6431l:
-        #     continue
+        if i[0] != 6911l:
+            continue
         # print(i)
         # path = i[8]
         # ocr_result = ocr.getHttpContent(path)
@@ -79,8 +81,8 @@ def main():
         nameFlag = False
         flag = 0
         for j in icbc:
-            # if j[0] != '324':
-            #     continue
+            if j[0] != '420':
+                continue
             if j[1]=="":
                 continue
             try:

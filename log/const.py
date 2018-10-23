@@ -10,12 +10,12 @@ import datetime
 
 PI = 3.14
 class const:
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    LOG_DIR = os.path.join(BASE_DIR, "logs")
-    if not os.path.exists(LOG_DIR):
-        os.makedirs(LOG_DIR)  # 创建路径
-
-    LOG_FILE = datetime.datetime.now().strftime("%Y-%m-%d") + ".log"
+    # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    # LOG_DIR = os.path.join(BASE_DIR, "logs")
+    # if not os.path.exists(LOG_DIR):
+    #     os.makedirs(LOG_DIR)  # 创建路径
+    #
+    # LOG_FILE = datetime.datetime.now().strftime("%Y-%m-%d") + ".log"
 
     LOGGING = {
         "version": 1,
@@ -41,7 +41,7 @@ class const:
                 "class": "logging.handlers.RotatingFileHandler",
                 "level": "INFO",
                 "formatter": "simple",
-                "filename": os.path.join(LOG_DIR, LOG_FILE),
+                # "filename": os.path.join(LOG_DIR, LOG_FILE),
                 'mode': 'w+',
                 "maxBytes": 1024*1024*5,  # 5 MB
                 "backupCount": 20,
