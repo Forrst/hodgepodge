@@ -66,8 +66,16 @@ class BaiduOCR(object):
         options["probability"] = "true"
 
         """ 带参数调用通用文字识别（高精度版） """
-        result = client.basicAccurate(image, options)
+        # result = client.basicAccurate(image, options)
+        result = client.basicGeneral(image,options)
         words_result = result['words_result']
         for i in words_result:
             ret=ret+i['words']+"\n"
         return ret
+
+if __name__=='__main__':
+    ocr = BaiduOCR()
+    path = "/accountimage/depositcert/2018/10/31/05C36169FAA5550316.jpg"
+    ret = ocr.getHttpContent(path)
+    print ret
+    print path+"\n"+ret

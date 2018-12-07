@@ -16,13 +16,13 @@ def getUserReadTimeDesc(date):
     sql = "select user_id,sum(read_time) read_times from news_read_time where read_day >= '%s' group by user_id order by read_times desc"%date
     return getDataFrom5_105(sql)
 
-getUserReadTimeDesc
+user = getUserReadTimeDesc('2018-10-01')
 
 sql = "select * from news_read_time where news_type=19 and news_channel = '(null)' order by read_time desc"
 result = getDataFrom5_105(sql)
 
 
-user_info = getDataFrom5_105("select name,phone_number from user_account_info where user_id = '29462'")
+user_info = getDataFrom5_105("select name,phone_number from user_account_info where user_id = '68843'")
 
 #港股募资额
 # select a.IssueEndDate,b.SECUCODE,b.CHINAME,a.TotalProceeds from HK_SHAREIPO a inner join HK_SECUMAIN b on a.innercode = b.innercode where b.SECUMARKET = 72 and b.SECUCATEGORY = 51 and b.LISTEDSTATE = 1  and to_char(IssueEndDate,'YYYY-MM-DD')>'2018-01-01' order by IssueEndDate desc

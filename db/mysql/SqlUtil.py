@@ -15,6 +15,9 @@ class Mysql():
         self.confPath = "db/config/mysql.cfg"
         self.host = self.getConfig(server)
 
+    def getCon(self,db = "report"):
+        return MySQLdb.connect(self.host['host'],self.host['user'],self.host['passwd'],db,charset='utf8')
+
     def getConfig(self,server):
         '''
         :return:

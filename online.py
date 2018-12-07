@@ -42,10 +42,11 @@ result = getDataFrom5_105(sql)
 user_id = "16380"
 md5_user_id = hashlib.md5(user_id).hexdigest()[:16]
 
-con = happybase.Connection("192.168.5.151")
+import happybase
+con = happybase.Connection("192.168.2.232")
 con.open()
-table = con.table("user_tag")
-ret = table.row(md5_user_id.decode("hex"))
+table = con.table("deep_read")
+ret = table.row("c04364f803ca5285259d1799ee85960b".decode("hex"))
 for i in ret:
     print i
 con.close()

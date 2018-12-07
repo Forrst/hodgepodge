@@ -3,6 +3,7 @@
 '''
 作者:eos
 创建时间:2018-08-15 下午2:23
+腾讯ocr识别
 '''
 from qcloud_image import auth
 import ConfigParser
