@@ -11,9 +11,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     name = ["jaryn","zhou"]
-    return render_template('index.html', name=name)
+    return render_template('/home/eos/git/Mr.Jaryn/restfulapi/index.html', name=name)
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host='192.168.2.119',port=8080)
+    app.run(debug=True,host='192.168.3.168',port=8080)

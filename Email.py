@@ -19,18 +19,17 @@ _pwd = "pxbgmgnifwurbied"
 _geter = "jia.zhou@aliyun.com"
 
 msg = MIMEMultipart()
-msg['Subject'] = '测试'
+msg['Subject'] = '文件传输'
 msg['From'] = _user
 msg['To'] = _geter
 
-puretext = MIMEText('这是一封测试邮件')
-msg.attach(puretext)
+# puretext = MIMEText('这是一封测试邮件')
+# msg.attach(puretext)
 
-path = "/root/env/public/"
 # mp3part = MIMEApplication(open(path+'movie.mp4', 'rb').read())
-mp3part = MIMEApplication(open("/home/eos/CHATS12180802BKR03183.png", 'rb').read())
+mp3part = MIMEApplication(open("/root/multi_cased_L-12_H-768_A-12.zip", 'rb').read())
 
-mp3part.add_header('Content-Disposition', 'attachment', filename='movie.mp4')
+mp3part.add_header('Content-Disposition', 'attachment', filename='multi_cased_L-12_H-768_A-12.zip')
 msg.attach(mp3part)
 
 server = smtplib.SMTP_SSL("smtp.qq.com", 465)
