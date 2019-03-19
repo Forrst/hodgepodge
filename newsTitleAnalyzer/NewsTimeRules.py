@@ -4,7 +4,7 @@
 作者:jia.zhou@aliyun.com
 创建时间:2018-10-19 上午9:13
 '''
-from db.mysql.SqlUtil import Mysql
+from bank.db.mysql import Mysql
 
 mysql5_106 = Mysql("mysql5.106")
 rules = mysql5_106.execute("select * from news_title_rules_by_time",'app_data')

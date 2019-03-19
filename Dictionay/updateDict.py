@@ -4,7 +4,7 @@
 作者:jia.zhou@aliyun.com
 创建时间:2018-09-19 上午10:51
 '''
-from db.mysql.SqlUtil import Mysql
+from bank.db.mysql import Mysql
 import pandas as pd
 
 db5_106 = Mysql("mysql5.106")

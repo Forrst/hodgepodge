@@ -24,7 +24,7 @@ def getDetail(deposite_id):
     if deposite_id == "favicon.ico":
         return send_from_directory(os.path.join(app.root_path, 'static'),
                                    'favicon.ico', mimetype='image/vnd.microsoft.icon')
-    sql = Mysql.Mysql("mysql2.231")
+    sql = Mysql.Mysql("mysql2_231.231")
     ret = sql.execute("select bank_id,bank_name from in_account where deposit_id = %s limit 1" % deposite_id, "bank")
     if len(ret) == 0:
         return "Deposit_id:%s does not exist!" % deposite_id
@@ -47,7 +47,7 @@ def getJson(bank_name, result):
     col = []
     row = []
     path = ""
-    sql = Mysql.Mysql("mysql2.231")
+    sql = Mysql.Mysql("mysql2_231.231")
     columns = sql.getDBColumns("bank", bank_name)
     column = columns[0]
     columnlist = column[0].split(",")
@@ -78,7 +78,7 @@ def getJson(bank_name, result):
         col.append("bank")
         row.append("永隆银行")
     elif bank_name.lower() == "bank_of_china_hk":
-        path = "http://192.168.2.232:8991" + "/bankofchinaHK/" + ret['disposeDate'].replace("/", "")[8] + "/" + ret[
+        path = "http://192.168.2.232:8991" + "/bankofchinaHK/" + ret['disposeDate'].replace("/", "")[:8] + "/" + ret[
             'imgName']
         url = "<a href='%s'>图片网址</a>" % path
         col.append("url")
@@ -131,4 +131,4 @@ def index(deposit_id):
 # api.add_resource(Todo, '/<todo_id>')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='192.168.2.119', port=8989)
+    app.run(debug=True, host='192.168.2.232', port=8989)

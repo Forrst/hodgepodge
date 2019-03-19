@@ -34,7 +34,7 @@ plt.show()
 print "y = ax+b :"+"a="+str(m)+",b="+str(n)
 
 import MySQLdb
-con = MySQLdb.connect(host='192.168.2.231',user='root',passwd='zunjiazichan123',db='app_data',charset='utf8')
+con = MySQLdb.connect(host='sg2plcpnl0222.prod.sin2.secureserver.net',user='bq43jgalsvjq',passwd='zunjiazichan123',db='app_data',charset='utf8')
 cursor = con.cursor()
 sql = "select * from mazhan_data"
 cursor.execute(sql)
@@ -110,3 +110,28 @@ for i in ret:
     except Exception,e:
         print e
 
+import MySQLdb
+con = MySQLdb.connect(host='sg2plcpnl0222.prod.sin2.secureserver.net',user='bq43jgalsvjq',passwd='Deying123#',db='deyingsteel',charset='utf8')
+cursor = con.cursor()
+sql = "show databases"
+cursor.execute(sql)
+ret = cursor.fetchall()
+cursor.close()
+con.close()
+
+import MySQLdb
+con = MySQLdb.connect(host='43.255.154.34',user='deyingsteel',passwd='Deying123',db='deyingsteel',charset='utf8')
+cursor = con.cursor()
+sql = '''
+CREATE TABLE IF NOT EXISTS `company_founder` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `company` varchar(64) NOT NULL DEFAULT '' COMMENT '公司名',
+  `founder` varchar(64) NOT NULL DEFAULT '' COMMENT '创始人' ,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='新闻时间分类表' AUTO_INCREMENT=0 ;
+'''
+cursor.execute(sql)
+ret = cursor.fetchall()
+cursor.close()
+con.commit()
+con.close()

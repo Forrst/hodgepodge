@@ -5,7 +5,7 @@
 创建时间:2018-08-14 下午3:09
 '''
 
-from log.const import const,PI
+from bank.log.const import const,PI
 import logging
 logging.config.dictConfig(const.LOGGING)
 logger = logging.getLogger('area.py')

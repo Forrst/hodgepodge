@@ -52,6 +52,13 @@ def texts(news):
                 yield t
     print u'原始文章总数%s,最终计算了%s篇文章'%(len(news),len(texts_set))
 
+text = '''
+
+'''
+re.split(u'[^\u4e00-\u9fa50-9a-zA-Z|%]+', text)
+
+
+
 if __name__=="__main__":
     # con = happybase.Connection("192.168.5.151")
     # con.open()

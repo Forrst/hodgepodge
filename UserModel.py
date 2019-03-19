@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- coding:utf-8 -*- 
+# -*- coding:utf-8 -*-
 """
 作者:eos
 创建时间:2018-08-06 上午11:46
@@ -11,7 +11,7 @@ from db.mysql import SqlUtil
 from log.const import const
 import pandas as pd
 logging.config.dictConfig(const.LOGGING)
-logger = logging.getLogger(__file__)
+# logger = logging.getLogger(__file__)
 '''
 #自选5.105
 #获取dt=2018-07-31的用户阅读时长
@@ -84,6 +84,7 @@ for i in ret:
         print i,ret[i]
 # con.close()
 '''
+datetime.datetime.now()
 sql = "select id,read_day,read_hour,user_id,news_type,news_id,news_channel,start_time,stop_time,read_time from news_read_time where dt>='2018-10-01' order by user_id desc,read_day desc,read_hour desc"
 index_col = "id,read_day,read_hour,user_id,news_type,news_id,news_channel,start_time,stop_time,read_time".split(",")
 mysql = SqlUtil.Mysql("mysql5.105")
@@ -141,7 +142,7 @@ for line in train_data.itertuples():
 
 from sklearn.metrics.pairwise import pairwise_distances
 user_similarity = pairwise_distances(train_data_matrix, metric='cosine')
-item_similarity = pairwise_distances(train_data_matrix.T, metric='cosine')
+# item_similarity = pairwise_distances(train_data_matrix.T, metric='cosine')
 
 def predict(ratings, similarity, type='user'):
     if type == 'user':
@@ -156,10 +157,17 @@ def predict(ratings, similarity, type='user'):
 
 # item_prediction = predict(train_data_matrix, item_similarity, type='item')
 user_prediction = predict(train_data_matrix, user_similarity, type='user')
-print(user_prediction)
-
+# print(user_prediction)
+import happybase
+def get_title(x):
+    con = happybase.Connection("192.168.5.156")
+    con.open()
+    table = con.table("news")
+    ret = table.row(x.decode("hex"))
+    con.close()
+    return ret['info:title']
 #推荐的新闻
-userid = '768'
+userid = '118696'
 u_index = userid_index[userid]
 
 ret = []
@@ -172,21 +180,14 @@ df_['rowkey'] = df_.apply(lambda x:index_item[x[0]],axis=1)
 
 df_fil = df_.head(100)
 df_fil['title'] = df_fil.apply(lambda x:get_title(x['rowkey']),axis=1)
-df_fil.to_csv("/home/eos/df_fil.csv",encoding="utf-8")
-import happybase
-def get_title(x):
-    con = happybase.Connection("192.168.5.156")
-    con.open()
-    table = con.table("news")
-    ret = table.row(x.decode("hex"))
-    con.close()
-    return ret['info:title']
+df_fil.to_csv("/home/eos/df_fil_%s.csv"%str(userid),encoding="utf-8")
+
 
 #查看他最近的阅读
-for j in [i for i in train_data_matrix[userid_index['16380']] if i != 0]:
-    rowkey = index_item[j]
-    title = get_title(rowkey)
-    print rowkey,"\t",title
+# for j in [i for i in train_data_matrix[userid_index['16380']] if i != 0]:
+#     rowkey = index_item[j]
+#     title = get_title(rowkey)
+#     print rowkey,"\t",title
 
 #查找最相近的用户
 ret = []
@@ -198,10 +199,10 @@ user_df_ = user_df.sort_values('score',ascending=True)
 
 user_df_fil = user_df_.head(100)
 user_df_fil['user_id'] = user_df_fil.apply(lambda x:index_userid[x[0]],axis=1)
-user_df_fil.to_csv("/home/eos/user_df_fil.csv",encoding="utf-8")
+user_df_fil.to_csv("/home/eos/user_df_fil_%s.csv"%str(userid),encoding="utf-8")
 
 #查看共同点击的新闻
-user_index = 818
+user_index = 4144
 ret = []
 for i,j in enumerate(train_data_matrix[u_index]):
     if train_data_matrix[user_index][i] >0 and j > 0:

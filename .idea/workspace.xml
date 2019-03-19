@@ -2,67 +2,150 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b608251-c558-4413-93ed-e7d97a9741b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/NewWordDiscover/HANLP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/als_recommender.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/account.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/account.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/accuracy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/baiduaip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/bank.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/bocTransferTime.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/boc_deposite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/boc_withdraw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/db/config/mysql.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/db/config/ocr.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/db/mysql/SqlUtil.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/db/mysql/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/dbs_deposite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/dbs_deposite_syn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/icbc_deposite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/log/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/log/const.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/restfulapi/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/restfulapi/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/restfulapi/hkipo.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/restfulapi/hkipo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/restfulapi/hkipo.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/restfulapi/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/wlb_deposite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datastructure/alg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hbase_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nwd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dictionay/updateDict.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionay/updateDict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWordDiscover/HANLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewWordDiscover/HANLP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flasklearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/flasklearn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/log/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/websitecate.py" beforeDir="false" afterPath="$PROJECT_DIR$/log/websitecate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newWordDiscover.py" beforeDir="false" afterPath="$PROJECT_DIR$/newWordDiscover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsTitleAnalyzer/NewsTimeRules.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsTitleAnalyzer/NewsTimeRules.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restfulapi/hkipo.py" beforeDir="false" afterPath="$PROJECT_DIR$/restfulapi/hkipo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/area.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Mr_Jaryn$als_recommender.coverage" NAME="als_recommender Coverage Results" MODIFIED="1552986622299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mr_Jaryn$als_rec.coverage" NAME="als_rec Coverage Results" MODIFIED="1552632728773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/下载" />
+    <SUITE FILE_PATH="coverage/Mr_Jaryn$nwd.coverage" NAME="nwd Coverage Results" MODIFIED="1550131880476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mr_Jaryn$hbase_test.coverage" NAME="hbase_test Coverage Results" MODIFIED="1548730224022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mr_Jaryn$HANLP.coverage" NAME="HANLP Coverage Results" MODIFIED="1548397043134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NewWordDiscover" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserModel.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/UserModel.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/als_recommender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newWordDiscover.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1338">
-              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
+            <state relative-caret-position="40">
+              <caret line="166" column="13" lean-forward="true" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
               <folding>
-                <element signature="e#119#128#0" expanded="true" />
+                <element signature="e#96#111#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flasklearn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flasklearn.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bank/db/mysql/SqlUtil.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bank/boc_deposite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="-1415">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/mazhan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="406">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/connections.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="317" selection-start-line="317" selection-end-line="317" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1007">
+              <caret line="57" column="47" selection-start-line="57" selection-end-line="57" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Email.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nwd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="988">
+              <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+              <folding>
+                <element signature="e#97#106#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/下载/user_cf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="573">
+              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -79,26 +162,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>strf</find>
-      <find>tochar</find>
-      <find>favicon.ico</find>
-      <find>join</find>
-      <find>logger</find>
-      <find>left_date</find>
-      <find>5.1</find>
-      <find>5.151</find>
-      <find>read</find>
       <find>title_classfication_with_weight</find>
-      <find>executemany</find>
       <find>__generalBasicUrl</find>
       <find>pandas.re</find>
       <find>pd.DataFrame.from_sql</find>
       <find>bank</find>
       <find>5.15</find>
       <find>logger.er</find>
-      <find>hanlp</find>
       <find>NewsSelector</find>
       <find>parent</find>
+      <find>Mysqld</find>
+      <find>2.232</find>
+      <find>mysql</find>
+      <find>from_dict</find>
+      <find>happybase</find>
+      <find>words_dict</find>
+      <find>executema</find>
+      <find>beau</find>
+      <find>executemany</find>
+      <find>%</find>
+      <find>hanlp</find>
+      <find>yyyy-mm-d</find>
+      <find>datetime.str</find>
+      <find>read_sql</find>
+      <find>skl</find>
+      <find>gensim</find>
+      <find>als</find>
+      <find>new_read_time</find>
+      <find>Mysql</find>
+      <find>MySQLdb</find>
+      <find>executem</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -110,16 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fdaga.py" />
-        <option value="$PROJECT_DIR$/DDASFSD.py" />
-        <option value="$PROJECT_DIR$/old/websitecate.py" />
-        <option value="$PROJECT_DIR$/old/pythonscript/Apriori.py" />
-        <option value="$PROJECT_DIR$/old/pdf2htm.py" />
-        <option value="$PROJECT_DIR$/log/websitecate.py" />
-        <option value="$PROJECT_DIR$/db/config/ocr.cfg" />
-        <option value="$PROJECT_DIR$/account.py" />
-        <option value="$PROJECT_DIR$/wlb.py" />
-        <option value="$PROJECT_DIR$/IpoData.py" />
         <option value="$PROJECT_DIR$/html/test.html" />
         <option value="$PROJECT_DIR$/html/demo.html" />
         <option value="$PROJECT_DIR$/html/dota2.html" />
@@ -155,12 +238,22 @@
         <option value="$PROJECT_DIR$/Email.py" />
         <option value="$PROJECT_DIR$/NewWordDiscover/hanlp.py" />
         <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/pyhanlp/server.py" />
-        <option value="$PROJECT_DIR$/NewWordDiscover/HANLP.py" />
         <option value="$PROJECT_DIR$/NewWordDiscover/WordInfo.py" />
-        <option value="$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py" />
         <option value="$PROJECT_DIR$/flasklearn.py" />
         <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py" />
+        <option value="$PROJECT_DIR$/log/temp.py" />
+        <option value="$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py" />
+        <option value="$PROJECT_DIR$/NewWordDiscover/HANLP.py" />
+        <option value="$PROJECT_DIR$/log/downloadpdf.py" />
+        <option value="$PROJECT_DIR$/newWordDiscover.py" />
+        <option value="$PROJECT_DIR$/log/websitecate.py" />
+        <option value="$PROJECT_DIR$/datastructure/alg.py" />
+        <option value="$PROJECT_DIR$/hbase_test.py" />
         <option value="$PROJECT_DIR$/UserModel.py" />
+        <option value="$PROJECT_DIR$/nwd.py" />
+        <option value="$USER_HOME$/下载/als_rec.py" />
+        <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py" />
+        <option value="$PROJECT_DIR$/als_recommender.py" />
       </list>
     </option>
   </component>
@@ -179,8 +272,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,16 +279,12 @@
               <item name="Mr.Jaryn" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mr.Jaryn" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Mr.Jaryn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mr.Jaryn" type="462c0819:PsiDirectoryNode" />
-              <item name="Dictionay" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,26 +292,29 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552987602547" />
+    <property name="last_opened_file_path" value="$USER_HOME$/下载/als_rec.py" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2706596" />
-    <property name="settings.editor.selected.configurable" value="nele.options" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/NewWordDiscover" />
-      <recent name="$PROJECT_DIR$/log" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static/img" />
-      <recent name="$PROJECT_DIR$/restfulapi" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/log" />
       <recent name="$PROJECT_DIR$/restfulapi" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bank" />
+      <recent name="$PROJECT_DIR$/NewWordDiscover" />
+      <recent name="$PROJECT_DIR$/log" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,25 +329,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.UserModel">
+  <component name="RunManager" selected="Python.als_recommender">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HANLP" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mr.Jaryn" />
@@ -271,13 +355,39 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NewWordDiscover/HANLP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration name="UserModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="als_rec" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Mr.Jaryn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/下载" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/下载/als_rec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="als_recommender" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mr.Jaryn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -289,13 +399,17 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UserModel.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/als_recommender.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration name="flasklearn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hbase_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mr.Jaryn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -307,31 +421,17 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flasklearn.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hbase_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Mr.Jaryn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/pyhanlp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/pyhanlp/server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="nwd" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mr.Jaryn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -343,48 +443,31 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nwd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <list>
-      <item itemvalue="Python.UserModel" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.HANLP" />
-      <item itemvalue="Python.server" />
-      <item itemvalue="Python.flasklearn" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.UserModel" />
-        <item itemvalue="Python.flasklearn" />
+        <item itemvalue="Python.als_recommender" />
+        <item itemvalue="Python.als_rec" />
+        <item itemvalue="Python.nwd" />
+        <item itemvalue="Python.hbase_test" />
         <item itemvalue="Python.HANLP" />
-        <item itemvalue="Python.server" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -398,771 +481,468 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533518795628</updated>
+      <workItem from="1547627987789" duration="543000" />
+      <workItem from="1547628553251" duration="184000" />
+      <workItem from="1547690455074" duration="611000" />
+      <workItem from="1547693320321" duration="1899000" />
+      <workItem from="1547771961345" duration="663000" />
+      <workItem from="1547777553318" duration="12000" />
+      <workItem from="1547781566472" duration="2846000" />
+      <workItem from="1548121942631" duration="3768000" />
+      <workItem from="1548207680498" duration="642000" />
+      <workItem from="1548291547878" duration="3760000" />
+      <workItem from="1548378258160" duration="7417000" />
+      <workItem from="1548730142032" duration="1324000" />
+      <workItem from="1548986782582" duration="4261000" />
+      <workItem from="1549934910889" duration="2270000" />
+      <workItem from="1550019543261" duration="1228000" />
+      <workItem from="1550105437653" duration="23567000" />
+      <workItem from="1550627415917" duration="13209000" />
+      <workItem from="1550797724427" duration="1377000" />
+      <workItem from="1550833880205" duration="220000" />
+      <workItem from="1551055833589" duration="3083000" />
+      <workItem from="1551175346213" duration="1927000" />
+      <workItem from="1551248053033" duration="3229000" />
+      <workItem from="1551424414316" duration="605000" />
+      <workItem from="1551661070330" duration="1540000" />
+      <workItem from="1551833742355" duration="7301000" />
+      <workItem from="1551920292164" duration="2302000" />
+      <workItem from="1552011206172" duration="3543000" />
+      <workItem from="1552353586892" duration="10390000" />
+      <workItem from="1552443786799" duration="5307000" />
+      <workItem from="1552474410904" duration="629000" />
+      <workItem from="1552524199301" duration="1232000" />
+      <workItem from="1552610468938" duration="17838000" />
+      <workItem from="1552870426558" duration="24307000" />
+      <workItem from="1552958176084" duration="5415000" />
+      <workItem from="1552965677038" duration="92000" />
+      <workItem from="1552965806941" duration="14682000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="173223000" />
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-7" width="1920" height="1024" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3295838" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5049288" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32921347" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7217963" visible="true" weight="0.17239584" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7217963" visible="true" weight="0.2534685" />
       <window_info id="Structure" order="1" sideWeight="0.27820373" side_tool="true" weight="0.17239584" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39539978" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.46868008" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.80536914" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.54362416" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.46906638" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32921347" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="SciView" order="10" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>69</line>
+          <url>file://$PROJECT_DIR$/NewWordDiscover/HANLP.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/NewWordDiscover/HANLP.py</url>
+          <line>74</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>70</line>
+          <url>file://$PROJECT_DIR$/hbase_test.py</url>
+          <line>15</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/area.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/nwd.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/qcloud.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/nwd.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/qcloud.py</url>
-          <line>25</line>
+          <url>file://$USER_HOME$/下载/als_rec.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/下载/als_rec.py</url>
+          <line>130</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/als_recommender.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>254</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>241</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>316</line>
-          <option name="timeStamp" value="208" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>245</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/area.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="238" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>248</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/area.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="244" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>233</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/area.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="245" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>240</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/restfulapi/hkipo.py</url>
-          <line>73</line>
-          <option name="timeStamp" value="249" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>318</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/restfulapi/hkipo.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="250" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>317</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/restfulapi/hkipo.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="251" />
+          <url>file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydevd_bundle/pydevd_comm.py</url>
+          <line>392</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/restfulapi/hkipo.py</url>
-          <line>83</line>
-          <option name="timeStamp" value="253" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/encodings/utf_8.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_wlb.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="254" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>262</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_wlb.py</url>
-          <line>93</line>
-          <option name="timeStamp" value="255" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>281</line>
-          <option name="timeStamp" value="256" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/restfulapi/hkipo.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="257" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>279</line>
-          <option name="timeStamp" value="260" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>280</line>
-          <option name="timeStamp" value="261" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>203</line>
-          <option name="timeStamp" value="264" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>200</line>
-          <option name="timeStamp" value="265" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>198</line>
-          <option name="timeStamp" value="266" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_icbc.py</url>
-          <line>112</line>
-          <option name="timeStamp" value="268" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_icbc.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="270" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_icbc.py</url>
-          <line>113</line>
-          <option name="timeStamp" value="271" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_icbc.py</url>
-          <line>82</line>
-          <option name="timeStamp" value="272" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_icbc.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="274" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="275" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>37</line>
-          <option name="timeStamp" value="276" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_icbc.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="278" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/log/hkbills_synchronization.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="279" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account_boc.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="289" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="293" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py</url>
-          <line>72</line>
-          <option name="timeStamp" value="294" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py</url>
-          <line>73</line>
-          <option name="timeStamp" value="295" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py</url>
-          <line>60</line>
-          <option name="timeStamp" value="296" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="297" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/baiduaip.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="299" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/baiduaip.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="300" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Email.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="302" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Email.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="303" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Email.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="304" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Email.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="307" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/smtplib.py</url>
-          <line>750</line>
-          <option name="timeStamp" value="310" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/smtplib.py</url>
-          <line>746</line>
-          <option name="timeStamp" value="311" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="313" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="321" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NewWordDiscover/HANLP.py</url>
-          <line>71</line>
-          <option name="timeStamp" value="323" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NewWordDiscover/HANLP.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="325" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NewWordDiscover/HANLP.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="326" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NewWordDiscover/HANLP.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="327" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="328" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="329" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/flasklearn.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="330" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/jinja2/environment.py</url>
-          <line>868</line>
-          <option name="timeStamp" value="333" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py</url>
-          <line>577</line>
-          <option name="timeStamp" value="338" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py</url>
-          <line>578</line>
-          <option name="timeStamp" value="339" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>143</line>
-          <option name="timeStamp" value="347" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py</url>
-          <line>918</line>
-          <option name="timeStamp" value="348" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>150</line>
-          <option name="timeStamp" value="353" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>151</line>
-          <option name="timeStamp" value="354" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="357" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="358" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py</url>
-          <line>124</line>
-          <option name="timeStamp" value="359" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py</url>
-          <line>113</line>
-          <option name="timeStamp" value="360" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>158</line>
-          <option name="timeStamp" value="361" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>148</line>
-          <option name="timeStamp" value="362" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>204</line>
-          <option name="timeStamp" value="363" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>205</line>
-          <option name="timeStamp" value="364" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>157</line>
-          <option name="timeStamp" value="365" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>142</line>
-          <option name="timeStamp" value="366" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UserModel.py</url>
-          <line>170</line>
-          <option name="timeStamp" value="367" />
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
+          <line>261</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-      <option name="time" value="368" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account_icbc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account_boc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="61" column="168" selection-start-line="61" selection-start-column="154" selection-end-line="61" selection-end-column="168" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/anaconda2/lib/python2.7/site-packages/baidu_aip-2.2.3.0-py2.7.egg!/aip/ocr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="72" column="20" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/updatehkbillsrowkey.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/six.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3458">
-          <caret line="188" column="14" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/mime/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/smtplib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="751" column="18" selection-start-line="751" selection-start-column="18" selection-end-line="751" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/io/sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5966">
-          <caret line="333" column="32" selection-start-line="333" selection-start-column="23" selection-end-line="333" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/config/mysql.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/const.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2774">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IpoData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/area.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-          <folding>
-            <element signature="e#96#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/websitecate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/mazhan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/temp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/downloadpdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newsTitleAnalyzer/NewsTimeRules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dictionay/updateDict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/sets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7258">
-          <caret line="382" column="4" selection-start-line="382" selection-start-column="4" selection-end-line="382" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/word2vec/tests/test_word2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="10" selection-start-line="12" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/hkbills_synchronization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/mysql/SqlUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWordDiscover/hs_err_pid11587.log" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pyhanlp/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWordDiscover/HANLP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newWordDiscover.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baiduaip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="73" selection-end-column="18" />
-          <folding>
-            <element signature="e#81#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="51" />
-          <folding>
-            <element signature="e#96#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restfulapi/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/jinja2/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="868" selection-start-line="868" selection-end-line="868" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1914">
-          <caret line="1988" column="17" selection-start-line="1988" selection-start-column="17" selection-end-line="1988" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/werkzeug/debug/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="292" selection-start-line="292" selection-end-line="292" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="4064" column="8" selection-start-line="4064" selection-start-column="8" selection-end-line="4064" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="1157" column="46" selection-start-line="1157" selection-start-column="40" selection-end-line="1157" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/preprocessing/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1499">
-          <caret line="1347" column="16" selection-start-line="1347" selection-start-column="16" selection-end-line="1347" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qcloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/flask/templating.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="120" column="4" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="1539">
+          <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flasklearn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="247">
+          <caret line="13" column="85" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.IdeaIC2018.1/system/python_stubs/348993582/sys.py">
+    <entry file="file://$PROJECT_DIR$/log/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2432">
+          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/websitecate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newWordDiscover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="57" selection-start-line="57" selection-end-line="63" />
+          <folding>
+            <element signature="e#97#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datastructure/alg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/jieba/posseg/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5016">
+          <caret line="271" column="4" selection-start-line="271" selection-start-column="4" selection-end-line="271" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/config/mysql.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/hkbills_synchronization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/downloadpdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+          <folding>
+            <element signature="e#41#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWordDiscover/HANLP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word2vec.model">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/numpy/__init__.py">
+    <entry file="file://$PROJECT_DIR$/hbase_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="122" column="5" lean-forward="true" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+        <state relative-caret-position="418">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baiduaip.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_wlb.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qcloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/encodings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102182">
+          <caret line="5431" column="12" selection-start-line="5431" selection-start-column="12" selection-end-line="5431" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10754">
+          <caret line="653" column="8" selection-start-line="653" selection-start-column="8" selection-end-line="653" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_icbc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/下载/als_rec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2337">
+          <caret line="129" selection-start-line="129" selection-end-line="136" selection-end-column="25" />
           <folding>
-            <element signature="e#3147#3211#0" expanded="true" />
+            <element signature="e#97#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        <state relative-caret-position="19">
+          <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1338">
-          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
-          <folding>
-            <element signature="e#119#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="22363">
+          <caret line="1195" selection-start-line="1195" selection-end-line="1195" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UserModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
+        <state relative-caret-position="2223">
+          <caret line="117" selection-start-line="117" selection-end-line="119" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/2/typing.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="409" column="46" selection-start-line="409" selection-start-column="46" selection-end-line="409" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/encodings/utf_8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydevd_bundle/pydevd_comm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="964" selection-start-line="964" selection-end-line="964" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/mysql/SqlUtil.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="57" column="47" selection-start-line="57" selection-end-line="57" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Email.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nwd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+          <folding>
+            <element signature="e#97#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="317" selection-start-line="317" selection-end-line="317" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/下载/user_cf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/mazhan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/db/mysql/SqlUtil.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/boc_deposite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1415">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/als_recommender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="166" column="13" lean-forward="true" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
+          <folding>
+            <element signature="e#96#111#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,7 +963,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Python</last-edited>
+          <last-edited>Python (Mr.Jaryn)|Python</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1195,7 +975,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Python 2.7 interpreter library</last-edited>
+          <last-edited>scala-sdk-2.12.61</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

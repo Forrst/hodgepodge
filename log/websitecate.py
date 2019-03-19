@@ -21,7 +21,35 @@ cursor.close()
 con.commit()
 con.close()
 
-
+a = set()
+a.add(768)
+a.add(6502)
+a.add(50942)
+a.add(1364)
+a.add(251521)
+import MySQLdb
+con = MySQLdb.connect(host='192.168.5.105',user='root',passwd='zunjiazichan123',db='report',charset='utf8')
+cursor = con.cursor()
+sql = "insert into user_cf_all (from_user_id,to_user_id,distance) values (6502,768,0.0001)"
+cursor.execute(sql)
+sql = "insert into user_cf_all (from_user_id,to_user_id,distance) values (768,6502,0.0001)"
+cursor.execute(sql)
+con.commit()
+con.close()
+counter = 0
+for to_user_id in d:
+    print counter
+    counter+=1
+    sql = "select from_user_id from user_cf_all where to_user_id = %s order by distance asc limit 500"%to_user_id
+    cursor.execute(sql)
+    ret = cursor.fetchall()
+    b = set()
+    for i in ret:
+        b.add(i[0])
+    if len(set(ret) & a) != 0:
+        print to_user_id,set(ret) & a
+cursor.close()
+con.close()
 
 
 con = MySQLdb.connect(host='192.168.2.231',user='root',passwd='zunjiazichan123',db='app_data',charset='utf8')
@@ -110,4 +138,22 @@ con.open()
 table = con.table("news")
 data = table.row("d0df7ffffe9ade954b59f830053f0000".decode("hex"))
 
+import MySQLdb
+con = MySQLdb.connect(host='',user='',passwd='',db='report',charset='utf8')
+cursor = con.cursor()
+sql = "update user_ab_test set user_type = 'B' where user_id in %s"%b
+sql = sql.replace("[","(").replace("]",")")
+cursor.execute(sql)
+ret = cursor.fetchall()
+cursor.close()
+con.commit()
+con.close()
 
+import happybase
+con = happybase.Connection("192.168.5.156")
+con.open()
+table = con.table("news")
+
+r= table.row('a2897ffffe96b96cb6cc9b7f615e0000'.decode("hex"))
+for i in r:
+    print i,r[i]

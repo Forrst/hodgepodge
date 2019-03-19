@@ -16,21 +16,110 @@ import numpy as np
 
 # one = table.row("58f17ffffe9a2a2133c2ea57401b0000".decode("hex"))
 
-def texts(news):
-    texts_set = set()
-    for text in news:
-        if not isinstance(news_list[0],unicode):
-            text = text.decode("utf-8")
-        if md5(text.encode('utf-8')) in texts_set:
-            continue
-        else:
-            texts_set.add(md5(text.encode('utf-8')))
-        for t in re.split(u'[^\u4e00-\u9fa50-9a-zA-Z]+', text):
-            if t:
-                yield t
-    print u'原始文章总数%s,最终计算了%s篇文章'%(len(news),len(texts_set))
+# def texts(news):
+#     texts_set = set()
+#     for text in news:
+#         if not isinstance(news_list[0],unicode):
+#             text = text.decode("utf-8")
+#         if md5(text.encode('utf-8')) in texts_set:
+#             continue
+#         else:
+#             texts_set.add(md5(text.encode('utf-8')))
+#         for t in re.split(u'[^\u4e00-\u9fa50-9a-zA-Z]+', text):
+#             if t:
+#                 yield t
+#     print u'原始文章总数%s,最终计算了%s篇文章'%(len(news),len(texts_set))
+
+
+import re
+import jieba
+import pandas as pd
+def split_context(context):
+    text = context
+    if not isinstance(context,unicode):
+        text = context.decode("utf-8")
+    sentences = re.split(u'[^\u4e00-\u9fa50-9a-zA-Z]+', text)
+    return sentences
+gram_max_length = 4
+
+
+class term:
+    def __init__(self):
+        self.word_name = ""
+        self.word_count = 0
+        self.word_right = {}
+        self.word_left = {}
+    def toString(self):
+        word_right_str = ""
+        for i in self.word_right:
+            word_right_str+="{}:{}".format(i,self.word_right[i])+" "
+        return "word_name:{}\tword_count:{}\tword_right:{}".format(self.word_name,self.word_count,word_right_str)
+
+import happybase
+con = happybase.Connection("192.168.5.156")
+con.open()
+table = con.table("news")
+
+r= table.row('a2897ffffe9715349e38677d0a0e0000'.decode("hex"))
+
+title = r['info:title']
+content = r['info:content']
+context = title+"\t"+content
+
+sentences = split_context(context)
+term_dict = {}
+
+for sentence in sentences:
+    if sentence.strip() == "":
+        continue
+    words = jieba.cut(sentence)
+    words = [word for word in words]
+    if words[0] == sentence:
+        continue
+    for i in xrange(len(words)):
+        word_name = words[i].encode("utf8")
+        tm = term_dict[word_name] if word_name in term_dict else term()
+        tm.word_name = word_name
+        tm.word_count = term_dict[tm.word_name].word_count+1 if tm.word_name in term_dict else 1
+        term_dict[tm.word_name] = tm
+        for j in xrange(min(len(words)-i-1,gram_max_length-1)):
+            new_word = "".join(words[i+1:i+j+2]).encode("utf8")
+            right_dict = term_dict[word_name].word_right if word_name in term_dict else {}
+            right_dict[new_word] = right_dict[new_word]+1 if new_word in right_dict else 1
+            term_dict[tm.word_name].word_right = right_dict
+
+            left_dict = term_dict[word_name].word_left if word_name in term_dict else {}
+            left_dict[new_word] = left_dict[new_word]+1 if new_word in left_dict else 1
+            term_dict[tm.word_name].word_left = left_dict
+
+
+
+
+ret = []
+for i in term_dict.keys():
+    for j in term_dict[i].word_right:
+        ret.append([i,term_dict[i].word_count,i+j,term_dict[i].word_right[j]])
+
+df = pd.DataFrame(ret,columns=['word_base','base_count','new_word','new_word_count'])
+df['rate'] = df['base_count']*df['new_word_count']*df['new_word_count']*1.0/(max(df['base_count'])*max(df['new_word_count'])*df['base_count'])
+dfs = df.sort_values(['rate'],ascending=False)
+
+dfs[dfs['base_count']>5][dfs['new_word_count']>5].head(5)
+
+
+df = pd.DataFrame.from_dict(words_dict,orient='index')
+df.columns = ['count']
+df.sort_values('count',ascending=False)
+
+
+
 
 if __name__=="__main__":
+
+
+
+
+
     # con = happybase.Connection("192.168.5.151")
     # con.open()
     # table = con.table("news")

@@ -7,10 +7,10 @@
 import os
 import re
 os.chdir('../')
-from db.mysql.SqlUtil import Mysql
+from bank.db.mysql import Mysql
 import json
 import pandas as pd
-import datetime
+
 db5_106 = Mysql("mysql5.106")
 news = db5_106.execute("select news_time,junior_channel,rowkey,title,other_info,weight from news where info_type = 1 and news_time>='2018-08-01 00:00:00' and news_time< '2018-10-01 00:00:00' and weight>=1 order by news_time desc","app_data")
 

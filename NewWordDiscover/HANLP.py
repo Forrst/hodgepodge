@@ -63,8 +63,13 @@ content = '''
 本文作者安卓，来源于第一财经，原标题《中信资本踩雷*ST凯迪，多只私募产品风险金额或超16亿元》
 '''
 context = title+"\t"+content
+import re
+sentences = re.split(u'[^\u4e00-\u9fa50-9a-zA-Z|%]+', context.decode("utf-8"))
+sentences = [i for i in sentences if i.strip() !=""]
+
 import jieba
-seg = jieba.cut(context)
+sentence_words = ["|".join(jieba.cut(i)) for i in sentences]
+seg = jieba.cut(sentences)
 print " ".join(seg)
 print hanlp.extractKeyword(context,20)
 phrases = hanlp.extractPhrase(context,5)
