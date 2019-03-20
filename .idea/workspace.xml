@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3b608251-c558-4413-93ed-e7d97a9741b5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/als_recommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/als_recommender.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/als_recommender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+            <state relative-caret-position="342">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#96#111#0" expanded="true" />
               </folding>
@@ -32,19 +33,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserModel.py">
+        <entry file="file://$PROJECT_DIR$/bank/log/const.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="85">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#80#89#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bank/log/const.py">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/logging/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="22" selection-start-line="22" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="435">
+              <caret line="1693" column="34" selection-start-line="1693" selection-start-column="28" selection-end-line="1693" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -58,7 +62,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bank/db/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bank/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -75,21 +84,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bank/boc_deposite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="455">
+              <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Email.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nwd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
+            <state relative-caret-position="1026">
               <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
               <folding>
                 <element signature="e#97#106#0" expanded="true" />
@@ -208,9 +212,9 @@
         <option value="$PROJECT_DIR$/nwd.py" />
         <option value="$USER_HOME$/下载/als_rec.py" />
         <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py" />
-        <option value="$PROJECT_DIR$/als_recommender.py" />
         <option value="$PROJECT_DIR$/bank/db/config/ocr.cfg" />
         <option value="$PROJECT_DIR$/bank/.gitignore" />
+        <option value="$PROJECT_DIR$/als_recommender.py" />
       </list>
     </option>
   </component>
@@ -228,8 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,23 +244,12 @@
               <item name="Mr.Jaryn" type="462c0819:PsiDirectoryNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Mr.Jaryn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mr.Jaryn" type="462c0819:PsiDirectoryNode" />
-              <item name="bank" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mr.Jaryn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mr.Jaryn" type="462c0819:PsiDirectoryNode" />
-              <item name="bank" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Course" />
     </panes>
   </component>
@@ -492,17 +483,19 @@
       <workItem from="1552958176084" duration="5415000" />
       <workItem from="1552965677038" duration="92000" />
       <workItem from="1552965806941" duration="16537000" />
-      <workItem from="1553044184646" duration="3626000" />
+      <workItem from="1553044184646" duration="3974000" />
+      <workItem from="1553051105021" duration="250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178704000" />
+    <option name="totallyTimeSpent" value="179302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-7" width="1920" height="1024" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7217963" visible="true" weight="0.2561366" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7217963" visible="true" weight="0.2588047" />
       <window_info id="Structure" order="1" sideWeight="0.27820373" side_tool="true" weight="0.17239584" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -577,7 +570,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/als_recommender.py</url>
-          <line>214</line>
+          <line>186</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -881,9 +874,33 @@
     <entry file="file://$PROJECT_DIR$/Email.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/UserModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/db/config/ocr.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/db/config/mysql.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/nwd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
+        <state relative-caret-position="1026">
           <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
           <folding>
             <element signature="e#97#106#0" expanded="true" />
@@ -898,51 +915,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bank/boc_deposite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/bank/db/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bank/log/const.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" selection-start-line="22" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#80#89#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserModel.py">
+    <entry file="file://$PROJECT_DIR$/bank/boc_deposite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state relative-caret-position="455">
+          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bank/db/config/mysql.cfg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank/db/config/ocr.cfg">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="435">
+          <caret line="1693" column="34" selection-start-line="1693" selection-start-column="28" selection-end-line="1693" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/als_recommender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#96#111#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
