@@ -40,7 +40,7 @@ class UserCF:
             str(start_date), str(now))
         columns = ['id', 'dt', 'user_id', 'news_id', 'news_type', 'start_time', 'stop_time', 'read_time']
         news_read = pd.read_sql(sql, conn, columns=columns)
-        print "load {} news_read_time records from read_date {} to {}".format(len(news_read), start_date, now)
+        logging.info("load {} news_read_time records from read_date {} to {}".format(len(news_read), start_date, now))
         conn.close()
         self.news_read_time = news_read.dropna()
 
@@ -150,7 +150,7 @@ class UserCF:
         cursor = con.cursor()
         total = len(data)
         now = datetime.datetime.now()
-        print "start insert into user_cf_all from {}".format(now)
+        logging.info("start insert into user_cf_all from {}".format(now))
         #以下有则更新无则插入的方法比较好
         sql = "insert into user_cf_all (from_user_id,to_user_id,distance) values(%s,%s,%s) on duplicate key update from_user_id = values(from_user_id),to_user_id = values(to_user_id), distance = values(distance) "
         num_once = 10000
@@ -170,9 +170,9 @@ class UserCF:
         con.commit()
         con.close()
         end = datetime.datetime.now()
-        print "end insert into user_cf_all at {}".format(end)
+        logging.info("end insert into user_cf_all at {}".format(end))
         period = (end-now).seconds
-        print "total records {} total time use: {} seconds".format(total,period)
+        logging.info("total records {} total time use: {} seconds".format(total,period))
 
     def process(self):
         usercf = UserCF()
