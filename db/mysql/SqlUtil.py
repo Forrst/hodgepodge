@@ -4,8 +4,16 @@
 作者:eos
 创建时间:2018-08-07 下午3:33
 '''
-import MySQLdb
 import ConfigParser
+import logging.config
+import os
+
+import MySQLdb
+
+from log.const import const
+
+logging.config.dictConfig(const.LOGGING)
+logger = logging.getLogger(__file__)
 class Mysql():
 
     def __init__(self,server):
@@ -14,9 +22,6 @@ class Mysql():
         '''
         self.confPath = "db/config/mysql.cfg"
         self.host = self.getConfig(server)
-
-    def getCon(self,db = "report"):
-        return MySQLdb.connect(self.host['host'],self.host['user'],self.host['passwd'],db,charset='utf8')
 
     def getConfig(self,server):
         '''
@@ -46,7 +51,44 @@ class Mysql():
         con.commit()
         con.close()
         return result
-
+    def executeMany(self,sql,columns=[],data = None,db = "app_data"):
+        '''
+        只适用于插入insert into
+        其中sql不需要写 '(......) values (......)'
+        :param sql:
+        :param columns:
+        :param data:
+        :param db:
+        :return:
+        '''
+        con = MySQLdb.connect(self.host['host'],self.host['user'],self.host['passwd'],db,charset='utf8')
+        cursor = con.cursor()
+        counter = 0
+        sql_end = "(%s) values (%s)"%(','.join(columns),','.join(['%s']*len(columns)))
+        sql = sql+sql_end
+        if len(data)>1000:
+            k = len(data)/1000+1
+            for i in range(k):
+                start = i*1000
+                end = i*1000+1000
+                if end>=len(data):
+                    end = len(data)
+                data_k = data[start:end]
+                #sql ="select title from news where rowkey in {}".format(columns).replace("[","(").replace("]",")")
+                #sql = "insert into table (%s) values (%s)"%(','.join(columns),','.join(['%s']*len(columns)))
+                cursor.executemany(sql,data_k)
+                counter=counter+end-start
+        else:
+            cursor.executemany(sql,data)
+            counter = len(data)
+        cursor.close()
+        con.commit()
+        con.close()
+        import re
+        finds = re.findall("(?<=from|into).*",sql)
+        table_name = finds[0] if len(finds)>0 else "?"
+        logger.info(":::::::save %s items to %s.%s"%(counter,db,table_name))
+        # return result
     def getDBColumns(self,db,table):
         '''
         :param db:
@@ -61,7 +103,7 @@ class Mysql():
         cursor.close()
         con.commit()
         con.close()
-        return columns
+        return str(columns[0][0]).split(",")
 
     def genDictMysql(self,items,columns):
         '''

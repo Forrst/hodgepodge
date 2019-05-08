@@ -14,7 +14,7 @@ from pandas.tslib import Timestamp as timestamp
 from sklearn.metrics.pairwise import pairwise_distances
 
 NUM_DAY = 23
-logging.basicConfig(level = logging.INFO,format = '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s')
+logging.basicConfig(level = logging.INFO,format = '%(asctime)s [%(process)d:%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s')
 logger = logging.getLogger(__file__)
 
 
