@@ -1,0 +1,7 @@
+初始化一个项目
+cd existing-project
+git init
+git add --all
+git commit -m "Initial Commit"
+git remote add origin ssh://git@192.168.2.206:7999/bigdata/report_subscribe.git
+git push -u origin master

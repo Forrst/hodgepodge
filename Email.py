@@ -26,10 +26,10 @@ msg['To'] = _geter
 # puretext = MIMEText('这是一封测试邮件')
 # msg.attach(puretext)
 
-# mp3part = MIMEApplication(open(path+'movie.mp4', 'rb').read())
-mp3part = MIMEApplication(open("/root/multi_cased_L-12_H-768_A-12.zip", 'rb').read())
+mp3part = MIMEApplication(open("/home/eos/test.csv", 'rb').read())
+# mp3part = MIMEApplication(open("/root/multi_cased_L-12_H-768_A-12.zip", 'rb').read())
 
-mp3part.add_header('Content-Disposition', 'attachment', filename='multi_cased_L-12_H-768_A-12.zip')
+mp3part.add_header('Content-Disposition', 'attachment', filename='test.csv')
 msg.attach(mp3part)
 
 server = smtplib.SMTP_SSL("smtp.qq.com", 465)
