@@ -10,7 +10,7 @@ import os
 
 import MySQLdb
 
-from log.const import const
+from const import const
 
 logging.config.dictConfig(const.LOGGING)
 logger = logging.getLogger(__file__)
@@ -28,6 +28,7 @@ class Mysql():
         :return:
         '''
         conf = ConfigParser.ConfigParser()
+        print os.getcwd()
         conf.readfp(open(self.confPath))
         host = conf.get(server,"host")
         user = conf.get(server,"user")

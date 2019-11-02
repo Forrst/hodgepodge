@@ -1,23 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/junior/pdf2htmlformater.py" line="514" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3b608251-c558-4413-93ed-e7d97a9741b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ReadME" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autosignin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hkmorning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/gz_erweima.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/xz_erweima.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pgp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usmorning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Mr.Jaryn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hodgepodge.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/aiwtc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/alltoken.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/biki.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/ddyj.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/eth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/graph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/graphx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/mxc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crypto/wechat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/mysql/const.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/hknewstockuser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/userprofit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdraw_compute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdraw_train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdrawratecompute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/account_analyse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/hkbills.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/hkdistribution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/juniorprofit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/pdf2htmlformater.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/proxy2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/proxyserver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recognition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/320file.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/320file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IpoData.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/IpoData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/UserModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_boc.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/account_boc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_icbc.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/account_icbc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_wlb.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/account_wlb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/als_recommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/als_recommender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baiduaip.py" beforeDir="false" afterPath="$PROJECT_DIR$/baiduaip.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/config/mysql.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/db/config/mysql.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flasklearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/dbs_flask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/mysql/SqlUtil.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/mysql/SqlUtil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hbase_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/hbase_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hkmorning.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/hkmorning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newWordDiscover.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/newWordDiscover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/nwd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/online.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pgp.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/pgp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/qcloud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usmorning.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/usmorning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word2vec.model" beforeDir="false" afterPath="$PROJECT_DIR$/junior/word2vec.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尊嘉金融–2019年6月27日（周四）美股市场分析报告.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尊嘉金融–2019年6月28日（周五）港股市场分析报告.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,83 +64,66 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Mr_Jaryn$320file.coverage" NAME="320file Coverage Results" MODIFIED="1556087605732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/log" />
+    <SUITE FILE_PATH="coverage/hodgepodge$userdata.coverage" NAME="userdata Coverage Results" MODIFIED="1572572661473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
+    <SUITE FILE_PATH="coverage/Mr_Jaryn$als_rec.coverage" NAME="als_rec Coverage Results" MODIFIED="1552632728773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/下载" />
+    <SUITE FILE_PATH="coverage/hodgepodge$eth.coverage" NAME="eth Coverage Results" MODIFIED="1562743942827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hodgepodge$juniorprofit.coverage" NAME="juniorprofit Coverage Results" MODIFIED="1562116757409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hodgepodge$proxyserver.coverage" NAME="proxyserver Coverage Results" MODIFIED="1571194709620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/proxy" />
+    <SUITE FILE_PATH="coverage/hodgepodge$proxy2.coverage" NAME="proxy2 Coverage Results" MODIFIED="1571204852452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/proxy" />
+    <SUITE FILE_PATH="coverage/miracle$hkmorning.coverage" NAME="hkmorning Coverage Results" MODIFIED="1561716207546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hodgepodge$recognition.coverage" NAME="recognition Coverage Results" MODIFIED="1571382095598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$als_recommender.coverage" NAME="als_recommender Coverage Results" MODIFIED="1552986622299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/miracle$usmorning.coverage" NAME="usmorning Coverage Results" MODIFIED="1561716226034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mr_Jaryn$320file.coverage" NAME="320file Coverage Results" MODIFIED="1556087605732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/log" />
-    <SUITE FILE_PATH="coverage/Mr_Jaryn$als_rec.coverage" NAME="als_rec Coverage Results" MODIFIED="1552632728773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/下载" />
+    <SUITE FILE_PATH="coverage/hodgepodge$baiduaip.coverage" NAME="baiduaip Coverage Results" MODIFIED="1571380120105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hodgepodge$hkdistribution.coverage" NAME="hkdistribution Coverage Results" MODIFIED="1572500989744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$nwd.coverage" NAME="nwd Coverage Results" MODIFIED="1550131880476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hodgepodge$user_withdraw_analyse.coverage" NAME="user_withdraw_analyse Coverage Results" MODIFIED="1572232789540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$hbase_test.coverage" NAME="hbase_test Coverage Results" MODIFIED="1548730224022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$HANLP.coverage" NAME="HANLP Coverage Results" MODIFIED="1548397043134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NewWordDiscover" />
     <SUITE FILE_PATH="coverage/miracle$connect.coverage" NAME="connect Coverage Results" MODIFIED="1558670006915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$finra.coverage" NAME="finra Coverage Results" MODIFIED="1553822767660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finra" />
     <SUITE FILE_PATH="coverage/miracle$dbs_flask.coverage" NAME="dbs_flask Coverage Results" MODIFIED="1559273178038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/miracle$hkmorning.coverage" NAME="hkmorning Coverage Results" MODIFIED="1561716207546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hodgepodge$graphx.coverage" NAME="graphx Coverage Results" MODIFIED="1564986157789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crypto" />
+    <SUITE FILE_PATH="coverage/hodgepodge$pdf2htmlformater.coverage" NAME="pdf2htmlformater Coverage Results" MODIFIED="1567410176614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hkmorning.py">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/logging/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-              <folding>
-                <element signature="e#97#106#0" expanded="true" />
-                <element signature="e#3281#9345#0" />
-              </folding>
+            <state relative-caret-position="22762">
+              <caret line="1198" column="24" selection-start-line="1198" selection-start-column="16" selection-end-line="1198" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/requests/adapters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9177">
+              <caret line="513" selection-start-line="513" selection-end-line="513" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/subprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7391">
+              <caret line="389" selection-start-line="389" selection-end-line="389" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ReadME">
+        <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/config/mysql.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usmorning.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/quoprimime.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1767">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/message.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2413">
-              <caret line="136" selection-start-line="136" selection-end-line="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/smtplib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12521">
-              <caret line="665" column="8" selection-start-line="665" selection-start-column="8" selection-end-line="665" selection-end-column="8" />
+            <state relative-caret-position="619">
+              <caret line="149" column="18" lean-forward="true" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+              <folding>
+                <element signature="e#97#111#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,24 +131,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/mysql/SqlUtil.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="456">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+              <folding>
+                <element signature="e#79#98#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/const.py">
+        <entry file="file://$PROJECT_DIR$/crypto/mxc.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/encoders.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/junior/hkbills.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2432">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
+              <folding>
+                <element signature="e#96#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/junior/hkdistribution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+              <folding>
+                <element signature="e#96#111#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -135,6 +178,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Python Script" />
       </list>
@@ -142,38 +186,39 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logging.</find>
-      <find>asctime</find>
-      <find>lda</find>
-      <find>year</find>
-      <find>update</find>
-      <find>strf</find>
-      <find>My</find>
-      <find>if</find>
-      <find>order</find>
-      <find>urllib</find>
-      <find>request</find>
-      <find>def request</find>
-      <find>def reques</find>
-      <find>CookieJar</find>
-      <find>cookiejar</find>
-      <find>build_opener</find>
-      <find>font</find>
-      <find>config</find>
-      <find>bill</find>
-      <find>logging</find>
+      <find>7059</find>
+      <find>crd</find>
+      <find>line = [crd</find>
+      <find>line</find>
+      <find>[crd</find>
+      <find>print</find>
+      <find>disclosure_regulatory_real_flag</find>
+      <find>indirect</find>
+      <find>Mysqldb.c</find>
+      <find>pd.Datafr</find>
+      <find>strptim</find>
+      <find>sample</find>
+      <find>train</find>
+      <find>total</find>
+      <find>smtp</find>
       <find>post</find>
-      <find>urllib2</find>
-      <find>register_openers</find>
-      <find>on duplicate</find>
-      <find>on du</find>
-      <find>executemany</find>
-      <find>%Y</find>
-      <find>点击</find>
-      <find>_geter</find>
-      <find>免责</find>
+      <find>logger.e</find>
+      <find>ykdc.hzyoka.com</find>
+      <find>jieba</find>
+      <find>pd.read</find>
+      <find>union</find>
+      <find>strp</find>
+      <find>x['trade_days_period'] = (max_trade_day - stat_time_day).days</find>
+      <find>getstock</find>
+      <find>][</find>
+      <find>apply</find>
+      <find>urllib</find>
+      <find>logging</find>
+      <find>Mysqldb</find>
+      <find>accounts</find>
     </findStrings>
     <dirStrings>
+      <dir>$PROJECT_DIR$/crypto</dir>
       <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
@@ -183,44 +228,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/area.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/account_wlb.py" />
-        <option value="$PROJECT_DIR$/abc/abc.py" />
-        <option value="$PROJECT_DIR$/restfulapi/hkipo.py" />
-        <option value="$PROJECT_DIR$/account_icbc.py" />
-        <option value="$PROJECT_DIR$/log/const.py" />
-        <option value="$PROJECT_DIR$/account_boc.py" />
-        <option value="$PROJECT_DIR$/Dictionay/updateDict.py" />
-        <option value="$PROJECT_DIR$/newsTitleAnalyzer/titleCategory.py" />
-        <option value="$PROJECT_DIR$/newsTitleAnalyzer/NewsTimeRules.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
-        <option value="$PROJECT_DIR$/log/hkbills_synchronization.py" />
-        <option value="$PROJECT_DIR$/baiduaip.py" />
-        <option value="$PROJECT_DIR$/updatehkbillsrowkey.py" />
-        <option value="$PROJECT_DIR$/email.py" />
-        <option value="$PROJECT_DIR$/qcloud.py" />
-        <option value="$PROJECT_DIR$/online.py" />
-        <option value="$PROJECT_DIR$/NewWordDiscover/hanlp.py" />
-        <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/pyhanlp/server.py" />
-        <option value="$PROJECT_DIR$/NewWordDiscover/WordInfo.py" />
-        <option value="$PROJECT_DIR$/flasklearn.py" />
-        <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/metrics/pairwise.py" />
-        <option value="$PROJECT_DIR$/log/temp.py" />
-        <option value="$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py" />
-        <option value="$PROJECT_DIR$/NewWordDiscover/HANLP.py" />
-        <option value="$PROJECT_DIR$/log/downloadpdf.py" />
-        <option value="$PROJECT_DIR$/newWordDiscover.py" />
-        <option value="$PROJECT_DIR$/log/websitecate.py" />
-        <option value="$PROJECT_DIR$/datastructure/alg.py" />
-        <option value="$PROJECT_DIR$/hbase_test.py" />
-        <option value="$PROJECT_DIR$/UserModel.py" />
-        <option value="$PROJECT_DIR$/nwd.py" />
-        <option value="$USER_HOME$/下载/als_rec.py" />
-        <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py" />
         <option value="$PROJECT_DIR$/bank/db/config/ocr.cfg" />
         <option value="$PROJECT_DIR$/bank/.gitignore" />
-        <option value="$PROJECT_DIR$/db/mysql/SqlUtil.py" />
         <option value="$PROJECT_DIR$/finra/finra.py" />
         <option value="$PROJECT_DIR$/log/320file.py" />
         <option value="$PROJECT_DIR$/als_recommender.py" />
@@ -230,10 +239,46 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/dbs_flask.py" />
         <option value="$PROJECT_DIR$/pgp.py" />
-        <option value="$PROJECT_DIR$/db/config/mysql.cfg" />
         <option value="$PROJECT_DIR$/usmorning.py" />
         <option value="$PROJECT_DIR$/hkmorning.py" />
         <option value="$PROJECT_DIR$/ReadME" />
+        <option value="$PROJECT_DIR$/account_icbc.py" />
+        <option value="$PROJECT_DIR$/juniorprofit.py" />
+        <option value="$PROJECT_DIR$/junior/hbase_test.py" />
+        <option value="$PROJECT_DIR$/etherscan.py" />
+        <option value="$PROJECT_DIR$/eth.py" />
+        <option value="$PROJECT_DIR$/crypto/wechat.py" />
+        <option value="$PROJECT_DIR$/crypto/aiwtc.py" />
+        <option value="$PROJECT_DIR$/crypto/mxc.py" />
+        <option value="$PROJECT_DIR$/crypto/graph.py" />
+        <option value="$PROJECT_DIR$/crypto/graph.js" />
+        <option value="$PROJECT_DIR$/log/temp.py" />
+        <option value="$PROJECT_DIR$/crypto/biki.py" />
+        <option value="$PROJECT_DIR$/crypto/alltoken.py" />
+        <option value="$PROJECT_DIR$/crypto/graphx.py" />
+        <option value="$PROJECT_DIR$/junior/divformater.py" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$USER_HOME$/data/pdf2html/firm_7059_python.html" />
+        <option value="$PROJECT_DIR$/db/config/mysql.cfg" />
+        <option value="$PROJECT_DIR$/junior/pdf2htmlformater.py" />
+        <option value="$PROJECT_DIR$/junior/account_analyse_test.py" />
+        <option value="$PROJECT_DIR$/junior/withdraw_train.py" />
+        <option value="$PROJECT_DIR$/junior/withdraw_compute.py" />
+        <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdrawratecompute.py" />
+        <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/hknewstockuser.py" />
+        <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/userprofit.py" />
+        <option value="$PROJECT_DIR$/crypto/ddyj.py" />
+        <option value="$PROJECT_DIR$/proxy/proxyserver.py" />
+        <option value="$PROJECT_DIR$/proxy/proxy2.py" />
+        <option value="$PROJECT_DIR$/baiduaip.py" />
+        <option value="$PROJECT_DIR$/recognition.py" />
+        <option value="$PROJECT_DIR$/junior/account_analyse.py" />
+        <option value="$PROJECT_DIR$/crypto/eth.py" />
+        <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py" />
+        <option value="$PROJECT_DIR$/junior/hkbills.py" />
+        <option value="$PROJECT_DIR$/db/mysql/SqlUtil.py" />
+        <option value="$PROJECT_DIR$/junior/hkdistribution.py" />
+        <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py" />
       </list>
     </option>
   </component>
@@ -255,8 +300,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="miracle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miracle" type="462c0819:PsiDirectoryNode" />
+              <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hodgepodge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -274,27 +323,27 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561950440532" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../report_subscribe" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572678905085" />
+    <property name="last_opened_file_path" value="$USER_HOME$/anaconda2/lib/python2.7" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2706596" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="project.structure.side.proportion" value="0.12222222" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db/mysql" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$/bank" />
-      <recent name="$PROJECT_DIR$/NewWordDiscover" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
+      <recent name="$PROJECT_DIR$/crypto" />
+      <recent name="$PROJECT_DIR$/junior" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/log" />
-      <recent name="$PROJECT_DIR$/restfulapi" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -309,7 +358,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.usmorning">
+  <component name="RunManager" selected="Python.userdata">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -323,29 +372,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="320file" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="hodgepodge" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda2/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/log" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/320file.py" />
-      <option name="PARAMETERS" value="$USER_HOME$/data/finra/ 2019-04-23" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="connect" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="baiduaip" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hodgepodge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -358,7 +385,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/connect.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baiduaip.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -367,7 +394,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dbs_flask" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hkdistribution" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hodgepodge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -375,12 +402,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junior" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dbs_flask.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junior/hkdistribution.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -389,7 +416,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hkmorning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="recognition" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hodgepodge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -402,7 +429,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hkmorning.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recognition.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -411,7 +438,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="usmorning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="user_withdraw_analyse" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hodgepodge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -419,12 +446,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/usmorning.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="userdata" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hodgepodge" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -441,82 +490,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <module name="hodgepodge" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Twisted Trial">
-      <module name="hodgepodge" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="hodgepodge" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <module name="hodgepodge" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.320file" />
-      <item itemvalue="Python.connect" />
-      <item itemvalue="Python.dbs_flask" />
-      <item itemvalue="Python.hkmorning" />
-      <item itemvalue="Python.usmorning" />
+      <item itemvalue="Python.baiduaip" />
+      <item itemvalue="Python.recognition" />
+      <item itemvalue="Python.user_withdraw_analyse" />
+      <item itemvalue="Python.hkdistribution" />
+      <item itemvalue="Python.userdata" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.usmorning" />
-        <item itemvalue="Python.hkmorning" />
-        <item itemvalue="Python.dbs_flask" />
-        <item itemvalue="Python.connect" />
-        <item itemvalue="Python.320file" />
+        <item itemvalue="Python.userdata" />
+        <item itemvalue="Python.hkdistribution" />
+        <item itemvalue="Python.user_withdraw_analyse" />
+        <item itemvalue="Python.recognition" />
+        <item itemvalue="Python.baiduaip" />
       </list>
     </recent_temporary>
   </component>
@@ -612,17 +599,99 @@
       <workItem from="1561343899831" duration="4144000" />
       <workItem from="1561689312517" duration="23169000" />
       <workItem from="1561946186904" duration="928000" />
+      <workItem from="1561951398305" duration="3325000" />
+      <workItem from="1562028000217" duration="9642000" />
+      <workItem from="1562578375831" duration="632000" />
+      <workItem from="1562729271045" duration="8439000" />
+      <workItem from="1563242441903" duration="5926000" />
+      <workItem from="1563329938278" duration="603000" />
+      <workItem from="1563417983814" duration="2668000" />
+      <workItem from="1563518600014" duration="9333000" />
+      <workItem from="1563775952588" duration="683000" />
+      <workItem from="1563932268791" duration="12826000" />
+      <workItem from="1564019622241" duration="3078000" />
+      <workItem from="1564102054123" duration="2194000" />
+      <workItem from="1564108399412" duration="4038000" />
+      <workItem from="1564361751226" duration="1203000" />
+      <workItem from="1564449274703" duration="1941000" />
+      <workItem from="1564536286634" duration="10506000" />
+      <workItem from="1564621819737" duration="4602000" />
+      <workItem from="1564709395352" duration="2523000" />
+      <workItem from="1564968200363" duration="16599000" />
+      <workItem from="1565083951641" duration="1415000" />
+      <workItem from="1565162193319" duration="4785000" />
+      <workItem from="1565226388415" duration="17736000" />
+      <workItem from="1565577422375" duration="15108000" />
+      <workItem from="1565658013420" duration="2823000" />
+      <workItem from="1565675535934" duration="10025000" />
+      <workItem from="1565747163162" duration="19525000" />
+      <workItem from="1565831263911" duration="18100000" />
+      <workItem from="1565865483733" duration="618000" />
+      <workItem from="1565917198639" duration="11003000" />
+      <workItem from="1566179413896" duration="15974000" />
+      <workItem from="1566266293156" duration="27605000" />
+      <workItem from="1566350963383" duration="15513000" />
+      <workItem from="1566439770670" duration="37317000" />
+      <workItem from="1566781461629" duration="10949000" />
+      <workItem from="1566868079381" duration="12905000" />
+      <workItem from="1566953819823" duration="23095000" />
+      <workItem from="1567040905359" duration="17607000" />
+      <workItem from="1567127758414" duration="25539000" />
+      <workItem from="1567386398324" duration="11148000" />
+      <workItem from="1567503677064" duration="661000" />
+      <workItem from="1567997559556" duration="5110000" />
+      <workItem from="1568077556702" duration="21113000" />
+      <workItem from="1568168592341" duration="10223000" />
+      <workItem from="1568252940966" duration="15283000" />
+      <workItem from="1568600792324" duration="16888000" />
+      <workItem from="1568681865197" duration="20338000" />
+      <workItem from="1568769452826" duration="22488000" />
+      <workItem from="1568856179456" duration="19616000" />
+      <workItem from="1568888619779" duration="264000" />
+      <workItem from="1568940802023" duration="12441000" />
+      <workItem from="1569203488381" duration="16447000" />
+      <workItem from="1569306306177" duration="5312000" />
+      <workItem from="1569375858925" duration="23537000" />
+      <workItem from="1569459712076" duration="18543000" />
+      <workItem from="1569545794470" duration="4903000" />
+      <workItem from="1570518486716" duration="5614000" />
+      <workItem from="1570691076867" duration="1214000" />
+      <workItem from="1570754217622" duration="3782000" />
+      <workItem from="1571192004449" duration="12018000" />
+      <workItem from="1571379511362" duration="7120000" />
+      <workItem from="1571622350598" duration="9732000" />
+      <workItem from="1571705367030" duration="10291000" />
+      <workItem from="1571795663532" duration="13416000" />
+      <workItem from="1571817303976" duration="9014000" />
+      <workItem from="1571882788984" duration="16317000" />
+      <workItem from="1571967534263" duration="9914000" />
+      <workItem from="1572057131946" duration="13729000" />
+      <workItem from="1572223794566" duration="11239000" />
+      <workItem from="1572309396883" duration="23093000" />
+      <workItem from="1572398900625" duration="17710000" />
+      <workItem from="1572482319196" duration="18314000" />
+      <workItem from="1572507931356" duration="9974000" />
+      <workItem from="1572569920400" duration="11515000" />
+      <workItem from="1572654650116" duration="3906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421437000" />
+    <option name="totallyTimeSpent" value="1242067000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-7" width="1920" height="1024" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.2852349" visible="true" weight="0.19156884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.2852349" visible="true" weight="0.18890075" />
       <window_info id="Structure" order="1" sideWeight="0.7147651" side_tool="true" weight="0.26307365" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -631,16 +700,17 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.46868008" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32997763" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44183445" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.45078298" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.36800894" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32997763" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32885906" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053364" side_tool="true" weight="0.32997763" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="JProfiler" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -651,7 +721,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven" order="8" />
       <window_info anchor="right" id="Database" order="9" />
-      <window_info anchor="right" id="SciView" order="10" />
+      <window_info anchor="right" id="SciView" order="10" weight="0.80256134" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,17 +741,17 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hbase_test.py</url>
+          <url>file://$PROJECT_DIR$/junior/hbase_test.py</url>
           <line>15</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/nwd.py</url>
+          <url>file://$PROJECT_DIR$/junior/nwd.py</url>
           <line>54</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/nwd.py</url>
+          <url>file://$PROJECT_DIR$/junior/nwd.py</url>
           <line>59</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
@@ -696,54 +766,14 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/als_recommender.py</url>
+          <url>file://$PROJECT_DIR$/junior/als_recommender.py</url>
           <line>186</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>254</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>241</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>245</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>248</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>233</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>240</line>
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydevd_bundle/pydevd_comm.py</url>
           <line>392</line>
           <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>262</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/cursors.py</url>
-          <line>261</line>
-          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/finra/finra.py</url>
@@ -771,22 +801,22 @@
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/320file.py</url>
+          <url>file://$PROJECT_DIR$/junior/320file.py</url>
           <line>144</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/320file.py</url>
+          <url>file://$PROJECT_DIR$/junior/320file.py</url>
           <line>146</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/320file.py</url>
+          <url>file://$PROJECT_DIR$/junior/320file.py</url>
           <line>86</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/320file.py</url>
+          <url>file://$PROJECT_DIR$/junior/320file.py</url>
           <line>145</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
@@ -796,394 +826,640 @@
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hkmorning.py</url>
+          <url>file://$PROJECT_DIR$/junior/hkmorning.py</url>
           <line>222</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hkmorning.py</url>
+          <url>file://$PROJECT_DIR$/junior/hkmorning.py</url>
           <line>223</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hkmorning.py</url>
+          <url>file://$PROJECT_DIR$/junior/hkmorning.py</url>
           <line>48</line>
           <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/juniorprofit.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>150</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>392</line>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>532</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>530</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>534</line>
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>518</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>526</line>
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>529</line>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>388</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>385</line>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>389</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>384</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>381</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>387</line>
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="355" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>1095</line>
+          <option name="timeStamp" value="358" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>1092</line>
+          <option name="timeStamp" value="373" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/pdf2htmlformater.py</url>
+          <line>1061</line>
+          <option name="timeStamp" value="382" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baiduaip.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="383" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/account_analyse.py</url>
+          <line>307</line>
+          <option name="timeStamp" value="384" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proxy/proxyserver.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="391" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proxy/proxyserver.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="393" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proxy/proxy2.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="401" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proxy/proxy2.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="402" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proxy/proxy2.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="403" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proxy/proxy2.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="404" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proxy/proxy2.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="406" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/recognition.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="408" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/recognition.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="409" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/recognition.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="410" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/recognition.py</url>
+          <line>135</line>
+          <option name="timeStamp" value="411" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="412" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/hkdistribution.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="414" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/subprocess.py</url>
+          <line>384</line>
+          <option name="timeStamp" value="415" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/subprocess.py</url>
+          <line>389</line>
+          <option name="timeStamp" value="416" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py</url>
+          <line>222</line>
+          <option name="timeStamp" value="417" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py</url>
+          <line>224</line>
+          <option name="timeStamp" value="418" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>disclosure_regulatory</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>disclosure_award</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>disclosure_civil</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/__init__.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/bs4/builder/_lxml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        <state relative-caret-position="4389">
+          <caret line="250" selection-start-line="250" selection-end-line="250" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/MySQLdb/connections.py">
+    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/userprofit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="192" selection-start-line="192" selection-end-line="192" />
+        <state relative-caret-position="533">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/cookielib.py">
+    <entry file="file://$PROJECT_DIR$/autosignin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23104">
-          <caret line="1216" column="15" selection-start-line="1216" selection-start-column="6" selection-end-line="1216" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/urllib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11970">
-          <caret line="638" column="28" selection-start-line="638" selection-start-column="28" selection-end-line="638" selection-end-column="28" />
-        </state>
+        <state relative-caret-position="-1800" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/urllib2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8835">
-          <caret line="478" column="16" selection-start-line="478" selection-start-column="4" selection-end-line="478" selection-end-column="16" />
+        <state relative-caret-position="4028">
+          <caret line="225" column="8" selection-start-line="225" selection-start-column="8" selection-end-line="225" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/gensim/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/gensim/models/doc2vec.py">
+    <entry file="file://$PROJECT_DIR$/crypto/ddyj.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/gensim/test/test_tfidfmodel.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/gensim/sklearn_api/tfidf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/chart/line_chart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1799">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#96#107#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/worksheet/worksheet.py">
+    <entry file="file://$PROJECT_DIR$/crypto/biki.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="669" column="27" selection-start-line="669" selection-start-column="24" selection-end-line="669" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.IntelliJIdea2018.3/system/python_stubs/794982195/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="211" column="4" selection-start-line="211" selection-start-column="4" selection-end-line="211" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/chart/bar_chart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/chart/axis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/chart/label.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding>
-            <element signature="e#96#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finra/finra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-          <folding>
-            <element signature="e#96#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2603">
-          <caret line="148" column="1" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
-          <folding>
-            <element signature="e#118#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/flask/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="437">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bank/accuracy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" selection-start-line="19" selection-end-line="48" selection-end-column="20" />
+        <state relative-caret-position="304">
+          <caret line="22" column="5" selection-start-line="21" selection-end-line="42" selection-end-column="44" />
           <folding>
             <element signature="e#191#225#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account_wlb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank/boc_deposite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2242">
-          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/json/__init__.py">
+    <entry file="file://$PROJECT_DIR$/connect.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbs_flask.py">
+    <entry file="file://$PROJECT_DIR$/restfulapi/hkipo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/requests/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="1957">
+          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydevd_bundle/pydevd_comm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="1500" selection-start-line="1500" selection-end-line="1500" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy/proxyserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="108" column="15" lean-forward="true" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
           <folding>
-            <element signature="e#97#111#0" expanded="true" />
+            <element signature="e#97#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/320file.py">
+    <entry file="file://$USER_HOME$/.IntelliJIdea2018.3/system/python_stubs/794982195/thread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="127" column="37" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
+        <state relative-caret-position="115">
+          <caret line="110" column="4" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/twisted/internet/test/test_tcp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2147">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4256">
+          <caret line="227" selection-start-line="227" selection-end-line="227" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy/proxy2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <element signature="e#114#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baiduaip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="77" column="48" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recognition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2356">
+          <caret line="128" column="24" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+          <folding>
+            <element signature="e#96#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43795">
+          <caret line="2311" selection-start-line="2311" selection-end-line="2311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydevd_bundle/pydevd_resolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3762">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydevd_bundle/pydevd_vars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4199">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/typeshed/stdlib/2and3/socket.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9937">
+          <caret line="524" column="66" selection-start-line="524" selection-start-column="4" selection-end-line="524" selection-end-column="66" />
+          <folding>
+            <element signature="e#274#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.IntelliJIdea2018.3/system/python_stubs/794982195/_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3895">
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/io/sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="333" column="12" selection-start-line="333" selection-start-column="12" selection-end-line="333" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/account_analyse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7182">
+          <caret line="380" column="8" selection-start-line="380" selection-start-column="8" selection-end-line="380" selection-end-column="8" />
+          <folding>
+            <element signature="e#96#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/icbc_deposite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1786">
+          <caret line="103" column="73" selection-start-line="103" selection-start-column="73" selection-end-line="103" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/bocTransferTime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2090">
+          <caret line="116" column="33" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="304" column="4" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/eth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3154">
+          <caret line="170" column="19" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="19" />
           <folding>
             <element signature="e#96#111#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pgp.py">
+    <entry file="file://$PROJECT_DIR$/NewWordDiscover/newWordDiscover.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="228">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/als_recommender.py">
+    <entry file="file://$PROJECT_DIR$/bank/dbs_deposite_syn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2622">
-          <caret line="138" column="30" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="30" />
+        <state relative-caret-position="-1633">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4788">
+          <caret line="252" selection-start-line="252" selection-end-line="252" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdraw_compute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1577">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="e#96#111#0" expanded="true" />
+            <element signature="e#98#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/poster/streaminghttp.py">
+    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdrawratecompute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3572">
-          <caret line="189" column="4" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autosignin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        <state relative-caret-position="2394">
+          <caret line="129" column="24" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="24" />
           <folding>
             <element signature="e#96#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/tools/merge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="247">
+          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/chart/__init__.py">
+    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/hknewstockuser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="779">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10754">
+          <caret line="653" column="8" selection-start-line="653" selection-start-column="8" selection-end-line="653" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdraw_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#97#111#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/chart/title.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/pandas/core/generic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="44327">
+          <caret line="2386" column="8" selection-start-line="2386" selection-start-column="8" selection-end-line="2386" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/descriptors/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/openpyxl/workbook/child.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank/db/mysql/SqlUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/mime/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/header.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account_icbc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="92" column="68" selection-start-line="92" selection-start-column="68" selection-end-line="92" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="76" />
-          <folding>
-            <element signature="e#96#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/mime/text.py">
+    <entry file="file://$PROJECT_DIR$/db/config/ocr.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hkmorning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="e#97#106#0" expanded="true" />
-            <element signature="e#3281#9345#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/mazhan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/config/mysql.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usmorning.py">
+    <entry file="file://$PROJECT_DIR$/crypto/graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="285">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/quoprimime.py">
+    <entry file="file://$PROJECT_DIR$/crypto/aiwtc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="200">
+          <caret line="20" selection-start-line="20" selection-end-line="34" />
+          <folding>
+            <element signature="e#96#111#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/message.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2413">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="22762">
+          <caret line="1198" column="24" selection-start-line="1198" selection-start-column="16" selection-end-line="1198" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/smtplib.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/requests/adapters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12521">
-          <caret line="665" column="8" selection-start-line="665" selection-start-column="8" selection-end-line="665" selection-end-column="8" />
+        <state relative-caret-position="9177">
+          <caret line="513" selection-start-line="513" selection-end-line="513" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7391">
+          <caret line="389" selection-start-line="389" selection-end-line="389" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/mysql/SqlUtil.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="456">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="e#79#98#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/const.py">
+    <entry file="file://$PROJECT_DIR$/crypto/mxc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/email/encoders.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReadME">
+    <entry file="file://$PROJECT_DIR$/junior/hkbills.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        <state relative-caret-position="2432">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#96#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/hkdistribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+          <folding>
+            <element signature="e#96#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="149" column="18" lean-forward="true" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+          <folding>
+            <element signature="e#97#111#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1207,7 +1483,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2706596" />
+                <option value="0.12222222" />
               </list>
             </option>
           </splitter-proportions>
@@ -1215,11 +1491,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Python</last-edited>
+          <last-edited>Python (hodgepodge)|Python</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2706596" />
+                <option value="0.12222222" />
               </list>
             </option>
           </splitter-proportions>
@@ -1227,11 +1503,11 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>scala-sdk-2.12.61</last-edited>
+          <last-edited>Python 2.7 interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2706596" />
+                <option value="0.12222222" />
               </list>
             </option>
           </splitter-proportions>
@@ -1243,7 +1519,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2706596" />
+                <option value="0.12222222" />
               </list>
             </option>
           </splitter-proportions>
@@ -1251,11 +1527,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Mieee</last-edited>
+          <last-edited>hodgepodge</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2706596" />
+                <option value="0.12222222" />
               </list>
             </option>
           </splitter-proportions>
@@ -1278,7 +1554,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2706596" />
+                <option value="0.12222222" />
               </list>
             </option>
           </splitter-proportions>

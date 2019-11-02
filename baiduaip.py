@@ -66,8 +66,8 @@ class BaiduOCR(object):
         options["probability"] = "true"
 
         """ 带参数调用通用文字识别（高精度版） """
-        # result = client.basicAccurate(image, options)
-        result = client.basicGeneral(image,options)
+        result = client.basicAccurate(image, options)
+        # result = client.basicGeneral(image,options)
         words_result = result['words_result']
         for i in words_result:
             ret=ret+i['words']+"\n"
@@ -75,7 +75,10 @@ class BaiduOCR(object):
 
 if __name__=='__main__':
     ocr = BaiduOCR()
-    path = "/accountimage/depositcert/2018/10/31/05C36169FAA5550316.jpg"
-    ret = ocr.getHttpContent(path)
+    path = "/home/eos/图片/微信图片_20191018142028.png"
+    f = open(path,'r')
+    m = f.read()
+    f.close()
+    ret = ocr.getContext(m)
     print ret
     print path+"\n"+ret
