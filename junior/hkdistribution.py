@@ -10,6 +10,7 @@ import time
 import requests
 import urllib2
 import logging
+import re
 import MySQLdb
 from bs4 import BeautifulSoup as soup
 
@@ -51,10 +52,10 @@ for bill in billList:
     host = "/".join(webPath.split("/")[:-1])+"/"
     date = "{}-{}-{}".format(year,relMonth,relDay)
     stockCode = bill['stock'][0]['sc']
-    if relDay == now_day and relMonth == now_month:
+    if int(relDay) == int(now_day) and int(relMonth) == int(now_month):
         webXml = urllib2.urlopen(webPath).read()
         webSoup = soup(webXml,'lxml')
-        href = webSoup.find("td",text="概要").find("a")['href']
+        href = webSoup.find("a",text=re.compile(u"概要|摘要"))['href']
         realUrl = host+href
         requestPara.append([realUrl,stockCode,date])
         codeSet.add(stockCode)
