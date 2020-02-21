@@ -30,7 +30,7 @@ jsons = {"lastAddress": "北京市朝阳区太阳宫中路靠近冠城大厦", "
 r = requests.post(url,headers=data,data=json.dumps(jsons))
 print r.text
 
-#
+'''
 POST https://m.ddyjapp.com/api-service-app/user/home-users HTTP/1.1
 Host: m.ddyjapp.com
 Content-Type: application/json
@@ -43,7 +43,7 @@ Content-Length: 57
 Accept-Encoding: gzip, deflate, br
 
 {"lat":"39.971001","categoryType":"1","lon":"116.446953"}
-
+'''
 #第二部我要接单
 app_token = "eyJ1X2lkIjoiMjM0MjcwMzU3NzIzODE1OTM2IiwidV90b2tlbiI6IjdGNDFCMzQ2RUFENDI3MDlBN0QxMzkzQzEzNjM0NjZFIn0="
 url = "https://m.ddyjapp.com/api-service-app/needs/accept"

@@ -4,15 +4,15 @@
 作者:eos
 创建时间:2018-08-07 下午3:33
 '''
-import ConfigParser
+import configparser as ConfigParser
 import logging.config
 import os
 
 import MySQLdb
 
-from const import const
+from . import const
 
-logging.config.dictConfig(const.LOGGING)
+logging.config.dictConfig(const.const().LOGGING)
 logger = logging.getLogger(__file__)
 class Mysql():
 
@@ -28,7 +28,7 @@ class Mysql():
         :return:
         '''
         conf = ConfigParser.ConfigParser()
-        print os.getcwd()
+        print(os.getcwd())
         conf.readfp(open(self.confPath))
         host = conf.get(server,"host")
         user = conf.get(server,"user")

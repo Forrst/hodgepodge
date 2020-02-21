@@ -15,7 +15,7 @@ db = Mysql("mysql5.105")
 logging.basicConfig(level = logging.INFO,format = '%(asctime)s [%(process)d:%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s')
 logger =logging.getLogger("hkbills.py")
 
-process_date = "2019-10-29"
+process_date = "2019-11-21"
 sql1 = "SELECT a.`short_name`,b.`account_id` FROM (select account_id from cash_flow where process_date = '{}') b INNER JOIN account_profile a ON a.`account_id`=b.`account_id` GROUP BY b.`account_id`".format(process_date)
 
 sql2 = "SELECT a.`short_name`,b.`account_id` FROM (select account_id from product_flow where process_date = '{}') b INNER JOIN account_profile a ON a.`account_id`=b.`account_id` GROUP BY b.`account_id`".format(process_date)
@@ -84,7 +84,7 @@ for accountid in account_:
             logger.info("{} success".format(accountid))
         else:
             logger.info("{} failure".format(accountid))
-    except Exception,e:
+    except Exception as e:
         logger.error("error accountid: {}".format(accountid))
         logger.error(e,exc_info = True)
 
@@ -107,26 +107,48 @@ account = [i[0]for i in accounts]
 '''
 补发某人一段时间的结单
 '''
-import datetime
-account = '62078038'
-start = datetime.datetime(year=2019,month=10,day=4)
-while True:
-    process_date = str(start)[:10]
-    if process_date == '2019-10-31':
-        break
-    try:
-        r = requests.get("http://192.168.5.54:8089/sendEmail?accountid={}&day={}&billtype=daily".format(accountid,process_date))
-        if r.status_code == 200:
-            logger.info("{} success {}".format(accountid,process_date))
-        else:
-            logger.info("{} failure".format(accountid,process_date))
-        start += datetime.timedelta(days=1)
-    except Exception,e:
-        start += datetime.timedelta(days=1)
-        logger.error("error accountid: {}".format(accountid))
-        logger.error(e,exc_info = True)
-'''
-#修改结单
-db = Mysql("mysql5.106")
-sql = '''
+def sendforperiod():
+    import datetime
+    account = '62078038'
+    start = datetime.datetime(year=2019,month=10,day=4)
+    while True:
+        process_date = str(start)[:10]
+        if process_date == '2019-10-31':
+            break
+        try:
+            r = requests.get("http://192.168.5.54:8089/sendEmail?accountid={}&day={}&billtype=daily".format(accountid,process_date))
+            if r.status_code == 200:
+                logger.info("{} success {}".format(accountid,process_date))
+            else:
+                logger.info("{} failure".format(accountid,process_date))
+            start += datetime.timedelta(days=1)
+        except Exception as e:
+            start += datetime.timedelta(days=1)
+            logger.error("error accountid: {}".format(accountid))
+            logger.error(e,exc_info = True)
+
+def sendforday():
+    #修改某天指定用户的结单并发送邮件
+    process_date = '2019-12-11'
+    datestr = '20191211'
+    for account in acc:
+        try:
+            r = requests.get("http://192.168.5.54:8089/pdfonly.html?accountId={account}&day={process_date}&sendEmail=true".format(account=account,process_date=process_date))
+            if r.status_code == 200:
+                logger.info("{account} success {process_date}".format(account=account,process_date=process_date))
+            else:
+                logger.info("{account} failure {process_date}".format(account=account,process_date=process_date))
+        except Exception as e:
+            logger.error("error accountid: {account}".format(account=account))
+            logger.error(e,exc_info = True)
+
+    db = Mysql("mysql5.106")
+    acct_str = str(acc).replace("[","").replace("]","")
+    sql = '''
+    delete from hk_bills where bill_date = '{datestr}' and code in ({acct_str})
+    '''.format(datestr=datestr,acct_str=acct_str)
+    db.execute(sql,"app_data")
+
+##############
+
 

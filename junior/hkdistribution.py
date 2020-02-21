@@ -41,6 +41,18 @@ bills = r.json()
 logger.info(u"最新的配发结果公告如下:\n{}".format(r.text))
 billList = bills['newsInfo']
 
+r = requests.get("https://www1.hkexnews.hk/search/predefineddoc.xhtml?lang=zh&predefineddocuments=4")
+
+innerHeader = {
+    "Connection": "keep-alive",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+    "Referer": "https://www.hkexnews.hk/index_c.htm",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "zh-CN,zh;q=0.9",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/78.0.3904.70 Chrome/78.0.3904.70 Safari/537.36",
+
+}
+
 requestPara = []
 codeSet = set()
 for bill in billList:
@@ -53,9 +65,11 @@ for bill in billList:
     date = "{}-{}-{}".format(year,relMonth,relDay)
     stockCode = bill['stock'][0]['sc']
     if int(relDay) == int(now_day) and int(relMonth) == int(now_month):
-        webXml = urllib2.urlopen(webPath).read()
+        innerrequest =  requests.get(webPath,headers = innerHeader)
+        webXml = innerrequest.text
         webSoup = soup(webXml,'lxml')
-        href = webSoup.find("a",text=re.compile(u"概要|摘要"))['href']
+        hrefa = webSoup.find("a",text=re.compile(u"\xe6\xa6\x82\xe8\xa6\x81|\xe6\x91\x98\xe8\xa6\x81"))
+        href = hrefa['href']
         realUrl = host+href
         requestPara.append([realUrl,stockCode,date])
         codeSet.add(stockCode)

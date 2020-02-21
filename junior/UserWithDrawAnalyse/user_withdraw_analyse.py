@@ -47,9 +47,9 @@ def account_handler(x):
         max_trade_day = datetime.datetime.strptime(x['max_trade_day'],'%Y%m%d')
         try:
             x['trade_days_period'] = (max_trade_day - stat_time_day).days
-        except Exception,e:
-            print type(stat_time_day)
-            print e
+        except Exception as e:
+            print(type(stat_time_day))
+            print(e)
     elif x['max_trade_day'].strip() == "":
         x['trade_days_period'] = np.nan
 

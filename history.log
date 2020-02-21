@@ -1,0 +1,2090 @@
+import MySQLdb
+import os
+
+import datetime
+from pyecharts import options as opts
+from pyecharts.charts import Bar
+
+os.chdir("/home/eos/git/hodgepodge")
+from db.mysql.SqlUtil import Mysql
+import numpy as np
+import logging
+import pandas as pd
+import collections
+
+
+logging.basicConfig(level = logging.INFO,format = '%(asctime)s [%(process)d:%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s')
+logger =logging.getLogger("userdata.py")
+
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+cash_flow_sql = '''
+SELECT
+    account_id,
+    balance,
+    process_date,
+    amount,
+    purpose,
+    remark
+FROM
+    cash_flow
+WHERE
+(
+    remark LIKE "%存款%"
+    OR remark LIKE "%提款%"
+)
+AND process_date >='2019-06-02'
+AND process_date <="2019-12-24"
+ORDER BY
+    process_date DESC
+'''.format()
+accounts = pd.read_sql(cash_flow_sql,con)
+acc_unique = accounts.account_id.unique()
+accounts
+accounts[accounts.purpose==2][['account_id','process_date','amount']]
+a = accounts[accounts.purpose==2][['account_id','process_date','amount']]
+a.to_csv("出金金额.csv",index=False)
+cash_out_df = accounts[accounts.purpose==2][['account_id','process_date','amount']]
+cash_out_df
+def myiter(d, cols=None):
+    if cols is None:
+        v = d.values.tolist()
+        cols = d.columns.values.tolist()
+    else:
+        j = [d.columns.get_loc(c) for c in cols]
+        v = d.values[:, j].tolist()
+
+    n = collections.namedtuple('MyTuple', cols)
+
+    for line in iter(v):
+        yield n(*line)
+db = Mysql("mysql5.105")
+account_full_withdraw = []
+# account_date = set()
+#计算出金用户 出金之后的总资产
+for i in tqdm(myiter(cash_out_df)):
+    try:
+        net_assets = 0
+        date = i.process_date
+        account = i.account_id
+        # date_account = str(date)+"_"+str(account)
+        # if date_account in account_date:
+        #     continue
+        # else:
+        #     account_date.add(date_account)
+        process_date = str(date)
+        if process_date<'2019-07-01':
+            sqlret = db.execute("select net_assets from trade_user_money_backup_bak01 where info_date = '{}' and account = '{}'".format(process_date.replace("-",""),account),db='miningtrade')
+        elif process_date>='2019-07-01' and process_date<'2019-07-15':
+            sqlret = db.execute("select net_assets from trade_user_money where info_date = '{}' and account = '{}'".format(process_date.replace("-",""),account),db='miningtrade')
+        else:
+            net_assets_sql = '''
+                    SELECT
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id = '{}'
+                    AND process_date = '{}'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date = '{}'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+                '''.format(account,process_date,process_date)
+            sqlret = db.execute(net_assets_sql,db='jcbms')
+        net_assets = sqlret[0][0]
+        account_full_withdraw.append([account,process_date,net_assets])
+    except Exception as e:
+        print(i)
+        print(e)
+        continue
+from tqdm import tqdm
+db = Mysql("mysql5.105")
+account_full_withdraw = []
+# account_date = set()
+#计算出金用户 出金之后的总资产
+for i in tqdm(myiter(cash_out_df)):
+    try:
+        net_assets = 0
+        date = i.process_date
+        account = i.account_id
+        # date_account = str(date)+"_"+str(account)
+        # if date_account in account_date:
+        #     continue
+        # else:
+        #     account_date.add(date_account)
+        process_date = str(date)
+        if process_date<'2019-07-01':
+            sqlret = db.execute("select net_assets from trade_user_money_backup_bak01 where info_date = '{}' and account = '{}'".format(process_date.replace("-",""),account),db='miningtrade')
+        elif process_date>='2019-07-01' and process_date<'2019-07-15':
+            sqlret = db.execute("select net_assets from trade_user_money where info_date = '{}' and account = '{}'".format(process_date.replace("-",""),account),db='miningtrade')
+        else:
+            net_assets_sql = '''
+                    SELECT
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id = '{}'
+                    AND process_date = '{}'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date = '{}'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+                '''.format(account,process_date,process_date)
+            sqlret = db.execute(net_assets_sql,db='jcbms')
+        net_assets = sqlret[0][0]
+        account_full_withdraw.append([account,process_date,net_assets])
+    except Exception as e:
+        print(i)
+        print(e)
+        continue
+account_full_withdraw
+account_full_withdraw[-1]
+account_full_withdraw.append(['67821988', '2019-06-04', Decimal('0')])
+import decimal
+account_full_withdraw.append(['67821988', '2019-06-04', decimal('0')])
+account_full_withdraw.append(['67821988', '2019-06-04', decimal.Decimal('0')])
+account_full_withdraw.append(['61887958', '2019-06-03', decimal.Decimal(26651.33)])
+account_full_withdraw
+accounts
+cash_out_df
+account_full_withdraw_df = pd.Dataframe(account_full_withdraw)
+account_full_withdraw_df = pd.DataFrame(account_full_withdraw)
+account_full_withdraw_df
+account_full_withdraw_df.columns = ['account','process_date','amount']
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:account_full_withdraw_df[(account_full_withdraw_df.account==x.account_id)&(account_full_withdraw_df.process_date==x.process_date)].amount.values[0])
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:account_full_withdraw_df[(account_full_withdraw_df.account==x.account_id)&(account_full_withdraw_df.process_date==x.process_date)].amount.values[0],axis=1)
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:account_full_withdraw_df[(account_full_withdraw_df.account==x.account_id)&(account_full_withdraw_df.process_date==x.process_date)].amount.values[0],axis=1)
+m = account_full_withdraw_df
+def get_amount_after(x):
+    logger.info(x.account_id)
+    return m[(m.account==x.account_id)&(m.process_date==x.process_date)].amount.values[0]
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:get_amount_after(x),axis=1)
+x
+logging.basicConfig(level = logging.INFO,format = '%(asctime)s [%(process)d:%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s')
+logger =logging.getLogger("userdata.py")
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:get_amount_after(x),axis=1)
+m = account_full_withdraw_df
+def get_amount_after(x):
+    print(x)
+    logger.info(x.account_id)
+    return m[(m.account==x.account_id)&(m.process_date==x.process_date)]
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:get_amount_after(x),axis=1)
+cash_out_df
+m[(m.account=='65007528')&(m.process_date=='2019-12-24')]
+cash_out_df.iloc[16,:]
+m.process_date
+type(m.process_date)
+type(m.process_date[0])
+type(cash_out_df.process_date[0])
+type(cash_out_df.process_date)
+cash_out_df.process_date
+cash_out_df.process_date[16]
+m = account_full_withdraw_df
+def get_amount_after(x):
+    logger.info(x.account_id)
+    return m[(m.account==x.account_id)&(m.process_date==str(x.process_date))].values[0]
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:get_amount_after(x),axis=1)
+cash_outf_df
+cash_out_df
+m = account_full_withdraw_df
+def get_amount_after(x):
+    logger.info(x.account_id)
+    return round(float(m[(m.account==x.account_id)&(m.process_date==str(x.process_date))].amount.values[0]),2)
+cash_out_df['amount_after'] = cash_out_df.apply(lambda x:get_amount_after(x),axis=1)
+cash_out_df
+cash_out_df['amount_befor'] = cash_out_df['amount']+cash_out_df['amount_after']
+cash_out_df
+acc_unique
+len(acc_unique)
+accounts.account_id.unique()
+len(accounts.account_id.unique())
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+                    SELECT
+                    a.account_id,
+                    a.process_date
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id in ('{str(list(str(accounts.account_id.unique()))).replace("[","").replace("]","")}')
+                    AND process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+group by  a.account_id,a.process_date
+                '''
+account_balance = pd.read_sql(sql,con)
+
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+                    SELECT
+                    a.account_id,
+                    a.process_date
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id in ('{str(list(accounts.account_id.unique())).replace("[","").replace("]","")}')
+                    AND process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+group by  a.account_id,a.process_date
+                '''
+account_balance = pd.read_sql(sql,con)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+                    SELECT
+                    a.account_id,
+                    a.process_date
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id in ({str(list(accounts.account_id.unique())).replace("[","").replace("]","")})
+                    AND process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+group by  a.account_id,a.process_date
+                '''
+account_balance = pd.read_sql(sql,con)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+                    SELECT
+                    a.account_id,
+                    a.process_date,
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id in ({str(list(accounts.account_id.unique())).replace("[","").replace("]","")})
+                    AND process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+group by  a.account_id,a.process_date
+                '''
+account_balance = pd.read_sql(sql,con)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+                    SELECT
+                    a.account_id,
+                    a.process_date,
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                    account_id,
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id in ({str(list(accounts.account_id.unique())).replace("[","").replace("]","")})
+                    AND process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date>='2019-06-02'
+                    AND process_date<='2019-12-24'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+group by  a.account_id,a.process_date
+                '''
+account_balance = pd.read_sql(sql,con)
+account_balance
+account_balance.process_date.unique()
+len(account_balance.process_date.unique())
+cash_out_df
+cash_out_df.to_csv("出金用户出金前资金金额.csv",index=False)
+acc_uniq = pd.Dataframe(accounts.account_id.unique())
+acc_uniq = pd.DataFrame(accounts.account_id.unique())
+acc_uniq
+acc_uniq.columns = ['account']
+def getBalanceDay(x):
+    total_balance = account_balance[account_balance['account_id']==x]
+    total = len(total_balance)
+    total_1 = len(total_balance[total_balance.total<=10000])
+    total_13 = len(total_balance[total_balance.total>10000&total_balance.total<=30000])
+    total_35 = len(total_balance[total_balance.total>30000&total_balance.total<=50000])
+    total_5 = len(total_balance[total_balance.total>50000])
+    return [total,total_1,total_13,total_35,total_5]
+acc_uniq['balance_t'] = acc_uniq['account'].apply(lambda x:getBalanceDay(x))
+def getBalanceDay(x):
+    total_balance = account_balance[account_balance['account_id']==x]
+    total = len(total_balance)
+    total_1 = len(total_balance[total_balance.total<=10000])
+    total_13 = len(total_balance[(total_balance.total>10000)&(total_balance.total<=30000)])
+    total_35 = len(total_balance[(total_balance.total>30000)&(total_balance.total<=50000)])
+    total_5 = len(total_balance[total_balance.total>50000])
+    return [total,total_1,total_13,total_35,total_5]
+acc_uniq['balance_t'] = acc_uniq['account'].apply(lambda x:getBalanceDay(x))
+acc_uniq
+account_balance[account_balance['account_id']=='65008008']
+acc_uniq['total'] = acc_uniq['balance_t'].apply(lambda x:x[0])
+acc_uniq['total_1'] = acc_uniq['balance_t'].apply(lambda x:x[1])
+acc_uniq['total_13'] = acc_uniq['balance_t'].apply(lambda x:x[2])
+acc_uniq['total_35'] = acc_uniq['balance_t'].apply(lambda x:x[3])
+acc_uniq['total_5'] = acc_uniq['balance_t'].apply(lambda x:x[4])
+acc_uniq
+acc_uniq[['account','balance_t','total','total_1','total_13','total_35','total_5']].to_csv("出金用户资产分布.csv",index=False)
+cash_out_df
+cash_out_df.account_id.unique()
+len(cash_out_df.account_id.unique())
+sql = f'''
+select account_id,min(process_date) from cash_flow where purpose = 1 and remark like "%存款%" and account_id in ({str(list(cash_out_df.account_id.unique()))}) group by account_id,process_date
+'''
+cash_in_time = pd.read_sql(sql,con)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+select account_id,min(process_date) from cash_flow where purpose = 1 and remark like "%存款%" and account_id in ({str(list(cash_out_df.account_id.unique()))}) group by account_id,process_date
+'''
+cash_in_time = pd.read_sql(sql,con)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+select account_id,min(process_date) from cash_flow where purpose = 1 and remark like "%存款%" and account_id in ({str(list(cash_out_df.account_id.unique())).replace("[","").replace("]","")}) group by account_id,process_date
+'''
+cash_in_time = pd.read_sql(sql,con)
+cash_in_time
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+select account_id,min(process_date) as cash_in_first_day from cash_flow where purpose = 1 and remark like "%存款%" and account_id in ({str(list(cash_out_df.account_id.unique())).replace("[","").replace("]","")}) group by account_id,process_date
+'''
+cash_in_time = pd.read_sql(sql,con)
+cash_in_time
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+select account_id,min(process_date) as cash_in_first_day from cash_flow where purpose = 1 and remark like "%存款%" and account_id in ({str(list(cash_out_df.account_id.unique())).replace("[","").replace("]","")}) group by account_id
+'''
+cash_in_time = pd.read_sql(sql,con)
+cash_in_time
+cash_out_df
+set(cash_out_df.account_id)-set(cash_in_time.account_id)
+len(set(cash_out_df.account_id)-set(cash_in_time.account_id))
+cash_out_df
+cash_in_time
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+sql = f'''
+select account_id,min(process_date) as cash_in_first_day from cash_flow where purpose = 2 and remark like "%提款%" and account_id in ({str(list(cash_out_df.account_id.unique())).replace("[","").replace("]","")}) group by account_id
+'''
+cash_out_time = pd.read_sql(sql,con)
+cash_out_time
+692/2926
+cash_out_df
+len(cash_out_df.account_id.unique())
+def getTotalNetAssets(account,process_date):
+    '''
+    计算用户总资产
+    :param account:
+    :param process_date:
+    :return:
+    '''
+    net_assets_sql = '''
+                    SELECT
+                    sum(
+                    a.net_assets * b.exchange_rate
+                    ) AS total
+                    FROM
+                    (
+                    SELECT
+                        market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+                        currency,
+                        process_date
+                    FROM
+                        account_balance
+                    WHERE
+                        account_id = '{}'
+                    AND process_date = '{}'
+                    ) a
+                    LEFT JOIN (
+                    SELECT
+                    process_date,
+                    currency,
+                    exchange_rate
+                    FROM
+                    currency_history
+                    WHERE
+                    process_date = '{}'
+                    ) b ON a.process_date = b.process_date
+                    AND a.currency = b.currency
+                '''.format(account,process_date,process_date)
+    sqlret = db.execute(net_assets_sql,'jcbms')
+    return sqlret[0][0]
+cash_in_time['asset_first_in'] = cash_in_time.apply(lambda x:getTotalNetAssetsgetTotalNetAssets(x['account_id'],x['cash_in_first_day']),axis=1)
+cash_in_time['asset_first_in'] = cash_in_time.apply(lambda x:getTotalNetAssets(x['account_id'],x['cash_in_first_day']),axis=1)
+cash_in_time
+cash_in_time[cash_in_time['asset_first_in']==None]
+cash_in_time[cash_in_time['asset_first_in'] is None]
+cash_in_time[cash_in_time['asset_first_in']==numpy.NaN]
+import numpy as np
+cash_in_time[cash_in_time['asset_first_in']==np.NaN]
+cash_in_time['asset_first_in'][1]
+cash_in_time['asset_first_in'][0]
+cash_in_time['asset_first_in'][1]
+type(cash_in_time['asset_first_in'][1])
+cash_in_time['asset_first_in'][1] == None
+cash_in_time[cash_in_time['asset_first_in'].isnull()]
+cash_in_time[cash_in_time['asset_first_in']!=None]
+cash_in_time['asset_first_in']
+cash_in_time['asset_first_in'][1]
+cash_in_time['asset_first_in'][2]
+a = list(cash_in_time['asset_first_in'])
+a
+def getTotalNetAssets(account,process_date):
+    '''
+    计算用户总资产
+    :param account:
+    :param process_date:
+    :return:
+    '''
+    # net_assets_sql = '''
+    #                 SELECT
+    #                 sum(
+    #                 a.net_assets * b.exchange_rate
+    #                 ) AS total
+    #                 FROM
+    #                 (
+    #                 SELECT
+    #                     market_value + trade_balance + ipo_frozen_before_close AS net_assets,
+    #                     currency,
+    #                     process_date
+    #                 FROM
+    #                     account_balance
+    #                 WHERE
+    #                     account_id = '{}'
+    #                 AND process_date = '{}'
+    #                 ) a
+    #                 LEFT JOIN (
+    #                 SELECT
+    #                 process_date,
+    #                 currency,
+    #                 exchange_rate
+    #                 FROM
+    #                 currency_history
+    #                 WHERE
+    #                 process_date = '{}'
+    #                 ) b ON a.process_date = b.process_date
+    #                 AND a.currency = b.currency
+    #             '''.format(account,process_date,process_date)
+    net_assets_sql = f'''
+                    SELECT
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date = '{process_date}'
+                GROUP BY
+                    account_id
+                    '''
+    sqlret = db.execute(net_assets_sql,'jcbms')
+    return sqlret[0][0]
+cash_in_time['asset_first_in'] = cash_in_time.apply(lambda x:getTotalNetAssets(x['account_id'],x['cash_in_first_day']),axis=1)
+cash_in_time
+cash_out_time
+3614-2926
+cash_out_time['asset_first_out'] = cash_out_time.apply(lambda x:getTotalNetAssets(x['account_id'],x['cash_in_first_day']),axis=1)
+cash_out_time
+cash_in_time.to_csv("首次入金时的资产.csv",index=False)
+cash_out_df
+cash_out_df
+cash_in_time
+cash_out_df[cash_out_df['account_id']=='11351356']
+cash_out_time
+cash_out_time[cash_out_time['account_id']=='11351356']
+cash_in_time.to_csv("出金用户首次入金时资产.csv",index=False)
+cash_out_time.to_csv("出金用户首次出金时资产.csv",index=False)
+cash_out_df.to_csv("出金前总资产.csv",index=False)
+cash_out_df
+cash_in_time
+cash_in_time['cash_out_first_day'] = cash_in_time['account_id'].apply(lambda x:cash_out_time[cash_out_time['account_id']==x]['cash_in_first_day'].values[0])
+cash_out_time
+cash_in_time
+set(cash_in_time.account_id)-set(cash_out_time.account_id)
+cash_in_time[cash_in_time['account_id']=='65018168']
+cash_in_time = cash_in_time.drop(cash_in_time.index=1467)
+cash_in_time = cash_in_time.drop(cash_in_time.index==1467)
+cash_in_time = cash_in_time.drop(1467)
+cash_in_time[cash_in_time['account_id']=='65018168']
+cash_in_time[cash_in_time['account_id']=='66018958']
+cash_in_time = cash_in_time.drop(1694)
+cash_in_time['cash_out_first_day'] = cash_in_time['account_id'].apply(lambda x:cash_out_time[cash_out_time['account_id']==x]['cash_in_first_day'].values[0])
+casj_in_time
+cash_in_time
+cash_in_time['cash_out_first_day_amount'] = cash_in_time.apply(lambda x:cash_out_df[(cash_out_df['account_id']==x['account_id'])&(cash_out_df['process_date']==x['cash_out_first_day'])]['amount_befor'].values[0])
+cash_in_time['cash_out_first_day_amount'] = cash_in_time.apply(lambda x:cash_out_df[(cash_out_df['account']==x['account_id'])&(cash_out_df['process_date']==x['cash_out_first_day'])]['amount_befor'].values[0])
+cash_in_time
+cash_out_df
+cash_in_time['cash_out_first_day_amount'] = cash_in_time.apply(lambda x:cash_out_df[(cash_out_df['account_id']==x['account_id'])&(cash_out_df['process_date']==x['cash_out_first_day'])]['amount_befor'].values[0])
+cash_in_time['cash_out_first_day_amount'] = cash_in_time.apply(lambda x:cash_out_df[(cash_out_df['account_id']==x['account_id'])&(cash_out_df['process_date']==x['cash_out_first_day'])]['amount_befor'].values[0],axis = 1)
+set(cash_in_time.account_id)-set(cash_out_df.account_id)
+def getCashoutfirstdayamount(x):
+    print(x.account_id)
+    cash_out_df[(cash_out_df['account_id']==x['account_id'])&(cash_out_df['process_date']==x['cash_out_first_day'])]['amount_befor'].values[0]
+cash_in_time['cash_out_first_day_amount'] = cash_in_time.apply(lambda x:getCashoutfirstdayamount(x),axis = 1)
+cash_in_time['20429012']
+cash_in_time[cash_in_time.account_id=='20429012']
+cash_out_df[cash_out_df.account_id=='20429012']
+cash_out_df[(cash_out_df.account_id=='20429012')&(cash_out_df.process_date=='2019-03-21')]
+def getCashoutfirstdayamount(x):
+    print(x.account_id)
+    a = cash_out_df[(cash_out_df['account_id']==x['account_id'])&(cash_out_df['process_date']==x['cash_out_first_day'])]
+    if len(a) == 0:
+        return getTotalNetAssets(x.account_id,x.cash_out_first_day)
+    else:
+        return a['amount_befor'].values[0]
+cash_in_time['cash_out_first_day_amount'] = cash_in_time.apply(lambda x:getCashoutfirstdayamount(x),axis = 1)
+cash_in_time
+cash_in_time.to_csv("首次入金首次出金.csv",index=False)
+acc_uniq
+cash_out_df
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+
+sql = '''
+select process_date from account_position where process_date group by process_date order by process_date desc 
+'''
+process_date_list = pd.read_sql(sql,con)
+process_date_list
+process_date_list = list(process_date_list)
+process_date_list[0]
+process_date_list[-1]
+process_date_list = list(process_date_list.process_date)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+
+sql = '''
+select process_date from account_position where process_date group by process_date order by process_date desc 
+'''
+process_date_list = pd.read_sql(sql,con)
+process_date_list = list(process_date_list.process_date)
+process_date_list
+cash_out_df
+x = cash_out_df['account_id']
+x
+x = cash_out_df.iloc[0,:]
+x
+account = x['account_id']
+process_day = x['process_date']
+sql = f'''
+select max(process_day) from account_position where account='{account}' and process_day<'{process_day}'
+'''
+data = pd.read_sql(sql,con)
+account = x['account_id']
+process_day = x['process_date']
+sql = f'''
+select max(process_date) from account_position where account='{account}' and process_day<'{process_day}'
+'''
+data = pd.read_sql(sql,con)
+account = x['account_id']
+process_day = x['process_date']
+sql = f'''
+select max(process_date) from account_position where account_id='{account}' and process_date<'{process_day}'
+'''
+data = pd.read_sql(sql,con)
+data
+account = x['account_id']
+process_day = x['process_date']
+sql = f'''
+select max(process_date) from account_position where account_id='{account}' and net_quantity<>0 and process_date<'{process_day}'
+'''
+print(sql)
+data = pd.read_sql(sql,con)
+data
+cash_out_df
+len(cash_out_df.account_id.unique())
+acc_uniq
+cash_out_user = pd.DataFrame(cash_out_df.account_id.unique())
+cash_out_user
+cash_out_user.columns = ['account']
+cash_out_time
+accounts
+accounts[accounts['purpose']==2]
+cash_out = accounts[accounts['purpose']==2]
+cash_out
+cash_out_df
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:x.account_id x.process_date,axis=1)
+account= '65007528'
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                    '''
+    data = pd.read_sql(sql,con)
+data
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                    '''
+    data = pd.read_sql(empty_sql,con)
+data
+myiter(data)
+cash_out_df
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+data
+def getEmptyday(account,process_date,amount):
+    print(account)
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+    da = myiter(data[data['process_date']<process_date])
+    counter = 0
+    for i in da:
+        rate = i['total_asset']/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+    return counter
+
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:getEmptyday(x.account_id,x.process_date,x.amount_befor),axis=1)
+cash_out_df
+account,process_date,amount = '65007528','2019-12-24','14617.04'
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+data
+da = myiter(data[data['process_date']<process_date])
+process_date
+da = myiter(data[data['process_date']<datetime.datetime(year=2019,month=12,day=24)])
+cash_out_df
+cash_out_df['process_date'][16]
+data
+data[process_date][0]
+data[process_date]
+data.process_date[0]
+da = myiter(data[data['process_date']<datetime.date(year=2019,month=12,day=24)])
+da
+    counter = 0
+    for i in da:
+        rate = i['total_asset']/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+amount
+cash_out_df
+cash_out_df['amount_befor']
+cash_out_df['amount_befor'][16]
+type(cash_out_df['amount_befor'][16])
+data['total_assets']
+data.total_asset
+data.total_asset[1]
+type(data.total_asset[1])
+def getEmptyday(account,process_date,amount):
+    print(account)
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+    da = myiter(data[data['process_date']<process_date])
+    counter = 0
+    for i in da:
+        print(type(i['total_asset']))
+        print(type(amount))
+        rate = i['total_asset']/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+    return counter
+
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:getEmptyday(x.account_id,x.process_date,x.amount_befor),axis=1)
+def getEmptyday(account,process_date,amount):
+    print(account)
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+    da = myiter(data[data['process_date']<process_date])
+    counter = 0
+    for i in da:
+        print(type(i.total_asset))
+        print(type(amount))
+        rate = i.total_asset/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+    return counter
+
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:getEmptyday(x.account_id,x.process_date,x.amount_befor),axis=1)
+def getEmptyday(account,process_date,amount):
+    print(account)
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+    da = myiter(data[data['process_date']<process_date])
+    counter = 0
+    for i in da:
+        rate = i.total_asset/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+    print(account,process_date,counter)
+    return counter
+    
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:getEmptyday(x.account_id,x.process_date,x.amount_befor),axis=1)
+def getEmptyday(account,process_date,amount):
+    print(account)
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+    da = myiter(data[data['process_date']<process_date])
+    counter = 0
+    for i in da:
+        rate = i.total_asset/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+    print(account,process_date,counter)
+    return counter
+
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:getEmptyday(x.account_id,x.process_date,x.amount_befor),axis=1)
+def getEmptyday(account,process_date,amount):
+    print(account)
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+    da = myiter(data[data['process_date']<process_date])
+    counter = 0
+    for i in da:
+        rate = i.total_asset/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+    print(f"account:{account}\tprocess_date:{process_date}\tcounter:{counter}")
+    return counter
+
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:getEmptyday(x.account_id,x.process_date,x.amount_befor),axis=1)
+account
+x = cash_out_df.iloc[0,:]
+x
+account,process_date,amount = x.account_id,x.process_date,x.amount_befor
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+con
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="jcbms", charset="utf8")
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+data
+def getEmptyday(account,process_date,amount):
+    print(account)
+    empty_sql = f'''
+                    SELECT
+                    account_id,process_date,
+                    sum(
+                        (
+                            market_value + trade_balance + ipo_frozen_before_close
+                        ) * (
+                            CASE
+                            WHEN currency = 1 THEN
+                                1.1656370206
+                            WHEN currency = 2 THEN
+                                1
+                            WHEN 4 THEN
+                                7.8415000000
+                            END
+                        )
+                    ) AS total_asset
+                FROM
+                    account_balance
+                WHERE
+                    account_id = '{account}'
+                AND process_date >= '2019-06-02'
+                AND process_date <= '2019-12-24'
+                GROUP BY
+                    account_id,process_date
+                order by process_date desc
+             '''
+    data = pd.read_sql(empty_sql,con)
+    da = myiter(data[data['process_date']<process_date])
+    counter = 0
+    for i in da:
+        rate = i.total_asset/amount
+        if rate>0.99 and rate<1.01:
+            counter+=1
+        else:
+            break
+    print(f"account:{account}\tprocess_date:{process_date}\tcounter:{counter}")
+    return counter
+
+cash_out_df['empty_day'] = cash_out_df.apply(lambda x:getEmptyday(x.account_id,x.process_date,x.amount_befor),axis=1)
+cash_out_df
+cash_out_df.to_csv("用户出金空仓天数.csv",index=False)
+pwd
+cash_out_df
+cash_out_user
+cash_out_list = list(cash_out_user.account)
+cash_out_list
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="report", charset="utf8")
+    sql = f'''
+    select funds_account,stat_time_day,trade_money as total_deposit_amount,withdraw_money as total_withdraw_amount from user_golden_info where funds_account in (str(cash_out_list).replace("[","").replace("]","")) group by funds_account
+    '''
+    cash_info = pd.read_sql(sql,con)
+    sql = f'''
+    select funds_account,stat_time_day,trade_money as total_deposit_amount,withdraw_money as total_withdraw_amount from user_golden_info where funds_account in ({str(cash_out_list).replace("[","").replace("]","")}) group by funds_account
+    '''
+    cash_info = pd.read_sql(sql,con)
+cash_info
+    sql_product = f'''
+    select funds_account,sum(volume*rate*closing_price),purpose from stock_transfer where funds_account in ({str(cash_out_list).replace("[","").replace("]","")}) group by funds_account,purpose
+    '''
+    product_info = pd.read_sql(sql_product,con)
+product_info
+    sql_product = f'''
+    select funds_account,sum(volume*rate*closing_price) as total_amount,purpose from stock_transfer where funds_account in ({str(cash_out_list).replace("[","").replace("]","")}) group by funds_account,purpose
+    '''
+    product_info = pd.read_sql(sql_product,con)
+product_info
+product_info.iloc[0,1]
+product_info.iloc[0,:]
+product_info.iloc[1,:]
+product_info.iloc[2,:]
+product_info.iloc[90,:]
+product_info.iloc[2,1]
+type(product_info.iloc[2,1])
+sql_assets_first = '''
+select account,net_assets from trade_user_money where info_date='20190131' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_first = pd.read_sql(sql_assets_first)
+sql_assets_end = '''
+select account,net_assets from trade_user_money where info_date='20191227' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_end = pd.read_sql(sql_assets_end,con)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="miningtrade", charset="utf8")
+sql_assets_first = '''
+select account,net_assets from trade_user_money where info_date='20190131' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_first = pd.read_sql(sql_assets_first,con)
+sql_assets_end = '''
+select account,net_assets from trade_user_money where info_date='20191227' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_end = pd.read_sql(sql_assets_end,con)
+
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="miningtrade", charset="utf8")
+sql_assets_first = f'''
+select account,net_assets from trade_user_money where info_date='20190131' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_first = pd.read_sql(sql_assets_first,con)
+sql_assets_end = f'''
+select account,net_assets from trade_user_money where info_date='20191227' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_end = pd.read_sql(sql_assets_end,con)
+assets_first
+assets_end
+assets_end.net_assets
+assets_end.net_assets[100:200]
+cash_info
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="miningtrade", charset="utf8")
+sql_assets_first = f'''
+select account,net_assets from trade_user_money_backup_bak01 where info_date='20190131' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_first = pd.read_sql(sql_assets_first,con)
+assets_first
+def getstNetAsset(x):
+    asset_st = assets_first[assets_first.account==x.account_id]
+    if len(asset_st)==0:
+        return 0
+    else:
+        return asset_st.net_assets.values[0]
+def getendNetAsset(x):
+    asset_ed = assets_end[assets_end.account==x.account_id]
+    if len(asset_ed)==0:
+        return 0
+    else:
+        return assets_end.net_assets.values[0]
+cash_info['assets_start'] = cash_info.apply(lambda x:getstNetAsset(x),axis=1)
+cash_info['assets_end'] = cash_info.apply(lambda x:getendNetAsset(x),axis=1)
+cash_info
+def getstNetAsset(x):
+    asset_st = assets_first[assets_first.account==x.funds_account]
+    if len(asset_st)==0:
+        return 0
+    else:
+        return asset_st.net_assets.values[0]
+def getendNetAsset(x):
+    asset_ed = assets_end[assets_end.account==x.funds_account]
+    if len(asset_ed)==0:
+        return 0
+    else:
+        return assets_end.net_assets.values[0]
+cash_info['assets_start'] = cash_info.apply(lambda x:getstNetAsset(x),axis=1)
+cash_info['assets_end'] = cash_info.apply(lambda x:getendNetAsset(x),axis=1)
+cash_info
+cash_info['in'] = cash_info.apply(lambda x:x.total_deposit_amount+assets_start,axis=1)
+cash_info['in'] = cash_info.apply(lambda x:x.total_deposit_amount+x.assets_start,axis=1)
+cash_info['out'] = cash_info.apply(lambda x:x.total_withdraw_amount+x.assets_end,axis=1)
+cash_info['rate'] = cash_info['out']/cash_info['in']
+cash_info
+product_info
+def getproin(x):
+    p_in = product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose==1)]
+    if len(p_in)==0:
+        return 0
+    else:
+        return p_in.total_amount.values[0]
+
+def getproot(x):
+    p_ot = product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose==2)]
+    if len(p_ot)==0:
+        return 0
+    else:
+        return p_ot.total_amount.values[0]
+
+cash_info['pro_in'] = cash_info.apply(lambda x:getproin(x),axis=1)
+cash_info['pro_ot'] = cash_info.apply(lambda x:getproot(x),axis=1)
+cash_info
+cash_info['in'] = cash_info.apply(lambda x:x.total_deposit_amount+x.assets_start+x.pro_in,axis=1)
+cash_info['out'] = cash_info.apply(lambda x:x.total_withdraw_amount+x.assets_end+x.pro_out,axis=1)
+cash_info['out'] = cash_info.apply(lambda x:x.total_withdraw_amount+x.assets_end+x.pro_ot,axis=1)
+cash_info['rate'] = cash_info['out']/cash_info['in']
+cash_info
+cash_info.to_csv("出金用户盈亏.csv",index=False)
+cash_out_df
+124.0/6690
+124.0/3618
+1926+3658+470+636
+history
+acc_uniq
+acc_uniq.set_index('account')
+acc_uniq
+acc_uniq = acc_uniq.set_index('account')
+acc_uniq.drop(accounts[accounts.purpose==1].account_id.unique())
+acc_uniq.drop(accounts[accounts.purpose==2].account_id.unique())
+acc_uniq
+acc_uniq.account
+acc_uniq['account']
+acc_uniq.index
+acc_uniq.index.unique()
+len(acc_uniq.index.unique())
+accounts
+len(accounts[accounts.purpose==2].unique())
+len(accounts[accounts.purpose==2].account_id.unique())
+acc_uniq
+a = accounts[accounts.purpose==2].account_id.unique()
+a
+list(a)
+acc_uniq
+acc_uniq['is_in'] = acc_uniq.apply(lambda x:x.index in a,axis=1)
+x = acc_uniq.iloc[0,:]
+x
+x.index
+x.index.name
+x.Name
+x.index.Name
+dir(x)
+x.name
+acc_uniq['is_in'] = acc_uniq.apply(lambda x:x.name in a,axis=1)
+acc_uniq
+len(acc_uniq[acc_uniq['is_in']==False])
+len(acc_uniq[acc_uniq['is_in']==True])
+acc_uniq_out = acc_uniq[acc_uniq['is_in']==True]
+def getMaxValue(x):
+    total_list = [x['total_1'],x['total_13'],x['total_35'],x['total_5']]
+    max_total = max(total_list)
+    return total_list.index(max_total)
+acc_uniq_out['type'] = acc_uniq_out.apply(lambda x:getMaxValue(x),axis=1)
+acc_uniq_out
+acc_uniq_out.to_csv("出金用户资产分布.csv",index=True)
+1306 1689 266 357
+1306+1689
+2995/3618
+5788+1985
+268+366
+634+7773
+7773/8407
+cash_out_df
+acc_uniq
+acc_uniq_out
+cash_out_user
+acc_uniq_out
+cash_info
+product_info
+product_info[product_info['funds_account']=='33333333']
+cash_info[cash_info['funds_account']=='33333333']
+x = cash_info[cash_info['funds_account']=='33333333']
+x
+p_in = product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose==1)]
+x.funds_account
+x = cash_info[cash_info['funds_account']=='33333333'].values[0]
+x
+p_in = product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose==1)]
+x = cash_info.iloc[15,:]
+x
+p_in = product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose==1)]
+p_in
+x.funds_account
+product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose==1)]
+product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose==2)]
+product_info[(product_info.funds_account==x.funds_account)]
+product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose=='2')]
+product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose=='2')]
+def getproin(x):
+    p_in = product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose=='1')]
+    if len(p_in)==0:
+        return 0
+    else:
+        return p_in.total_amount.values[0]
+
+def getproot(x):
+    p_ot = product_info[(product_info.funds_account==x.funds_account)&(product_info.purpose=='2')]
+    if len(p_ot)==0:
+        return 0
+    else:
+        return p_ot.total_amount.values[0]
+
+cash_info['pro_in'] = cash_info.apply(lambda x:getproin(x),axis=1)
+cash_info['pro_ot'] = cash_info.apply(lambda x:getproot(x),axis=1)
+cash_info['in'] = cash_info.apply(lambda x:x.total_deposit_amount+x.assets_start+x.pro_in,axis=1)
+cash_info['out'] = cash_info.apply(lambda x:x.total_withdraw_amount+x.assets_end+x.pro_ot,axis=1)
+cash_info['rate'] = cash_info['out']/cash_info['in']
+cash_info.to_csv("出金用户盈亏.csv",index=False)
+assets_end
+sql_assets_end = f'''
+select account,net_assets from trade_user_money where info_date='20191227' and account in ({str(cash_out_list).replace("[","").replace("]","")})
+'''
+assets_end = pd.read_sql(sql_assets_end,con)
+history
+;
+/
+eos
+eof
+cash_out_df
+cash_out_list
+len(cash_out_list)
+cash_out_list
+cash_out_df
+len(cash_out_df.account_id.unique())
+accounts
+len(accounts.account_id.unique())
+accounts[accounts.purpose==1]
+11980
+20387-11980
+8407/20387
+1-8407/20387
+cash_out_df
+acc_uniq
+import time
+time.time()
+cash_out_df
+cash_out_df[cash_out_df.process_date>'201907-01']
+cash_out_df[cash_out_df.process_date>=datetime.date(2019,7,1)]
+a = cash_out_df[cash_out_df.process_date>=datetime.date(2019,7,1)]
+a['empty_day']
+a['empty_day'].unique()
+a
+a.groupby('empty_day').sum()
+a.groupby('empty_day').count()
+b = a.groupby('empty_day').count()
+b['account_id']
+c = b['account_id']
+c.index
+c.values
+df1
+cash_out_df
+    c = (
+        Bar()
+            .add_xaxis(c.index)
+            .add_yaxis("无交易行为", c.values)
+            .set_global_opts(
+            title_opts=opts.TitleOpts(title="Bar-DataZoom（slider+inside）"),
+            datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
+        )
+    )
+c.render("无交易行为的天数.html")
+pwd
+    c = (
+        Bar()
+            .add_xaxis(list(c.index))
+            .add_yaxis("无交易行为", list(c.values))
+            .set_global_opts(
+            title_opts=opts.TitleOpts(title="Bar-DataZoom（slider+inside）"),
+            datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
+        )
+    )
+c = b['account_id']
+    ba = (
+        Bar()
+            .add_xaxis(list(c.index))
+            .add_yaxis("无交易行为", list(c.values))
+            .set_global_opts(
+            title_opts=opts.TitleOpts(title="Bar-DataZoom（slider+inside）"),
+            datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_="inside")],
+        )
+    )
+ba.render("无交易行为的天数.html")
+c
+c
+c.values
+c.values[:20]
+c.values[:30]
+c.values[:40]
+for i in c.iteritems():
+    i.index,i.values
+for i in c.iteritems():
+    i[0],i[1]
+c
+c.to_csv("empty_day.csv")
+c['days'] = c.index
+c
+c
+c = b['account_id']
+c
+b
+b['account_id']
+b.days
+a = '''0    1895
+1   1285
+2   1312
+3   781
+4   424
+5   293
+6   226
+7   163
+8   141
+9   97
+10  80
+11  72
+12  52
+13  58
+14  54
+15  41
+16  31
+17  45
+18  30
+19  26
+20  26
+21  22
+22  32
+23  30
+24  23
+25  25
+26  15
+27  14
+28  9
+29  16
+30  9
+31  16
+32  12
+33  18
+34  11
+35  12
+36  14
+37  13
+38  10
+39  8
+40  12
+41  8
+42  7
+43  12
+44  9
+45  7
+46  7
+47  7
+48  10
+49  5
+50  6
+51  4
+52  4
+53  6
+54  3
+55  6
+56  7
+57  2
+58  3
+59  1
+60  2
+61  7
+62  4
+63  2
+64  3
+65  3
+67  3
+68  2
+69  1
+70  4
+72  1
+73  4
+74  3
+75  3
+76  1
+77  1
+80  3
+81  1
+83  1
+85  4
+86  2
+87  1
+90  1
+91  2
+92  1
+93  1
+94  1
+97  3
+98  2
+100 1
+104 2
+106 1
+107 1
+120 1
+123 1
+141 1
+143 2'''
+b = a.split("\n")
+b
+c = [i.split("\t")[0],i.split("\t")[1] for i in b]
+c = [[i.split("\t")[0],i.split("\t")[1]] for i in b]
+c
+pd.DataFrame(c)
+df = pd.DataFrame(c)
+df.columns = ['days','total']
+for i in range(30):
+    start = i*5
+    end = i*5+5
+    print(f"{start}\t{end}\t{df[(df.days>=start)&(df.days<end)].total.sum())}")
+for i in range(30):
+    start = i*5
+    end = i*5+5
+    print(f"{start}\t{end}\t{df[(df.days>=start)&(df.days<end)].total.sum()}")
+for i in range(30):
+    start = i*5
+    end = i*5+5
+    print(f"{start}\t{end}\t{df[(int(df.days)>=start)&(int(df.days)<end)].total.sum()}")
+df.days = df.days.astype('int')
+for i in range(30):
+    start = i*5
+    end = i*5+5
+    print(f"{start}\t{end}\t{df[(df.days>=start)&(df.days<end)].total.sum()}")
+df[(df.days>=0)&(df.days<5)]
+df[(df.days>=0)&(df.days<5)].total
+df[(df.days>=0)&(df.days<5)].total.sum()
+df.days = df.days.astype('int')
+df.total =df.total.astype('int')
+for i in range(30):
+    start = i*5
+    end = i*5+5
+    print(f"{start}\t{end}\t{df[(df.days>=start)&(df.days<end)].total.sum()}")
+df
+df[df.days>60]
+df[df.days>60].total.sum()
+df
+cash_out_df
+cash_out_df[cash_out_df['process_date']]
+cash_out_df[cash_out_df['process_date']>datatime.date(2019,7,1)]
+cash_out_df[cash_out_df['process_date']>datetime.date(2019,7,1)]
+cash_out_df
+cash_out_df.account_id.unique()
+len(cash_out_df.account_id.unique())
+acc_uniq
+acc_uniq_out
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="miningtrade", charset="utf8")
+
+sql1 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money
+WHERE
+    account in (str(list(acc_uniq_out)).replace("[","").replace("]",""))
+AND info_date <= '20191224'
+AND info_date >= '20190501'
+ORDER BY
+    info_date DESC
+
+'''
+trade1 = pd.read_sql(sql1,con)
+
+sql2 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money_backup_bak01
+WHERE
+    account = (str(list(acc_uniq_out)).replace("[","").replace("]",""))
+AND info_date <= '20190701'
+AND info_date >= '20190401'
+ORDER BY
+    info_date DESC
+
+'''
+trade2 = pd.read_sql(sql2,con)
+trade_user_money = pd.concat([trade1,trade2])
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="miningtrade", charset="utf8")
+
+sql1 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money
+WHERE
+    account in ({str(list(acc_uniq_out)).replace("[","").replace("]","")})
+AND info_date <= '20191224'
+AND info_date >= '20190501'
+ORDER BY
+    info_date DESC
+
+'''
+trade1 = pd.read_sql(sql1,con)
+
+sql2 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money_backup_bak01
+WHERE
+    account = ({str(list(acc_uniq_out)).replace("[","").replace("]","")})
+AND info_date <= '20190701'
+AND info_date >= '20190401'
+ORDER BY
+    info_date DESC
+
+'''
+trade2 = pd.read_sql(sql2,con)
+trade_user_money = pd.concat([trade1,trade2])
+acc_uniq_out
+acc_uniq_out.account
+acc_uniq_out.index
+list(acc_uniq_out.index)
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="miningtrade", charset="utf8")
+
+sql1 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money
+WHERE
+    account in ({str(list(acc_uniq_out.index)).replace("[","").replace("]","")})
+AND info_date <= '20191224'
+AND info_date >= '20190501'
+ORDER BY
+    info_date DESC
+
+'''
+trade1 = pd.read_sql(sql1,con)
+
+sql2 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money_backup_bak01
+WHERE
+    account = ({str(list(acc_uniq_out.index)).replace("[","").replace("]","")})
+AND info_date <= '20190701'
+AND info_date >= '20190401'
+ORDER BY
+    info_date DESC
+
+'''
+trade2 = pd.read_sql(sql2,con)
+trade_user_money = pd.concat([trade1,trade2])
+con = MySQLdb.connect(host="192.168.5.105", user="root", passwd="zunjiazichan123", db="miningtrade", charset="utf8")
+
+sql1 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money
+WHERE
+    account in ({str(list(acc_uniq_out.index)).replace("[","").replace("]","")})
+AND info_date <= '20191224'
+AND info_date >= '20190501'
+ORDER BY
+    info_date DESC
+
+'''
+trade1 = pd.read_sql(sql1,con)
+
+sql2 = f'''
+SELECT
+    account,
+    net_assets,
+    withdraw,
+    info_date
+FROM
+    trade_user_money_backup_bak01
+WHERE
+    account in ({str(list(acc_uniq_out.index)).replace("[","").replace("]","")})
+AND info_date <= '20190701'
+AND info_date >= '20190401'
+ORDER BY
+    info_date DESC
+
+'''
+trade2 = pd.read_sql(sql2,con)
+trade_user_money = pd.concat([trade1,trade2])
+trade_user_money
+cash_out_df
+trade_user_money['is_equal'] = trade_user_money['net_assets'] == trade_user_money['withdraw']
+trade_user_money.is_equal
+trade_user_money[trade_user_money['account']=='65007528']
+trade_user_money[(trade_user_money['account']=='65007528') & (trade_user_money['info_date']<'20191224')]
+trade_user_money[(trade_user_money['account']=='65007528') & (trade_user_money['info_date']<int('20191224'))]
+trade_user_money[(trade_user_money['account']=='65007528') & (trade_user_money['info_date']<int('20191224'))].is_equal
+trade_user_money[(trade_user_money['account']=='65007528') & (trade_user_money['info_date']<int('20191224'))].is_equal.values
+a = list(trade_user_money[(trade_user_money['account']=='65007528') & (trade_user_money['info_date']<int('20191224'))].is_equal.values)
+a
+a.index(False)
+trade_user_money[(trade_user_money['account']=='65007528') & (trade_user_money['info_date']<int('20191224'))].head(40)
+cash_out_df
+accounts[accounts.account_id==]
+accounts[accounts.account_id=='65007528']
+accounts[accounts.account_id=='65007528'].process_date
+accounts[accounts.account_id=='65007528'].process_date.values
+accounts[accounts.account_id=='65007528'].process_date.values[1]
+b = [1,2,3,3,4]
+b.index(3)
+def getLastProcessDate(account,process_date):
+    ret = accounts[(accounts.account_id==account)&(accounts.process_date<process_date)].process_date.values
+    if len(ret)==0:
+        return '2017-07-01'
+    else:
+        return ret[0]
+def getEmptyDays(account,process_date):
+    last_cash_date  = getLastProcessDate(account,process_date)
+    last_cash_date = int(str(last_cash_date).replace("-",""))
+    equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']<last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+    equal_days_list = list(equal_days.values)
+    return equal_days_list.index(False)
+cash_out_df
+cash_out_df['equal_days'] = cash_out_df.apply(lambda x:getEmptyDays(x.account_id,x.process_date),axis=1)
+def getEmptyDays(account,process_date):
+    print(f"{account}\t{process_date}")
+    last_cash_date  = getLastProcessDate(account,process_date)
+    last_cash_date = int(str(last_cash_date).replace("-",""))
+    equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']<last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+    equal_days_list = list(equal_days.values)
+    return equal_days_list.index(False)
+
+cash_out_df['equal_days'] = cash_out_df.apply(lambda x:getEmptyDays(x.account_id,x.process_date),axis=1)
+cash_out_df
+cash_out_df.head(20)
+x = cash_out_df.iloc[27,:]
+x
+account,process_date=x.account_id,x.process_date
+account
+process_date
+last_cash_date  = getLastProcessDate(account,process_date)
+last_cash_date
+accounts[accounts.account_id=='60008008']
+last_cash_date = int(str(last_cash_date).replace("-",""))
+last_cash_date
+equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']<last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))]
+equal_days
+trade_user_money[trade_user_money.account==account]
+equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))]
+equal_days
+equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+equal_days_list = list(equal_days.values)
+equal_days_list
+equal_days_list.index(False)
+def getEmptyDays(account,process_date):
+    print(f"{account}\t{process_date}")
+    last_cash_date  = getLastProcessDate(account,process_date)
+    last_cash_date = int(str(last_cash_date).replace("-",""))
+    equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+    equal_days_list = list(equal_days.values)
+    return equal_days_list.index(False)
+
+cash_out_df['equal_days'] = cash_out_df.apply(lambda x:getEmptyDays(x.account_id,x.process_date),axis=1)
+x = cash_out_df.iloc[16,:]
+x
+cash_out_df
+def getEmptyDays(account,process_date):
+    print(f"{account}\t{process_date}")
+    last_cash_date  = getLastProcessDate(account,process_date)
+    last_cash_date = int(str(last_cash_date).replace("-",""))
+    equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+    equal_days_list = list(equal_days.values)
+    if len(equal_days_list)==0:
+        return 0
+    return equal_days_list.index(False)
+
+cash_out_df['equal_days'] = cash_out_df.apply(lambda x:getEmptyDays(x.account_id,x.process_date),axis=1)
+def getEmptyDays(account,process_date):
+    print(f"{account}\t{process_date}")
+    last_cash_date  = getLastProcessDate(account,process_date)
+    last_cash_date = int(str(last_cash_date).replace("-",""))
+    equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+    equal_days_list = list(equal_days.values)
+    if len(equal_days_list)==0:
+        return 0
+    if False not in equal_days_list:
+        return 1000
+    return equal_days_list.index(False)
+
+cash_out_df['equal_days'] = cash_out_df.apply(lambda x:getEmptyDays(x.account_id,x.process_date),axis=1)
+cash_out_df
+x = cash_out_df.iloc[16,:]
+x
+account,process_date = x
+account,process_date = x.account_id,x.process_date
+account
+process_date
+last_cash_date  = getLastProcessDate(account,process_date)
+last_cash_date
+accounts[accounts.account_id=='61826278']
+accounts[accounts.account_id=='65007528']
+x = cash_out_df.iloc[0,:]
+x
+account,process_date = x.account_id,x.process_date
+account
+process_da
+process_date
+last_cash_date  = getLastProcessDate(account,process_date)
+last_cash_date
+last_cash_date = int(str(last_cash_date).replace("-",""))
+last_cash_date
+equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))]
+equal_days
+equal_days_list = list(equal_days.values)
+equal_days_list
+equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+equal_days_list = list(equal_days.values)
+equal_days_list
+def getEmptyDays(account,process_date):
+    print(f"{account}\t{process_date}")
+    last_cash_date  = getLastProcessDate(account,process_date)
+    last_cash_date = int(str(last_cash_date).replace("-",""))
+    equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))].is_equal
+    equal_days_list = list(equal_days.values)
+    if len(equal_days_list)==0:
+        return 0
+    if False not in equal_days_list:
+        return len(equal_days_list)
+    return equal_days_list.index(False)
+
+cash_out_df['equal_days'] = cash_out_df.apply(lambda x:getEmptyDays(x.account_id,x.process_date),axis=1)
+cash_out_df
+cash_out_df.head(50)
+cash_out_df.tail(50)
+cash_out_df.head(500)
+cash_out_df.head(100)
+cash_out_df.to_csv("出金前总资产等于总可取的天数.csv",index=False)
+pwd
+x
+x.process_date
+account = '65011508'
+process_date = datetime.date(2019, 6, 3)
+last_cash_date  = getLastProcessDate(account,process_date)
+last_cash_date
+equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))]
+trade_user_money
+trade_user_money[trade_user_money.account==account]
+trade_user_money[(trade_user_money.account==account)]
+trade_user_money[(trade_user_money.account==account)].info_date
+trade_user_money[(trade_user_money.account==account)].info_date[0]
+trade_user_money[(trade_user_money.account==account)].info_date[1484]
+type(trade_user_money[(trade_user_money.account==account)].info_date[1484])
+last_cash_date = int(str(last_cash_date).replace("-",""))
+equal_days = trade_user_money[(trade_user_money['account']==account) & (trade_user_money['info_date']>last_cash_date) & (trade_user_money['info_date']<int(str(process_date).replace("-","")))]
+equal_days
+cash_out_df.equal_days
+cash_out_df.equal_days.values
+a = list(cash_out_df.equal_days.values)
+a
+cash_out_df.equal_days.values
+cash_out_df.equal_days
+cash_out_df.equal_days.aggregate(count)
+cash_out_df.equal_days.aggregate.count
+help(cash_out_df.equal_days.aggregate)
+ret = []
+for i in range(12):
+    start = i*7
+    len(cash_out_df.equal_days>=start)
+cash_out_df.equal_days>=start
+cash_out_df[cash_out_df.equal_days>=start]
+start
+for i in range(12):
+    start = i*7
+    l = len(cash_out_df[(cash_out_df.equal_days>=start)&(cash_out_df.equal_days<end)])
+    ret.append([start,end,l])
+ret
+for i in range(12):
+    start = i*7
+    end = i*7+7
+    l = len(cash_out_df[(cash_out_df.equal_days>=start)&(cash_out_df.equal_days<end)])
+    ret.append([start,end,l])
+ret
+ret = []
+for i in range(12):
+    start = i*7
+    end = i*7+7
+    l = len(cash_out_df[(cash_out_df.equal_days>=start)&(cash_out_df.equal_days<end)])
+    ret.append([start,end,l])
+ret
+for i in range(12):
+    start = i*5
+    end = i*5+5
+    l = len(cash_out_df[(cash_out_df.equal_days>=start)&(cash_out_df.equal_days<end)])
+    ret.append([start,end,l])
+ret = []
+for i in range(12):
+    start = i*5
+    end = i*5+5
+    l = len(cash_out_df[(cash_out_df.equal_days>=start)&(cash_out_df.equal_days<end)])
+    ret.append([start,end,l])
+ret
+len(cash_out_df[(cash_out_df.equal_days>=60)])
+len(cash_out_df[(cash_out_df.equal_days==0)])
+len(cash_out_df[(cash_out_df.equal_days==1)])
+len(cash_out_df[(cash_out_df.equal_days==2)])
+len(cash_out_df[(cash_out_df.equal_days==3)])
+len(cash_out_df[(cash_out_df.equal_days==4)])
+len(cash_out_df[(cash_out_df.equal_days==5)])
+len(cash_out_df[(cash_out_df.equal_days==6)])
+6724/8407
+history
+
+

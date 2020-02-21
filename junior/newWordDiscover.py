@@ -4,7 +4,7 @@
 作者:jia.zhou@aliyun.com
 创建时间:2018-09-30 下午3:19
 '''
-
+import sklearn
 import happybase
 # import NewsSelector
 import re
