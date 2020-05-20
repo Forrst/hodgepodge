@@ -5,52 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b608251-c558-4413-93ed-e7d97a9741b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/crypto/erc_contract.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/filehash.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/strategy/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/strategy/btc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/strategy/pyecharts_kline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/strategy/render.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/strategy/strategy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/websocket/binance_websocket.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/websocket/localhost.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/websocket/okex_websocket_py2version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/websocket/okex_websocket_py3version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/websocket/websocket_html/client.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/websocket/websocket_html/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto/websocket/websockett.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/BussinessMonthlyBill.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_analyse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_real_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/configure.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/export_excel_monthly_statement.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/export_profit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/export_profit_bos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/export_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/finra/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/hkbillsMonth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/liwei/channel_register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/junior/liwei/customer_contribution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy/proxyhttps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/fiddlerRawHeaderUtil.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/whv/whv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hodgepodge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hodgepodge.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datastructure/edit_distance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junior/email/outPosition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/ddyj.py" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/ddyj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datastructure/alg.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/alg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/mysql/SqlUtil.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/mysql/SqlUtil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/mysql/const.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/mysql/const.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finra/finra.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/finra/finra.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto/eth.py" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/eth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/junior/hkbills.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/hkbills.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junior/hkdistribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/hkdistribution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junior/newWordDiscover.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/newWordDiscover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/html5lib/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/html5lib/html5parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/fields.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/setuptools/command/egg_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/setuptools/command/egg_info.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,17 +23,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/hodgepodge$outPosition.coverage" NAME="outPosition Coverage Results" MODIFIED="1589774311465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior/email" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$320file.coverage" NAME="320file Coverage Results" MODIFIED="1556087605732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/log" />
     <SUITE FILE_PATH="coverage/hodgepodge$userdata.coverage" NAME="userdata Coverage Results" MODIFIED="1572572661473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
-    <SUITE FILE_PATH="coverage/hodgepodge$robot.coverage" NAME="robot Coverage Results" MODIFIED="1578306926722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/hodgepodge$BussinessMonthlyBill.coverage" NAME="BussinessMonthlyBill Coverage Results" MODIFIED="1578477925041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior" />
+    <SUITE FILE_PATH="coverage/hodgepodge$robot.coverage" NAME="robot Coverage Results" MODIFIED="1589359644288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hodgepodge$BussinessMonthlyBill.coverage" NAME="BussinessMonthlyBill Coverage Results" MODIFIED="1588833451153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior" />
     <SUITE FILE_PATH="coverage/hodgepodge$proxy2.coverage" NAME="proxy2 Coverage Results" MODIFIED="1571204852452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/proxy" />
     <SUITE FILE_PATH="coverage/hodgepodge$test_websocket.coverage" NAME="test_websocket Coverage Results" MODIFIED="1573106933372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/anaconda2/lib/python2.7/site-packages/websocket/tests" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$als_recommender.coverage" NAME="als_recommender Coverage Results" MODIFIED="1552986622299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/miracle$usmorning.coverage" NAME="usmorning Coverage Results" MODIFIED="1561716226034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/hodgepodge$hkdistribution.coverage" NAME="hkdistribution Coverage Results" MODIFIED="1572918006777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior" />
+    <SUITE FILE_PATH="coverage/hodgepodge$edit_distance.coverage" NAME="edit_distance Coverage Results" MODIFIED="1588987712544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datastructure" />
     <SUITE FILE_PATH="coverage/hodgepodge$okex_websocket.coverage" NAME="okex_websocket Coverage Results" MODIFIED="1576201869166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crypto/websocket" />
     <SUITE FILE_PATH="coverage/hodgepodge$export_report.coverage" NAME="export_report Coverage Results" MODIFIED="1579250889838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior" />
+    <SUITE FILE_PATH="coverage/hodgepodge$SqlUtil.coverage" NAME="SqlUtil Coverage Results" MODIFIED="1589157927971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db/mysql" />
     <SUITE FILE_PATH="coverage/hodgepodge$user_withdraw_analyse.coverage" NAME="user_withdraw_analyse Coverage Results" MODIFIED="1572232789540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
     <SUITE FILE_PATH="coverage/Mr_Jaryn$hbase_test.coverage" NAME="hbase_test Coverage Results" MODIFIED="1548730224022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/hodgepodge$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1576464135476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/anaconda3/lib/python3.7/site-packages/pyecharts" />
@@ -100,116 +67,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/export_report.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="e#238#247#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="98" column="34" lean-forward="true" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+            <state relative-caret-position="2843">
+              <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
               <folding>
-                <element signature="e#95#111#0" expanded="true" />
+                <element signature="e#97#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/liwei/customer_contribution.py">
+        <entry file="file://$PROJECT_DIR$/junior/hkbills.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2660">
-              <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
+            <state relative-caret-position="381">
+              <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
               <folding>
-                <element signature="e#96#110#0" expanded="true" />
+                <element signature="e#96#111#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/user_withdraw_analyse.py">
+        <entry file="file://$PROJECT_DIR$/junior/email/outPosition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="34" column="17" selection-start-line="34" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/liwei/channel_register.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+            <state relative-caret-position="405">
+              <caret line="124" column="25" selection-start-line="124" selection-end-line="125" />
               <folding>
-                <element signature="e#96#110#0" expanded="true" />
+                <element signature="e#193#207#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_real_time.py">
+        <entry file="file://$PROJECT_DIR$/junior/BussinessMonthlyBill.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2660">
-              <caret line="142" column="78" selection-start-line="142" selection-start-column="2" selection-end-line="142" selection-end-column="78" />
+            <state relative-caret-position="650">
+              <caret line="597" column="32" lean-forward="true" selection-start-line="597" selection-start-column="32" selection-end-line="597" selection-end-column="32" />
               <folding>
-                <element signature="e#97#111#0" expanded="true" />
+                <element signature="e#97#112#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/userprofit.py">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/mime/multipart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1482">
-              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+            <state relative-caret-position="227">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_analyse.py">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/mime/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#96#110#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="379">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm.py">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1729">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
-              <folding>
-                <element signature="e#97#111#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="167">
+              <caret line="399" selection-start-line="399" selection-end-line="399" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/pandas/core/reshape/merge.py">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/_policybase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#34#45#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret line="198" column="34" selection-start-line="198" selection-start-column="34" selection-end-line="198" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/junior/account_analyse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="421" selection-start-line="420" selection-end-line="433" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -227,14 +182,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>collections</find>
-      <find>concat</find>
-      <find>product_ipo_app</find>
-      <find>pr</find>
-      <find>split</find>
-      <find>SPLIT</find>
-      <find>SPLIT_STR</find>
-      <find>reindex</find>
       <find>bind</find>
       <find>logging</find>
       <find>rs[2]</find>
@@ -257,10 +204,19 @@
       <find>continue</find>
       <find>转入</find>
       <find>loggin</find>
+      <find>happybase</find>
+      <find>Mysqldb.co</find>
+      <find>.encode(&quot;utf-8&quot;)</find>
+      <find>Your wechat account</find>
+      <find>push_login</find>
+      <find>.iter</find>
+      <find>_headers</find>
+      <find>sys.ar</find>
     </findStrings>
     <replaceStrings>
       <replace>rs['buss_date']</replace>
       <replace>rs['process_date']</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/crypto</dir>
@@ -274,8 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/recognition.py" />
-        <option value="$PROJECT_DIR$/crypto/ddyj.py" />
         <option value="$PROJECT_DIR$/junior/export_excel_monthly_statement.py" />
         <option value="$PROJECT_DIR$/crypto/filehash.py" />
         <option value="$PROJECT_DIR$/crypto/okex.py" />
@@ -298,8 +252,6 @@
         <option value="$PROJECT_DIR$/crypto/websocket/binance_websocket.py" />
         <option value="$PROJECT_DIR$/crypto/strategy.py" />
         <option value="$PROJECT_DIR$/db/mysql/const.py" />
-        <option value="$PROJECT_DIR$/db/mysql/SqlUtil.py" />
-        <option value="$PROJECT_DIR$/junior/hkbills.py" />
         <option value="$PROJECT_DIR$/crypto/mxc.py" />
         <option value="$PROJECT_DIR$/crypto/websocket/okex_websocket.py" />
         <option value="$PROJECT_DIR$/crypto/websocket/localhost.pem" />
@@ -318,13 +270,17 @@
         <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_real_time.py" />
         <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_analyse.py" />
         <option value="$PROJECT_DIR$/crypto/strategy/strategy.py" />
-        <option value="$PROJECT_DIR$/robot.py" />
         <option value="$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py" />
         <option value="$PROJECT_DIR$/junior/export_report.py" />
         <option value="$PROJECT_DIR$/junior/BussinessMonthlyBill.py" />
         <option value="$PROJECT_DIR$/junior/liwei/customer_contribution.py" />
         <option value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm.py" />
         <option value="$PROJECT_DIR$/junior/liwei/channel_register.py" />
+        <option value="$PROJECT_DIR$/junior/hkbills.py" />
+        <option value="$PROJECT_DIR$/datastructure/edit_distance.py" />
+        <option value="$PROJECT_DIR$/db/mysql/SqlUtil.py" />
+        <option value="$PROJECT_DIR$/junior/email/outPosition.py" />
+        <option value="$PROJECT_DIR$/robot.py" />
       </list>
     </option>
   </component>
@@ -338,10 +294,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="44" />
-    <option name="width" value="1400" />
-    <option name="height" value="953" />
+    <option name="x" value="292" />
+    <option name="y" value="150" />
+    <option name="width" value="1398" />
+    <option name="height" value="948" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -351,7 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -362,28 +317,13 @@
             <path>
               <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
               <item name="hodgepodge" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hodgepodge" type="462c0819:PsiDirectoryNode" />
               <item name="junior" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
               <item name="hodgepodge" type="462c0819:PsiDirectoryNode" />
               <item name="junior" type="462c0819:PsiDirectoryNode" />
-              <item name="liwei" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hodgepodge" type="462c0819:PsiDirectoryNode" />
-              <item name="junior" type="462c0819:PsiDirectoryNode" />
-              <item name="UserWithDrawAnalyse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hodgepodge" type="b2602c69:ProjectViewProjectNode" />
@@ -398,6 +338,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Course" />
     </panes>
@@ -409,9 +350,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579512825690" />
-    <property name="last_opened_file_path" value="$USER_HOME$/anaconda2/bin" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589936110681" />
+    <property name="last_opened_file_path" value="$USER_HOME$/data/tencent/train_preliminary" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.12222222" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -444,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.export_report">
+  <component name="RunManager" selected="Python.BussinessMonthlyBill">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -475,7 +417,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junior/BussinessMonthlyBill.py" />
-      <option name="PARAMETERS" value="-d $USER_HOME$/data/bills -f 20191201 -t 20191231 -u 88888881" />
+      <option name="PARAMETERS" value="-d $USER_HOME$/data/bills -f 20200401 -t 20200430 -u 88888881" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -483,7 +425,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="SqlUtil" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hodgepodge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -491,12 +433,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/anaconda3/lib/python3.7/site-packages/pyecharts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db/mysql" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/anaconda3/lib/python3.7/site-packages/pyecharts/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db/mysql/SqlUtil.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -505,29 +447,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="export_report" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="hodgepodge" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junior" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junior/export_report.py" />
-      <option name="PARAMETERS" value="-d $USER_HOME$/data/consumer_profit -c rpt3 -f 20191201 -t 20191231 -l  $USER_HOME$/data/consumer_profit/accounts" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="rfm_real_time" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="edit_distance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hodgepodge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -535,12 +455,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junior/UserWithDrawAnalyse" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datastructure" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_real_time.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datastructure/edit_distance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="outPosition" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hodgepodge" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junior/email" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junior/email/outPosition.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -556,7 +498,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda2/envs/hodgepodge/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -581,19 +523,19 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.server" />
-      <item itemvalue="Python.export_report" />
-      <item itemvalue="Python.__init__" />
-      <item itemvalue="Python.rfm_real_time" />
       <item itemvalue="Python.robot" />
       <item itemvalue="Python.BussinessMonthlyBill" />
+      <item itemvalue="Python.edit_distance" />
+      <item itemvalue="Python.SqlUtil" />
+      <item itemvalue="Python.outPosition" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.export_report" />
-        <item itemvalue="Python.BussinessMonthlyBill" />
+        <item itemvalue="Python.outPosition" />
         <item itemvalue="Python.robot" />
-        <item itemvalue="Python.rfm_real_time" />
-        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.SqlUtil" />
+        <item itemvalue="Python.edit_distance" />
+        <item itemvalue="Python.BussinessMonthlyBill" />
       </list>
     </recent_temporary>
   </component>
@@ -818,6 +760,17 @@
       <workItem from="1578625450401" duration="11898000" />
       <workItem from="1578969174990" duration="12820000" />
       <workItem from="1579512479379" duration="348000" />
+      <workItem from="1588755003989" duration="2090000" />
+      <workItem from="1588833385292" duration="833000" />
+      <workItem from="1588843848691" duration="2374000" />
+      <workItem from="1588932361578" duration="5660000" />
+      <workItem from="1589157174025" duration="7515000" />
+      <workItem from="1589355833030" duration="4116000" />
+      <workItem from="1589415691412" duration="911000" />
+      <workItem from="1589525824930" duration="54000" />
+      <workItem from="1589531225194" duration="685000" />
+      <workItem from="1589772640594" duration="4000" />
+      <workItem from="1589772682489" duration="6232000" />
     </task>
     <task id="LOCAL-00001" summary="修改配发结果日期判断">
       <created>1572920132895</created>
@@ -830,7 +783,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1874577000" />
+    <option name="totallyTimeSpent" value="1905051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -845,7 +798,7 @@
     <frame x="0" y="-7" width="1920" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.2852349" visible="true" weight="0.2139808" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.2852349" visible="true" weight="0.14674494" />
       <window_info id="Structure" order="1" sideWeight="0.7147651" side_tool="true" weight="0.26307365" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -854,12 +807,12 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.46868008" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.42281878" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.4720358" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.1756152" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.30536914" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32997763" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32885906" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.39709172" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053364" side_tool="true" weight="0.32997763" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -1421,22 +1374,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/junior/hkbills.py</url>
-          <line>79</line>
+          <line>78</line>
           <option name="timeStamp" value="598" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/junior/hkbills.py</url>
-          <line>76</line>
+          <line>75</line>
           <option name="timeStamp" value="599" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/junior/hkbills.py</url>
-          <line>77</line>
+          <line>76</line>
           <option name="timeStamp" value="600" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/junior/hkbills.py</url>
-          <line>20</line>
+          <line>19</line>
           <option name="timeStamp" value="601" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1590,26 +1543,6 @@
           <option name="timeStamp" value="659" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
-          <line>135</line>
-          <option name="timeStamp" value="661" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
-          <line>132</line>
-          <option name="timeStamp" value="662" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
-          <line>155</line>
-          <option name="timeStamp" value="663" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
-          <line>156</line>
-          <option name="timeStamp" value="664" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/junior/BussinessMonthlyBill.py</url>
           <line>564</line>
           <option name="timeStamp" value="669" />
@@ -1628,6 +1561,136 @@
           <url>file://$PROJECT_DIR$/junior/BussinessMonthlyBill.py</url>
           <line>131</line>
           <option name="timeStamp" value="677" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/datastructure/edit_distance.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="678" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/backports/configparser/__init__.py</url>
+          <line>1051</line>
+          <option name="timeStamp" value="680" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/hotreload.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="683" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="706" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="707" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="708" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>180</line>
+          <option name="timeStamp" value="709" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="710" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="711" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="712" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="713" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="714" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="715" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="716" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/email/outPosition.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="721" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/email/utils.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="722" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/email/outPosition.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="727" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/email/outPosition.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="728" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/email/mime/multipart.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="729" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/email/mime/base.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="730" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/email/outPosition.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="731" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/email/outPosition.py</url>
+          <line>130</line>
+          <option name="timeStamp" value="732" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/email/message.py</url>
+          <line>399</line>
+          <option name="timeStamp" value="735" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/email/message.py</url>
+          <line>408</line>
+          <option name="timeStamp" value="736" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/lib/python3.7/email/message.py</url>
+          <line>400</line>
+          <option name="timeStamp" value="737" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/junior/BussinessMonthlyBill.py</url>
+          <line>578</line>
+          <option name="timeStamp" value="738" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/crypto/websocket/websocket_html/server.js</url>
@@ -1683,208 +1746,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/junior/hkbillsMonth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-          <folding>
-            <element signature="e#96#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/local/lib/python2.7/site-packages/pip/_vendor/urllib3/util/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/websocket/websockett.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/websocket/okex_websocket_py2version.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#97#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/pymysql/connections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="480" column="8" selection-start-line="480" selection-start-column="8" selection-end-line="480" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/export_profit_bos.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.IntelliJIdea2018.3/system/python_stubs/924064914/pymssql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3645" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/websocket/okex_websocket_py3version.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#97#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47310">
-          <caret line="2561" column="8" selection-start-line="2561" selection-start-column="8" selection-end-line="2561" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/hknewstockuser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="10" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdrawratecompute.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdraw_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#97#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/withdraw_compute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#98#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64961">
-          <caret line="3527" selection-start-line="3527" selection-end-line="3527" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/pyecharts/charts/basic_charts/bar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/mysql/SqlUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="e#79#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5852">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/userdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8132">
-          <caret line="434" column="13" selection-start-line="434" selection-start-column="13" selection-end-line="434" selection-end-column="13" />
-          <folding>
-            <element signature="e#96#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/erc_contract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/filehash.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datastructure/alg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/hkbills.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/account_analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2698">
-          <caret line="144" column="32" selection-start-line="144" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/hotreload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/schedule/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6745">
-          <caret line="361" column="25" selection-start-line="361" selection-start-column="17" selection-end-line="361" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8341">
-          <caret line="444" column="8" selection-start-line="444" selection-start-column="8" selection-end-line="444" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/junior/pdf2htmlformater.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22173">
@@ -1901,43 +1762,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crypto/strategy/pyecharts_kline.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/export_profit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
-          <folding>
-            <element signature="e#97#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/export_excel_monthly_statement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#41#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crypto/ddyj.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1964,26 +1788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/BussinessMonthlyBill.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2831">
-          <caret line="149" column="16" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
-          <folding>
-            <element signature="e#97#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/junior/export_report.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#238#247#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2014,9 +1818,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/websitecate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2983">
+          <caret line="158" column="16" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/export_profit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2470">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="e#97#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/export_excel_monthly_statement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#41#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/config/mysql.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" selection-start-line="16" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/junior/liwei/channel_register.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
+        <state relative-caret-position="969">
           <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#96#110#0" expanded="true" />
@@ -2026,11 +1864,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/junior/UserWithDrawAnalyse/rfm_real_time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
+        <state relative-caret-position="2698">
           <caret line="142" column="78" selection-start-line="142" selection-start-column="2" selection-end-line="142" selection-end-column="78" />
           <folding>
             <element signature="e#97#111#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/export_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9253">
+          <caret line="495" column="25" selection-start-line="495" selection-start-column="25" selection-end-line="495" selection-end-column="25" />
+          <folding>
+            <element signature="e#238#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons/numpy/core/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53827">
+          <caret line="2833" selection-start-line="2833" selection-end-line="2833" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="74" column="22" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5852">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
         </state>
       </provider>
     </entry>
@@ -2071,12 +1940,197 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/backports/configparser/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="1051" selection-start-line="1051" selection-end-line="1051" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/usmorning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/hotreload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/mysql/SqlUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/MySQLdb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#359#424#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python2.7/UserDict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2888">
+          <caret line="152" column="34" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datastructure/edit_distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/components/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3249">
+          <caret line="171" column="23" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/area.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/itchat/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7372">
+          <caret line="393" column="35" selection-start-line="393" selection-start-column="35" selection-end-line="393" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/MySQLdb/release.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/MySQLdb/constants/CLIENT.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/mysqlclient-1.4.6.dist-info/INSTALLER">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/mysqlclient-1.4.6.dist-info/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/mysqlclient-1.4.6.dist-info/WHEEL">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/account_analyse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="421" selection-start-line="420" selection-end-line="433" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/hkbills.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding>
+            <element signature="e#96#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/_policybase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="198" column="34" selection-start-line="198" selection-start-column="34" selection-end-line="198" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/mime/multipart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/mime/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/email/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="399" selection-start-line="399" selection-end-line="399" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/email/outPosition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="124" column="25" selection-start-line="124" selection-end-line="125" />
+          <folding>
+            <element signature="e#193#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junior/BussinessMonthlyBill.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="597" column="32" lean-forward="true" selection-start-line="597" selection-start-column="32" selection-end-line="597" selection-end-column="32" />
+          <folding>
+            <element signature="e#97#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="98" column="34" lean-forward="true" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+        <state relative-caret-position="2843">
+          <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
           <folding>
-            <element signature="e#95#111#0" expanded="true" />
+            <element signature="e#97#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2121,7 +2175,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Python 3.7 (hodgepodge) interpreter library</last-edited>
+          <last-edited>Python 2.7 (hodgepodge) interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

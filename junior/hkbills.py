@@ -4,18 +4,17 @@
 作者:jia.zhou@aliyun.com
 创建时间:2019-08-07 下午3:28
 '''
-import os
 import requests
-import MySQLdb
 import logging
-os.chdir("/home/eos/git/hodgepodge/")
+import datetime
 from db.mysql.SqlUtil import Mysql
 db = Mysql("mysql5.105")
 
 logging.basicConfig(level = logging.INFO,format = '%(asctime)s [%(process)d:%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s')
 logger =logging.getLogger("hkbills.py")
 
-process_date = "2019-11-21"
+# process_date = str(datetime.datetime.now().date())
+process_date = '2020-04-24'
 sql1 = "SELECT a.`short_name`,b.`account_id` FROM (select account_id from cash_flow where process_date = '{}') b INNER JOIN account_profile a ON a.`account_id`=b.`account_id` GROUP BY b.`account_id`".format(process_date)
 
 sql2 = "SELECT a.`short_name`,b.`account_id` FROM (select account_id from product_flow where process_date = '{}') b INNER JOIN account_profile a ON a.`account_id`=b.`account_id` GROUP BY b.`account_id`".format(process_date)
@@ -81,11 +80,11 @@ for accountid in account_:
     try:
         r = requests.get("http://192.168.5.54:8089/pdf.html?accountId={}&day={}".format(accountid,process_date))
         if r.status_code == 200:
-            logger.info("{} success".format(accountid))
+            logger.info("send hkbil email for {} success for bill_date {}".format(accountid,process_date))
         else:
-            logger.info("{} failure".format(accountid))
+            logger.info("send hkbil email for {} failure for bill_date {}".format(accountid,process_date))
     except Exception as e:
-        logger.error("error accountid: {}".format(accountid))
+        logger.error("error accountid: {} for bill_date {}".format(accountid,process_date))
         logger.error(e,exc_info = True)
 
 '''

@@ -1,5 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding:utf-8 -*-
+
 '''
 作者:jia.zhou@aliyun.com
 创建时间:2019-07-26 上午9:59
@@ -19,6 +20,7 @@ logger =logging.getLogger("[robot.py]")
 
 url = "https://app.investassistant.com/MiningStock/stock/getStockBasicInfo"
 #http://www.zinvestglobal.com/?hmsr=wx
+
 code_exchange = {}
 code_name = {}
 name_code = {}
@@ -34,6 +36,7 @@ def syn():
     logger.info(":::::::::::::::::::同步前code_name总量：{}:::::::::::::::::::".format(len(code_name)))
     logger.info(":::::::::::::::::::同步前name_code总量：{}:::::::::::::::::::".format(len(name_code)))
     logger.info(":::::::::::::::::::同步前code_exchange_name总量：{}:::::::::::::::::::".format(len(code_exchange_name)))
+
     db = Mysql("mysql5.106")
     cn_sql = "select exchange,code,name from stock_info group by exchange,code "
     hk_sql = "select exchange,code,name from stock_info_hk group by exchange,code"
@@ -74,6 +77,7 @@ def syn():
     logger.info(":::::::::::::::::::同步后name_code总量：{}:::::::::::::::::::".format(len(name_code)))
     logger.info(":::::::::::::::::::同步后code_exchange_name总量：{}:::::::::::::::::::".format(len(code_exchange_name)))
 
+
 def synThread():
     threading.Thread(target=syn()).start()
 
@@ -86,14 +90,22 @@ def group_reply_text(msg):
     # logger.info(u"【{}】群的【{}】说: {}".format(chatroom_name,username,msg['Content']))
     if msg['Type'] == TEXT:
         content = msg['Content'].upper()
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==4:
-            content = ("0"+content.encode("utf-8")).decode("utf-8")
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==3:
-            content = ("00"+content.encode("utf-8")).decode("utf-8")
+        if isinstance(content,str) and content.isdigit() and len(content)==4:
+            content = ("0"+content)
+        if isinstance(content,str) and content.isdigit() and len(content)==3:
+            content = ("00"+content)
+
         if content in name_code or content in code_exchange or content in code_exchange_name:
-            logger.info(u"【{}】群的【{}】查询报价: {}".format(chatroom_name,username,msg['Content']))
+            logger.info("【{}】群的【{}】查询报价: {}".format(chatroom_name,username,msg['Content']))
             response = getRequestDate(content)
             itchat.send_msg(response,msg['FromUserName'])
+        if "华美" in content and "入金" in content:
+            logger.info("【{}】群的【{}】查询华美入金: {}".format(chatroom_name,username,msg['Content']))
+            itchat.send_msg("尊嘉华美入金流程请参阅：https://w.url.cn/s/AlX3IFt",msg['FromUserName'])
+        if "大陆" in content and "入金" in content:
+            logger.info("【{}】群的【{}】查询大陆入金: {}".format(chatroom_name,username,msg['Content']))
+            itchat.send_msg("尊嘉大陆入金优选中信/北京/浙商，更多入金说明：https://w.url.cn/s/Ad3t8mk",msg['FromUserName'])
+
             # if chatroom_id == u'@@805faaab88bffc6001f2df8efa1c1338c8291f825f3d8ce50da8c0089df0a5ba':
             #     # 发送者的昵称
             #     url = msg['Url']
@@ -105,6 +117,7 @@ def group_reply_text(msg):
             # elif msg['Type'] == SHARING:
             #     content = msg['Text']
 
+
 @itchat.msg_register(TEXT,isGroupChat=False)
 def reply_one_text(msg):
     RemarkName = msg['User']['RemarkName']
@@ -112,25 +125,27 @@ def reply_one_text(msg):
     # logger.info(u"【{}】群的【{}】说: {}".format(chatroom_name,username,msg['Content']))
     if msg['Type'] == TEXT:
         content = msg['Content'].upper()
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==4:
-            content = ("0"+content.encode("utf-8")).decode("utf-8")
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==3:
-            content = ("00"+content.encode("utf-8")).decode("utf-8")
+        if isinstance(content,str) and content.isdigit() and len(content)==4:
+            content = ("0"+content)
+        if isinstance(content,str) and content.isdigit() and len(content)==3:
+            content = ("00"+content)
         if content in name_code or content in code_exchange or content in code_exchange_name:
-            logger.info(u"您的昵称为【{}】备注为【{}】的好友查询报价: {}".format(NickName,RemarkName,msg['Content']))
+            logger.info("您的昵称为【{}】备注为【{}】的好友查询报价: {}".format(NickName,RemarkName,msg['Content']))
             response = getRequestDate(content)
             itchat.send_msg(response,msg['FromUserName'])
-
-
-
-
+        if "华美" in content and "入金" in content:
+            logger.info("【{}】群的【{}】查询华美入金: {}".format(NickName,RemarkName,msg['Content']))
+            itchat.send_msg("尊嘉华美入金流程请参阅：https://w.url.cn/s/AlX3IFt",msg['FromUserName'])
+        if "大陆" in content and "入金" in content:
+            logger.info("【{}】群的【{}】查询大陆入金: {}".format(NickName,RemarkName,msg['Content']))
+            itchat.send_msg("尊嘉大陆入金优选中信/工商，更多入金说明：https://w.url.cn/s/Ad3t8mk",msg['FromUserName'])
 
 
 def getRequestDate(content):
     result = ""
     code = ''
     exchange = ''
-    if content in name_code:
+    if content in name_code and "老虎证券" not in content and "富途证券" not in content:
         nameCodeList = name_code[content].split("_")
         code = nameCodeList[0]
         exchange = nameCodeList[1]
@@ -156,13 +171,13 @@ def getRequestDate(content):
             stockstr = stockstr+code_exchange_name[code+"."+i]+"("+code+"."+i+")"+"\n"
             orstr = orstr+code+u"."+i+u"或者"
         orstr =orstr[:-2]
-        attention = u"温馨提示：您输入的股票代码包含多个股票\n{}您可以尝试输入{}以查询具体的股票".format(stockstr,orstr)
-        if code.startswith(u"00") and u"SESH" in exchange:
-            exchange = u"SESZ"
-            attention = u"\n(温馨提示：您输入的股票代码与指数代码一样默认为您显示股票的行情\n{}您可以尝试输入{}以查询具体的股票)".format(stockstr,orstr)
+        attention = "温馨提示：您输入的股票代码包含多个股票\n{}您可以尝试输入{}以查询具体的股票".format(stockstr,orstr)
+        if code.startswith("00") and "SESH" in exchange:
+            exchange = "SESZ"
+            attention = "\n(温馨提示：您输入的股票代码与指数代码一样默认为您显示股票的行情\n{}您可以尝试输入{}以查询具体的股票)".format(stockstr,orstr)
     if isinstance(exchange,list):
         result = attention
-    if isinstance(exchange,unicode):
+    if isinstance(exchange,str):
         if exchange in currency:
             currency_name = currency[exchange]
         data = {
@@ -197,6 +212,7 @@ def getRequestDate(content):
         r.close()
         print(ret['response_data'])
         if 'stock_info' in ret['response_data']:
+
             try:
                 name = ret['response_data']['stock_info']['name']
                 code = ret['response_data']['stock_info']['code']
@@ -208,7 +224,7 @@ def getRequestDate(content):
                         riseandfall = 0.0
                     else:
                         riseandfall = round((close-pre_close)/pre_close*100,2)
-                    result = u'''{}({}.{})\n\n【最新价】  {}{}\n【涨跌幅】  {}%\n【状  态】  {}\n\n本消息来源于港美股永久0佣的【尊嘉金融】\n36只热门美股免费送，戳☞ https://w.url.cn/s/Amphhew{}
+                    result = u'''{}({}.{})\n\n【最新价】  {}{}\n【涨跌幅】  {}%\n【状  态】  {}\n\n实时关注全球新冠疫情最新动态:https://w.url.cn/s/A5JqWQC{}
                     '''.format(name,code,exchange_code[exchangecode],close,currency_name,riseandfall,ret['response_data']['stock_info']['time_info'],attention)
                 else:
                     open = ret['response_data']['open_px']
@@ -216,18 +232,18 @@ def getRequestDate(content):
                     low = ret['response_data']['low_px']
                     volumn = ret['response_data']['total_volume_trade']
                     total_value = ret['response_data']['total_value_trade']
-                    result = u'''{}({}.{})\n\n【最新价】  {}{}\n【涨跌幅】  {}%\n【开盘价】  {}{}\n【成交量】  {}万股\n【成交额】  {}亿{}\n【状  态】  {}\n\n本消息来源于港美股永久0佣的【尊嘉金融】\n36只热门美股免费送，戳☞ https://w.url.cn/s/Amphhew{}
+                    result = u'''{}({}.{})\n\n【最新价】  {}{}\n【涨跌幅】  {}%\n【开盘价】  {}{}\n【成交量】  {}万股\n【成交额】  {}亿{}\n【状  态】  {}\n\n实时关注全球新冠疫情最新动态:https://w.url.cn/s/A5JqWQC{}
                     '''.format(name,code,exchange_code[exchangecode],close,currency_name,round((close-pre_close)/pre_close*100,2),open,currency_name,round(volumn*1.0/10000,2),round(total_value*1.0/100000000,3),currency_name,ret['response_data']['stock_info']['time_info'],attention)
+
             except Exception as e:
                 logger.error(e,exc_info=True)
     return result
 if __name__ == "__main__":
+    syn()
     itchat.auto_login(enableCmdQR=2,hotReload=False)
     itchat.run()
-    syn()
-    # itchat.auto_login(enableCmdQR=2,hotReload=True)
-    # itchat.run()
     schedule.every(12).hours.do(synThread)
+
     while True:
         schedule.run_pending()
         time.sleep(1)
