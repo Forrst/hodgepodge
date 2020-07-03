@@ -4,18 +4,18 @@
 作者:jia.zhou@aliyun.com
 创建时间:2019-08-07 下午3:28
 '''
-import os
 import requests
-import MySQLdb
 import logging
-os.chdir("/home/eos/git/hodgepodge/")
+import os
+os.chdir("/home/eos/git/hodgepodge")
 from db.mysql.SqlUtil import Mysql
 db = Mysql("mysql5.105")
 
 logging.basicConfig(level = logging.INFO,format = '%(asctime)s [%(process)d:%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s')
 logger =logging.getLogger("hkbills.py")
 
-process_date = "2019-11-21"
+# process_date = str(datetime.datetime.now().date())
+process_date = '2020-06-08'
 sql1 = "SELECT a.`short_name`,b.`account_id` FROM (select account_id from cash_flow where process_date = '{}') b INNER JOIN account_profile a ON a.`account_id`=b.`account_id` GROUP BY b.`account_id`".format(process_date)
 
 sql2 = "SELECT a.`short_name`,b.`account_id` FROM (select account_id from product_flow where process_date = '{}') b INNER JOIN account_profile a ON a.`account_id`=b.`account_id` GROUP BY b.`account_id`".format(process_date)
@@ -81,11 +81,11 @@ for accountid in account_:
     try:
         r = requests.get("http://192.168.5.54:8089/pdf.html?accountId={}&day={}".format(accountid,process_date))
         if r.status_code == 200:
-            logger.info("{} success".format(accountid))
+            logger.info("send hkbil email for {} success for bill_date {}".format(accountid,process_date))
         else:
-            logger.info("{} failure".format(accountid))
+            logger.info("send hkbil email for {} failure for bill_date {}".format(accountid,process_date))
     except Exception as e:
-        logger.error("error accountid: {}".format(accountid))
+        logger.error("error accountid: {} for bill_date {}".format(accountid,process_date))
         logger.error(e,exc_info = True)
 
 '''
@@ -109,45 +109,24 @@ account = [i[0]for i in accounts]
 '''
 def sendforperiod():
     import datetime
-    account = '62078038'
-    start = datetime.datetime(year=2019,month=10,day=4)
+    accountid = '60119608'
+    start = datetime.datetime(year=2020,month=4,day=8)
     while True:
         process_date = str(start)[:10]
-        if process_date == '2019-10-31':
+        if process_date == '2020-05-16':
             break
         try:
-            r = requests.get("http://192.168.5.54:8089/sendEmail?accountid={}&day={}&billtype=daily".format(accountid,process_date))
+            r = requests.get(f"http://192.168.5.54:8089/pdfonly.html?accountId={accountid}&day={process_date}&sendEmail=true")
             if r.status_code == 200:
-                logger.info("{} success {}".format(accountid,process_date))
+                logger.info(f"{accountid} success {process_date}")
             else:
-                logger.info("{} failure".format(accountid,process_date))
+                logger.info(f"{accountid} failure {process_date}")
             start += datetime.timedelta(days=1)
         except Exception as e:
             start += datetime.timedelta(days=1)
-            logger.error("error accountid: {}".format(accountid))
+            logger.error(f"error accountid: {accountid} @ {process_date}")
             logger.error(e,exc_info = True)
 
-def sendforday():
-    #修改某天指定用户的结单并发送邮件
-    process_date = '2019-12-11'
-    datestr = '20191211'
-    for account in acc:
-        try:
-            r = requests.get("http://192.168.5.54:8089/pdfonly.html?accountId={account}&day={process_date}&sendEmail=true".format(account=account,process_date=process_date))
-            if r.status_code == 200:
-                logger.info("{account} success {process_date}".format(account=account,process_date=process_date))
-            else:
-                logger.info("{account} failure {process_date}".format(account=account,process_date=process_date))
-        except Exception as e:
-            logger.error("error accountid: {account}".format(account=account))
-            logger.error(e,exc_info = True)
-
-    db = Mysql("mysql5.106")
-    acct_str = str(acc).replace("[","").replace("]","")
-    sql = '''
-    delete from hk_bills where bill_date = '{datestr}' and code in ({acct_str})
-    '''.format(datestr=datestr,acct_str=acct_str)
-    db.execute(sql,"app_data")
 
 ##############
 

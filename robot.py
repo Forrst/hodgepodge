@@ -1,5 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding:utf-8 -*-
+
 '''
 作者:jia.zhou@aliyun.com
 创建时间:2019-07-26 上午9:59
@@ -11,6 +12,7 @@ import time
 import requests
 import schedule
 import json
+import re
 from itchat.content import *
 from db.mysql.SqlUtil import Mysql
 
@@ -19,10 +21,50 @@ logger =logging.getLogger("[robot.py]")
 
 url = "https://app.investassistant.com/MiningStock/stock/getStockBasicInfo"
 #http://www.zinvestglobal.com/?hmsr=wx
+
 code_exchange = {}
 code_name = {}
 name_code = {}
 code_exchange_name = {}
+
+robot_qa = {}
+
+def loadRobot_qa():
+    logger.info(":::::::::::::::::::开始导入机器人关键词库:::::::::::::::::::")
+    global robot_qa
+    db = Mysql("mysql2.231")
+    robot_qa_sql = "select keywords,answer from robot_qa"
+    robot_qa_data = db.execute(robot_qa_sql,"refine")
+    for i in robot_qa_data:
+        robot_qa[i[0]] = i[1]
+    logger.info(f":::::::::::::::::::导入关键词{len(robot_qa_data)}组:::::::::::::::::::")
+
+def get_robot_keys(content):
+    for key in robot_qa.keys():
+        regex_str = get_regex(key)
+        regex = re.compile(regex_str)
+        finds = regex.findall(content)
+        if len(finds)>0:
+            return key
+    return ""
+
+def get_regex(str):
+    '''
+    生成正则表达式
+    :param str:
+    :return:
+    '''
+    keywordlist = str.split("||")
+    words_str_list = []
+    for key in keywordlist:
+        words = key.split("&&")
+        words_str = "("
+        for word in words:
+            str = f"(?=.*{word})"
+            words_str = words_str+str
+        words_str = words_str+")"
+        words_str_list.append(words_str)
+    return "|".join(words_str_list)+"^.*$"
 
 def syn():
     logger.info("\n\n:::::::::::::::::::开始pull港美A股基础表:::::::::::::::::::")
@@ -34,6 +76,7 @@ def syn():
     logger.info(":::::::::::::::::::同步前code_name总量：{}:::::::::::::::::::".format(len(code_name)))
     logger.info(":::::::::::::::::::同步前name_code总量：{}:::::::::::::::::::".format(len(name_code)))
     logger.info(":::::::::::::::::::同步前code_exchange_name总量：{}:::::::::::::::::::".format(len(code_exchange_name)))
+
     db = Mysql("mysql5.106")
     cn_sql = "select exchange,code,name from stock_info group by exchange,code "
     hk_sql = "select exchange,code,name from stock_info_hk group by exchange,code"
@@ -43,7 +86,7 @@ def syn():
     us_data = db.execute(us_sql,"us_data")
     for i in cn_data:
         code_exchange_name[i[1]+"."+i[0]] =i[2]
-        if i[1] in code_exchange:
+        if i[1] in code_exchange and code_exchange[i[1]]!=i[0]:
             # print i[1],code_exchange[i[1]],code_name[i[1]]
             # print i[0],i[1],i[2]
             code_exchange[i[1]] = code_exchange[i[1]]+";"+i[0]
@@ -52,7 +95,7 @@ def syn():
         name_code[i[2]]=i[1]+"_"+i[0];code_name[i[1]]=i[2]
     for i in hk_data:
         code_exchange_name[i[1]+"."+i[0]] =i[2]
-        if i[1] in code_exchange:
+        if i[1] in code_exchange and code_exchange[i[1]]!=i[0]:
             # print i[1],code_exchange[i[1]],code_name[i[1]]
             # print i[0],i[1],i[2]
             code_exchange[i[1]] = code_exchange[i[1]]+";"+i[0]
@@ -61,7 +104,7 @@ def syn():
         name_code[i[2]]=i[1]+"_"+i[0];code_name[i[1]]=i[2]
     for i in us_data:
         code_exchange_name[i[1]+"."+i[0]] =i[2]
-        if i[1] in code_exchange:
+        if i[1] in code_exchange and code_exchange[i[1]]!=i[0]:
             # print i[1],code_exchange[i[1]],code_name[i[1]]
             # print i[0],i[1],i[2]
             code_exchange[i[1]] = code_exchange[i[1]]+";"+i[0]
@@ -74,9 +117,12 @@ def syn():
     logger.info(":::::::::::::::::::同步后name_code总量：{}:::::::::::::::::::".format(len(name_code)))
     logger.info(":::::::::::::::::::同步后code_exchange_name总量：{}:::::::::::::::::::".format(len(code_exchange_name)))
 
+
 def synThread():
     threading.Thread(target=syn()).start()
 
+def synRobot_qa():
+    threading.Thread(target=loadRobot_qa()).start()
 
 @itchat.msg_register(TEXT, isGroupChat=True)
 def group_reply_text(msg):
@@ -86,14 +132,26 @@ def group_reply_text(msg):
     # logger.info(u"【{}】群的【{}】说: {}".format(chatroom_name,username,msg['Content']))
     if msg['Type'] == TEXT:
         content = msg['Content'].upper()
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==4:
-            content = ("0"+content.encode("utf-8")).decode("utf-8")
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==3:
-            content = ("00"+content.encode("utf-8")).decode("utf-8")
+        if isinstance(content,str) and content.isdigit() and len(content)==4:
+            content = ("0"+content)
+        if isinstance(content,str) and content.isdigit() and len(content)==3:
+            content = ("00"+content)
         if content in name_code or content in code_exchange or content in code_exchange_name:
-            logger.info(u"【{}】群的【{}】查询报价: {}".format(chatroom_name,username,msg['Content']))
+            logger.info("【{}】群的【{}】查询报价: {}".format(chatroom_name,username,msg['Content']))
             response = getRequestDate(content)
             itchat.send_msg(response,msg['FromUserName'])
+        robot_key = get_robot_keys(content)
+        # if "华美" in content and "入金" in content:
+        #     logger.info("【{}】群的【{}】查询华美入金: {}".format(chatroom_name,username,msg['Content']))
+        #     itchat.send_msg("尊嘉华美入金流程请参阅：https://w.url.cn/s/AlX3IFt",msg['FromUserName'])
+        if "大陆" in content and "入金" in content:
+            logger.info("【{}】群的【{}】查询大陆入金: {}".format(chatroom_name,username,msg['Content']))
+            itchat.send_msg('''目前大陆银行卡入金失败率较高，建议使用境外银行卡入金。如您尝试大陆银行卡直接入金尊嘉，中间损失的手续费是需要您个人承担的，请您慎重选择。
+更多入金说明https://www.zinvestglobal.com/qa/second/002''',msg['FromUserName'])
+        elif len(robot_key)>0:
+            logger.info("【{}】群的【{}】查询: {}".format(chatroom_name,username,msg['Content']))
+            itchat.send_msg(robot_qa[robot_key],msg['FromUserName'])
+            logger.info(robot_qa[robot_key])
             # if chatroom_id == u'@@805faaab88bffc6001f2df8efa1c1338c8291f825f3d8ce50da8c0089df0a5ba':
             #     # 发送者的昵称
             #     url = msg['Url']
@@ -105,6 +163,7 @@ def group_reply_text(msg):
             # elif msg['Type'] == SHARING:
             #     content = msg['Text']
 
+
 @itchat.msg_register(TEXT,isGroupChat=False)
 def reply_one_text(msg):
     RemarkName = msg['User']['RemarkName']
@@ -112,25 +171,33 @@ def reply_one_text(msg):
     # logger.info(u"【{}】群的【{}】说: {}".format(chatroom_name,username,msg['Content']))
     if msg['Type'] == TEXT:
         content = msg['Content'].upper()
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==4:
-            content = ("0"+content.encode("utf-8")).decode("utf-8")
-        if isinstance(content.encode("utf-8"),str) and content.encode("utf-8").isdigit() and len(content.encode("utf-8"))==3:
-            content = ("00"+content.encode("utf-8")).decode("utf-8")
+        if isinstance(content,str) and content.isdigit() and len(content)==4:
+            content = ("0"+content)
+        if isinstance(content,str) and content.isdigit() and len(content)==3:
+            content = ("00"+content)
         if content in name_code or content in code_exchange or content in code_exchange_name:
-            logger.info(u"您的昵称为【{}】备注为【{}】的好友查询报价: {}".format(NickName,RemarkName,msg['Content']))
+            logger.info("您的昵称为【{}】备注为【{}】的好友查询报价: {}".format(NickName,RemarkName,msg['Content']))
             response = getRequestDate(content)
             itchat.send_msg(response,msg['FromUserName'])
-
-
-
-
-
+        robot_key = get_robot_keys(content)
+        # if "华美" in content and "入金" in content:
+        #     logger.info("【{}】群的【{}】查询华美入金: {}".format(NickName,RemarkName,msg['Content']))
+        #     itchat.send_msg("尊嘉华美入金流程请参阅：https://w.url.cn/s/AlX3IFt",msg['FromUserName'])
+        if "大陆" in content and "入金" in content:
+            logger.info("【{}】群的【{}】查询大陆入金: {}".format(NickName,RemarkName,msg['Content']))
+            itchat.send_msg('''目前大陆银行卡入金失败率较高，建议使用境外银行卡入金。如您尝试大陆银行卡直接入金尊嘉，中间损失的手续费是需要您个人承担的，请您慎重选择。
+更多入金说明https://www.zinvestglobal.com/qa/second/002''',msg['FromUserName'])
+            logger.info("尊嘉大陆入金优选中信/工商，更多入金说明：https://w.url.cn/s/Ad3t8mk")
+        elif len(robot_key)>0:
+            logger.info("【{}】群的【{}】查询: {}".format(NickName,RemarkName,msg['Content']))
+            itchat.send_msg(robot_qa[robot_key],msg['FromUserName'])
+            logger.info(robot_qa[robot_key])
 
 def getRequestDate(content):
     result = ""
     code = ''
     exchange = ''
-    if content in name_code:
+    if content in name_code and "老虎证券" not in content and "富途证券" not in content:
         nameCodeList = name_code[content].split("_")
         code = nameCodeList[0]
         exchange = nameCodeList[1]
@@ -156,13 +223,13 @@ def getRequestDate(content):
             stockstr = stockstr+code_exchange_name[code+"."+i]+"("+code+"."+i+")"+"\n"
             orstr = orstr+code+u"."+i+u"或者"
         orstr =orstr[:-2]
-        attention = u"温馨提示：您输入的股票代码包含多个股票\n{}您可以尝试输入{}以查询具体的股票".format(stockstr,orstr)
-        if code.startswith(u"00") and u"SESH" in exchange:
-            exchange = u"SESZ"
-            attention = u"\n(温馨提示：您输入的股票代码与指数代码一样默认为您显示股票的行情\n{}您可以尝试输入{}以查询具体的股票)".format(stockstr,orstr)
+        attention = "温馨提示：您输入的股票代码包含多个股票\n{}您可以尝试输入{}以查询具体的股票".format(stockstr,orstr)
+        if code.startswith("00") and "SESH" in exchange:
+            exchange = "SESZ"
+            attention = "\n(温馨提示：您输入的股票代码与指数代码一样默认为您显示股票的行情\n{}您可以尝试输入{}以查询具体的股票)".format(stockstr,orstr)
     if isinstance(exchange,list):
         result = attention
-    if isinstance(exchange,unicode):
+    if isinstance(exchange,str):
         if exchange in currency:
             currency_name = currency[exchange]
         data = {
@@ -197,9 +264,22 @@ def getRequestDate(content):
         r.close()
         print(ret['response_data'])
         if 'stock_info' in ret['response_data']:
+
             try:
                 name = ret['response_data']['stock_info']['name']
                 code = ret['response_data']['stock_info']['code']
+                eps = None
+                pe = None
+                epsstr = ''
+                pestr = ''
+                if 'eps' in ret['response_data']['stock_info']:
+                    eps = ret['response_data']['stock_info']['eps']
+                if 'pe' in ret['response_data']:
+                    pe = ret['response_data']['pe']
+                if eps is not None:
+                    epsstr = f'【每股收益】  {round(eps,4)}\n'
+                if pe is not None:
+                    pestr = f'【市盈率】      {round(pe,4)}\n'
                 exchangecode = ret['response_data']['stock_info']['exchange']
                 close = ret['response_data']['close_px']
                 pre_close = ret['response_data']['pre_close_px']
@@ -208,26 +288,28 @@ def getRequestDate(content):
                         riseandfall = 0.0
                     else:
                         riseandfall = round((close-pre_close)/pre_close*100,2)
-                    result = u'''{}({}.{})\n\n【最新价】  {}{}\n【涨跌幅】  {}%\n【状  态】  {}\n\n本消息来源于港美股永久0佣的【尊嘉金融】\n36只热门美股免费送，戳☞ https://w.url.cn/s/Amphhew{}
-                    '''.format(name,code,exchange_code[exchangecode],close,currency_name,riseandfall,ret['response_data']['stock_info']['time_info'],attention)
+                    result = u'''{}({}.{})\n\n【最新价】      {}{}\n【涨跌幅】      {}%\n{}{}【状   态】      {}\n\n尊嘉金融：随时随地，零佣交易。支持港股、美股和中华通（A股）。https://www.zinvestglobal.com?hmsr=rb
+                    '''.format(name,code,exchange_code[exchangecode],close,currency_name,riseandfall,pestr,epsstr,ret['response_data']['stock_info']['time_info'],attention)
                 else:
                     open = ret['response_data']['open_px']
-                    high = ret['response_data']['high_px']
-                    low = ret['response_data']['low_px']
+                    # high = ret['response_data']['high_px']
+                    # low = ret['response_data']['low_px']
                     volumn = ret['response_data']['total_volume_trade']
-                    total_value = ret['response_data']['total_value_trade']
-                    result = u'''{}({}.{})\n\n【最新价】  {}{}\n【涨跌幅】  {}%\n【开盘价】  {}{}\n【成交量】  {}万股\n【成交额】  {}亿{}\n【状  态】  {}\n\n本消息来源于港美股永久0佣的【尊嘉金融】\n36只热门美股免费送，戳☞ https://w.url.cn/s/Amphhew{}
-                    '''.format(name,code,exchange_code[exchangecode],close,currency_name,round((close-pre_close)/pre_close*100,2),open,currency_name,round(volumn*1.0/10000,2),round(total_value*1.0/100000000,3),currency_name,ret['response_data']['stock_info']['time_info'],attention)
+                    # total_value = ret['response_data']['total_value_trade']
+                    result = u'''{}({}.{})\n\n【最新价】      {}{}\n【涨跌幅】      {}%\n【开盘价】      {}{}\n【成交量】      {}万股\n{}{}【状   态】      {}\n\n尊嘉金融：随时随地，零佣交易。支持港股、美股和中华通（A股）。https://www.zinvestglobal.com?hmsr=rb                    '''.format(name,code,exchange_code[exchangecode],close,currency_name,round((close-pre_close)/pre_close*100,2),open,currency_name,round(volumn*1.0/10000,2),pestr,epsstr,ret['response_data']['stock_info']['time_info'],attention)
+
             except Exception as e:
                 logger.error(e,exc_info=True)
     return result
 if __name__ == "__main__":
-    itchat.auto_login(enableCmdQR=2,hotReload=False)
-    itchat.run()
+    getRequestDate("6666")
     syn()
-    # itchat.auto_login(enableCmdQR=2,hotReload=True)
-    # itchat.run()
+    loadRobot_qa()
+    itchat.auto_login(enableCmdQR=2,hotReload=False)
+    itchat.run(blockThread=False)
     schedule.every(12).hours.do(synThread)
+    schedule.every(1).hours.do(synRobot_qa)
     while True:
         schedule.run_pending()
         time.sleep(1)
+

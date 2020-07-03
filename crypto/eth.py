@@ -71,7 +71,7 @@ for addr in listTop100:
             _from = tds[2].text
             _to = tds[4].text
             _time = str(datetime.datetime.strptime(tds[1].find("span")['title'],"%b-%d-%Y %H:%M:%S %p"))
-            _flow = tds[3].text.encode("utf-8").replace("\xc2\xa0","")
+            _flow = tds[3].text.replace("\xc2\xa0","")
             _amount = float(tds[5].text.replace(",",""))
             flow.append([_from,_to,_time,_flow,_amount])
         if page == total_pages:
@@ -172,7 +172,7 @@ def get_transactions_from_exchange(contract_address,total_page):
 
             _to = tds[4].text
             _time = str(datetime.datetime.strptime(tds[1].find("span")['title'],"%b-%d-%Y %H:%M:%S %p"))
-            _flow = tds[3].text.encode("utf-8").replace("\xc2\xa0","")
+            _flow = tds[3].text.replace("\xc2\xa0","")
             _amount = float(tds[5].text.replace(",",""))
             if _from not in account_balance:
                 account_balance[_from] = _amount*-1
@@ -187,8 +187,8 @@ def get_transactions_from_exchange(contract_address,total_page):
 
 ret = []
 for i in flow:
-    fro = i[0].encode("utf-8")
-    to = i[1].encode("utf-8")
+    fro = i[0]
+    to = i[1]
     date =  i[2]
     type = i[3]
     amount = i[4]

@@ -4,6 +4,8 @@
 作者:jia.zhou@aliyun.com
 创建时间:2019-11-07 上午10:54
 '''
+import websockets
+
 import zlib
 import json
 import websocket

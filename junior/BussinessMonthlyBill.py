@@ -4,6 +4,10 @@
 作者:jia.zhou@aliyun.com
 创建时间:2019-11-09 上午10:58
 '''
+'''
+python BussinessMonthlyBill.py -f 20200501 -t 20200529 -d /home/eos/data/bills/ -u 88888881 
+'''
+
 import datetime
 import getopt
 # !/usr/bin/python
@@ -63,6 +67,7 @@ def initIsInCode():
             IFNULL(ISIN,"") AS isin_code
         FROM
             secumain
+        WHERE SecuCategoryName = 'A股'
         GROUP BY
             CODE,
             ISIN

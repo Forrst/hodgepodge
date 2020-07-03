@@ -4,6 +4,57 @@
 作者:jia.zhou@aliyun.com
 创建时间:2019-01-11 上午9:34
 '''
+import MySQLdb
+import os
+os.chdir("/home/eos/git/hodgepodge")
+from db.mysql.SqlUtil import Mysql
+db = Mysql("mysql5.106")
+
+sql = "select id,other_info from news where info_type!='41' and info_type !='42' and other_info like '%时长%'"
+data = db.execute(sql,"app_data")
+
+infos = []
+for i in data:
+    other_info = json.loads(i[1])
+    if "video_length" in other_info:
+        lens = other_info.get("video_length")
+        if lens == "":
+            continue
+        other_info["show_tags"] = ["时长:"+lens]
+        infos.append([i[0],other_info])
+for i in infos:
+    sql = f'''update news set other_info = '{json.dumps(i[1],ensure_ascii=False)}' where id = {i[0]}'''
+    db.execute(sql,"app_data")
+
+infos = []
+for i in data:
+    other_info = json.loads(i[1])
+    if "show_tags" in other_info:
+        del other_info['show_tags']
+        infos.append([i[0],other_info])
+for i in infos:
+    sql = f'''update news set other_info = '{json.dumps(i[1],ensure_ascii=False)}' where id = {i[0]}'''
+    db.execute(sql,"app_data")
+
+
+
+
+import json
+a = ""
+infos = []
+for i in data:
+    other_info = json.loads(i[1])
+    if "video_length" in other_info:
+        lens = other_info.get("video_length")
+        other_info["show_tags"] = ["时长:"+lens]
+        infos.append([i[0],other_info])
+
+for i in infos:
+    sql = f'''update news set other_info = '{json.dumps(i[1],ensure_ascii=False)}' where id = {i[0]}'''
+    db.execute(sql,"app_data")
+
+db.executeMany("update news  ",columns=['from_address','to_address','datetime','type','amount'],data=flow,db="erc20")
+
 import happybase
 import jieba
 rowkey = "481c7ffffe97d816e870a114974d0000"

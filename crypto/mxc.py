@@ -207,3 +207,6 @@ def http_request(method_type, url, params, data=None, add_to_headers=None):
     except BaseException as e:
         print("%s , %s" % (url, e))
         return
+
+if __name__=='__main__':
+    get_ticker("JST-USDT")
