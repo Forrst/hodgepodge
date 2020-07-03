@@ -9,7 +9,10 @@
 资产
 港股打新费用计算脚本
 参数如下
--d /home/eos/data/consumer_profit -c rpt3 -f 20191101 -t 20191129 -l  /home/eos/data/consumer_profit/accounts
+python ~/git/hodgepodge/junior/export_report.py -d /home/eos/data/consumer_profit -c rpt3 -f 20191101 -t 20191129 -l  /home/eos/data/consumer_profit/accounts
+rpt1 = "资金账户","首次入金时间","累计入金/转股金额(港币)","累计出金金额(港币)","打新笔数","交易笔数"
+rpt2 = "资金账户","打新佣金费用"
+rpt3 = "资金账户","累计入金/转股金额(港币)","累计出金金额(港币)","实时资产净值"
 '''
 
 import os

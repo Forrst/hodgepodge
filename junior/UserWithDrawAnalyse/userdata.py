@@ -180,7 +180,7 @@ account_real_fwd = account_balance_df[account_balance_df['amount']<50]
 start = datetime.datetime(year=2019,month=6,day=1)
 for i in range(10):
     end = start+datetime.timedelta(days=15)
-    print start.date(),end.date()
+    print(start.date(),end.date())
     # print len(account_real_fwd[account_real_fwd['process_date']>=str(start.date())][account_real_fwd['process_date']<str(end.date())])
     start = end
 
