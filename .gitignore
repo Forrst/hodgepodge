@@ -2,3 +2,5 @@
 *.cfg
 *.xml
 *.pyc
+*.iml
+*.xlsx
