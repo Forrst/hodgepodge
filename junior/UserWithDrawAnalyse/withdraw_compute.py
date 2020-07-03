@@ -157,7 +157,7 @@ from sklearn.naive_bayes import GaussianNB
 clf = GaussianNB()
 clf.fit(X, y)
 
-print X[2],clf.predict([X[2]])
+print([2],clf.predict([X[2]]))
 
 
 def normalization(x):

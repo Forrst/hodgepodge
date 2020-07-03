@@ -5,4 +5,6 @@ import happybase
 con = happybase.Connection("192.168.2.232")
 con.open()
 table = con.table("news")
-data = table.row("d0df7ffffe9ade954b59f830053f0000".decode("hex"))
+data = table.row(bytes.fromhex("6bda7ffffe8e3620e3fbf25b8e6a0000"))
+for i in data:
+    print(f"key{i}\tvalue{data[i]}")

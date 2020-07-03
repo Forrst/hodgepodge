@@ -33,9 +33,9 @@ con = happybase.Connection("192.168.5.156")
 con.open()
 table = con.table("news")
 
-r= table.row('481c7ffffe9681388c10c6161ed40000'.decode("hex"))
+r= table.row('6bda7ffffe8e7d42abc8e7f838580000'.decode("hex"))
 for i in r:
-    print i,r[i]
+    print(i,r[i])
 title = r['info:title']
 content = r['info:content']
 context = title+"\t"+content

@@ -5,7 +5,7 @@
 创建时间:2019-11-11 下午4:55
 '''
 
-str_filename = "/home/eos/data/fiddler/fiddler_raw_header.txt"
+str_filename = "C:\\Users\\29562\\Downloads\\fid.txt"
 # save_name = "re_test.py"
 save_name = str_filename.replace("txt", "py")
 
@@ -42,7 +42,10 @@ class FidToPy():
             if "Cookie: " in i:
                 self.cookies = i.replace("Cookie: ", "")
                 break
-        self.cookies = {i.split("=")[0]: i.split("=")[1] for i in self.cookies.split("; ")}
+        if len(self.cookies)==0:
+            self.cookies = {}
+        else:
+            self.cookies = {i.split("=")[0]: i.split("=")[1] for i in self.cookies.split("; ")}
 
     def get_data(self):
         try:
