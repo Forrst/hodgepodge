@@ -1,2 +1,4 @@
 *.csv
 *.cfg
+*.xml
+*.pyc
